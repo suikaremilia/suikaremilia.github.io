@@ -2,7 +2,7 @@
 title: Telegram
 links:
   - title: Telegram Channel
-    description: GitHub is the world's largest software development platform.
+    description: Telegram is a powerful tool and is the main IM I use.
     website: https://t.me/touhoumichong
     image: telegram.png
   - title: Telegram Bot
