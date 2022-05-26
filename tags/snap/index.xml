@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Snap on すいかの幻想郷</title>
-        <link>https://example.com/tags/snap/</link>
+        <link>https://suikaremilia.github.io/tags/snap/</link>
         <description>Recent content in Snap on すいかの幻想郷</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 07 Jul 2020 09:25:12 +0000</lastBuildDate><atom:link href="https://example.com/tags/snap/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 07 Jul 2020 09:25:12 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/snap/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Ubuntu删除snap</title>
-        <link>https://example.com/post/ubuntu%E5%88%A0%E9%99%A4snap/</link>
+        <link>https://suikaremilia.github.io/post/ubuntu%E5%88%A0%E9%99%A4snap/</link>
         <pubDate>Tue, 07 Jul 2020 09:25:12 +0000</pubDate>
         
-        <guid>https://example.com/post/ubuntu%E5%88%A0%E9%99%A4snap/</guid>
+        <guid>https://suikaremilia.github.io/post/ubuntu%E5%88%A0%E9%99%A4snap/</guid>
         <description>&lt;p&gt;Snap在ubuntu里简直是病毒一样的存在，一定要用&lt;code&gt;purge&lt;/code&gt;才能删掉……&lt;br&gt;
 &lt;del&gt;顽固病毒也不过如此&lt;/del&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;

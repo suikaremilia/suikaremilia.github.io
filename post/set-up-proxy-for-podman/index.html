@@ -5,13 +5,13 @@
 1 2 3  # cat /etc/profile.d/http_proxy.sh export HTTP_PROXY=http://192.168.0.1:8080 export HTTPS_PROXY=http://192.168.0.1:8080   或直接export，但前者对ansible也生效，后者只能是该终端的用户
 貌似都是废话，其他程序配置Proxy，用常规的用export命令配置环境变量不生效的时候，也可以试试这样……'><title>Set up proxy for podman</title>
 
-<link rel='canonical' href='https://example.com/post/set-up-proxy-for-podman/'>
+<link rel='canonical' href='https://suikaremilia.github.io/post/set-up-proxy-for-podman/'>
 
 <link rel="stylesheet" href="/scss/style.min.450926226e724574a6b936335ea06111f8aeb253d932c86cb2cc807341cd2889.css"><meta property='og:title' content='Set up proxy for podman'>
 <meta property='og:description' content='背景如题，方案在/etc/profile.d/下配置：
 1 2 3  # cat /etc/profile.d/http_proxy.sh export HTTP_PROXY=http://192.168.0.1:8080 export HTTPS_PROXY=http://192.168.0.1:8080   或直接export，但前者对ansible也生效，后者只能是该终端的用户
 貌似都是废话，其他程序配置Proxy，用常规的用export命令配置环境变量不生效的时候，也可以试试这样……'>
-<meta property='og:url' content='https://example.com/post/set-up-proxy-for-podman/'>
+<meta property='og:url' content='https://suikaremilia.github.io/post/set-up-proxy-for-podman/'>
 <meta property='og:site_name' content='すいかの幻想郷'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Proxy' /><meta property='article:tag' content='Podman' /><meta property='article:published_time' content='2020-07-20T14:15:12&#43;00:00'/><meta property='article:modified_time' content='2020-07-20T14:15:12&#43;00:00'/>
 <meta name="twitter:title" content="Set up proxy for podman">
@@ -19,6 +19,17 @@
 1 2 3  # cat /etc/profile.d/http_proxy.sh export HTTP_PROXY=http://192.168.0.1:8080 export HTTPS_PROXY=http://192.168.0.1:8080   或直接export，但前者对ansible也生效，后者只能是该终端的用户
 貌似都是废话，其他程序配置Proxy，用常规的用export命令配置环境变量不生效的时候，也可以试试这样……">
     <link rel="shortcut icon" href="/favicon.ico" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNEHT80K8P"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-RNEHT80K8P', { 'anonymize_ip': false });
+}
+</script>
 
     </head>
     <body class="

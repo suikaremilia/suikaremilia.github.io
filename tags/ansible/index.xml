@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Ansible on すいかの幻想郷</title>
-        <link>https://example.com/tags/ansible/</link>
+        <link>https://suikaremilia.github.io/tags/ansible/</link>
         <description>Recent content in Ansible on すいかの幻想郷</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 27 Jul 2020 17:39:01 +0000</lastBuildDate><atom:link href="https://example.com/tags/ansible/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 27 Jul 2020 17:39:01 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/ansible/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>ansible tower升级</title>
-        <link>https://example.com/post/ansible-tower%E5%8D%87%E7%BA%A7/</link>
+        <link>https://suikaremilia.github.io/post/ansible-tower%E5%8D%87%E7%BA%A7/</link>
         <pubDate>Mon, 27 Jul 2020 17:39:01 +0000</pubDate>
         
-        <guid>https://example.com/post/ansible-tower%E5%8D%87%E7%BA%A7/</guid>
+        <guid>https://suikaremilia.github.io/post/ansible-tower%E5%8D%87%E7%BA%A7/</guid>
         <description>&lt;p&gt;Ansible Tower的版本更新的也是莫名的快，去年安装的3.5今年已经到3.7.1了，新的版本可以在线申请license，旧的license快过期了，所以就升个级吧。&lt;/p&gt;
 &lt;h2 id=&#34;步骤&#34;&gt;步骤：&lt;/h2&gt;
 &lt;p&gt;升级的时候不能只看升级文档，还要看新版本的support，一开始只看了升级文档，做的时候报操作系统版本不被支持，所以第一步配个较新的rhel源，然后update系统。&lt;/p&gt;

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Proxy on すいかの幻想郷</title>
-        <link>https://example.com/tags/proxy/</link>
+        <link>https://suikaremilia.github.io/tags/proxy/</link>
         <description>Recent content in Proxy on すいかの幻想郷</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 20 Jul 2020 14:15:12 +0000</lastBuildDate><atom:link href="https://example.com/tags/proxy/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 20 Jul 2020 14:15:12 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/proxy/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Set up proxy for podman</title>
-        <link>https://example.com/post/set-up-proxy-for-podman/</link>
+        <link>https://suikaremilia.github.io/post/set-up-proxy-for-podman/</link>
         <pubDate>Mon, 20 Jul 2020 14:15:12 +0000</pubDate>
         
-        <guid>https://example.com/post/set-up-proxy-for-podman/</guid>
+        <guid>https://suikaremilia.github.io/post/set-up-proxy-for-podman/</guid>
         <description>&lt;p&gt;背景如题，方案在/etc/profile.d/下配置：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -31,10 +31,10 @@
         </item>
         <item>
         <title>Caddy翻墙</title>
-        <link>https://example.com/post/caddy%E7%BF%BB%E5%A2%99/</link>
+        <link>https://suikaremilia.github.io/post/caddy%E7%BF%BB%E5%A2%99/</link>
         <pubDate>Mon, 06 Apr 2020 10:09:28 +0000</pubDate>
         
-        <guid>https://example.com/post/caddy%E7%BF%BB%E5%A2%99/</guid>
+        <guid>https://suikaremilia.github.io/post/caddy%E7%BF%BB%E5%A2%99/</guid>
         <description>&lt;p&gt;Caddy有个模块很好用，经过简单的配置即可以https或http2的方式跨越防火墙，不需要单独申请证书同时还有正常网站做伪装，配合浏览器switch omega插件，方便快捷的访问被墙的资源。&lt;/p&gt;
 &lt;h2 id=&#34;安装&#34;&gt;安装：&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;

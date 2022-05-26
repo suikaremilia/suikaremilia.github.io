@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Openshift on すいかの幻想郷</title>
-        <link>https://example.com/tags/openshift/</link>
+        <link>https://suikaremilia.github.io/tags/openshift/</link>
         <description>Recent content in Openshift on すいかの幻想郷</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 12 Dec 2020 09:14:40 +0000</lastBuildDate><atom:link href="https://example.com/tags/openshift/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 12 Dec 2020 09:14:40 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/openshift/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Opne Shift 4.6在线安装</title>
-        <link>https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/</link>
+        <link>https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/</link>
         <pubDate>Sat, 12 Dec 2020 09:14:40 +0000</pubDate>
         
-        <guid>https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/</guid>
+        <guid>https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/</guid>
         <description>&lt;h2 id=&#34;规划&#34;&gt;规划&lt;/h2&gt;
 &lt;h3 id=&#34;架构&#34;&gt;架构：&lt;/h3&gt;
 &lt;h3 id=&#34;服务器信息&#34;&gt;服务器信息：&lt;/h3&gt;
@@ -695,10 +695,10 @@ CoreOS image &lt;a class=&#34;link&#34; href=&#34;https://mirror.openshift.com/p
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;启动设备&#34;&gt;启动设备：&lt;/h3&gt;
 &lt;p&gt;打开设备电源并在ilo挂载rhcos镜像：&lt;br&gt;
-&lt;img src=&#34;https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291406688.png&#34;
+&lt;img src=&#34;https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291406688.png&#34;
 	width=&#34;1030&#34;
 	height=&#34;796&#34;
-	srcset=&#34;https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291406688_hu343602dafc9e798b8dca3158886e66f3_19814_480x0_resize_box_3.png 480w, https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291406688_hu343602dafc9e798b8dca3158886e66f3_19814_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291406688_hu343602dafc9e798b8dca3158886e66f3_19814_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291406688_hu343602dafc9e798b8dca3158886e66f3_19814_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -707,10 +707,10 @@ CoreOS image &lt;a class=&#34;link&#34; href=&#34;https://mirror.openshift.com/p
 		data-flex-basis=&#34;310px&#34;
 	
 &gt;&lt;br&gt;
-&lt;img src=&#34;https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291424913.png&#34;
+&lt;img src=&#34;https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291424913.png&#34;
 	width=&#34;1027&#34;
 	height=&#34;792&#34;
-	srcset=&#34;https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291424913_hue754b5eb1b985840d2eaac6bf3503238_16246_480x0_resize_box_3.png 480w, https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291424913_hue754b5eb1b985840d2eaac6bf3503238_16246_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291424913_hue754b5eb1b985840d2eaac6bf3503238_16246_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291424913_hue754b5eb1b985840d2eaac6bf3503238_16246_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -719,10 +719,10 @@ CoreOS image &lt;a class=&#34;link&#34; href=&#34;https://mirror.openshift.com/p
 		data-flex-basis=&#34;311px&#34;
 	
 &gt;&lt;br&gt;
-&lt;img src=&#34;https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291432187.png&#34;
+&lt;img src=&#34;https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291432187.png&#34;
 	width=&#34;1030&#34;
 	height=&#34;793&#34;
-	srcset=&#34;https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291432187_hu243537b98e85fa1468c592b3c33b6c44_8365_480x0_resize_box_3.png 480w, https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291432187_hu243537b98e85fa1468c592b3c33b6c44_8365_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291432187_hu243537b98e85fa1468c592b3c33b6c44_8365_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291432187_hu243537b98e85fa1468c592b3c33b6c44_8365_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -733,10 +733,10 @@ CoreOS image &lt;a class=&#34;link&#34; href=&#34;https://mirror.openshift.com/p
 &gt;&lt;br&gt;
 用nmtui配置网络，生效后检查是否获取到主机名&lt;br&gt;
 下载上面的安装脚本进行安装：&lt;br&gt;
-&lt;img src=&#34;https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291401163.png&#34;
+&lt;img src=&#34;https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291401163.png&#34;
 	width=&#34;1075&#34;
 	height=&#34;813&#34;
-	srcset=&#34;https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291401163_huba157ebecfa6ebffca098be3973cbbd7_27556_480x0_resize_box_3.png 480w, https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291401163_huba157ebecfa6ebffca098be3973cbbd7_27556_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291401163_huba157ebecfa6ebffca098be3973cbbd7_27556_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291401163_huba157ebecfa6ebffca098be3973cbbd7_27556_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

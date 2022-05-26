@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>tape on すいかの幻想郷</title>
-        <link>https://example.com/tags/tape/</link>
+        <link>https://suikaremilia.github.io/tags/tape/</link>
         <description>Recent content in tape on すいかの幻想郷</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 27 Apr 2020 16:53:56 +0000</lastBuildDate><atom:link href="https://example.com/tags/tape/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 27 Apr 2020 16:53:56 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/tape/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Commvault修改介质信息</title>
-        <link>https://example.com/post/commvault%E4%BF%AE%E6%94%B9%E4%BB%8B%E8%B4%A8%E4%BF%A1%E6%81%AF/</link>
+        <link>https://suikaremilia.github.io/post/commvault%E4%BF%AE%E6%94%B9%E4%BB%8B%E8%B4%A8%E4%BF%A1%E6%81%AF/</link>
         <pubDate>Mon, 27 Apr 2020 16:53:56 +0000</pubDate>
         
-        <guid>https://example.com/post/commvault%E4%BF%AE%E6%94%B9%E4%BB%8B%E8%B4%A8%E4%BF%A1%E6%81%AF/</guid>
+        <guid>https://suikaremilia.github.io/post/commvault%E4%BF%AE%E6%94%B9%E4%BB%8B%E8%B4%A8%E4%BF%A1%E6%81%AF/</guid>
         <description>&lt;p&gt;做磁带转储的时候发生了一件很奇怪的事情，一盘LTO3的磁带被认成了LTO2，在LTO5的驱动器里读不出来。&lt;br&gt;
 当然读不出来很正常，毕竟只向下兼容两代读，可认成LTO2就很诡异了。&lt;br&gt;
 于是找了一下方法把它修改过来：&lt;/p&gt;

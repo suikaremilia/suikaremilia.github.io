@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>3PAR on すいかの幻想郷</title>
-        <link>https://example.com/tags/3par/</link>
+        <link>https://suikaremilia.github.io/tags/3par/</link>
         <description>Recent content in 3PAR on すいかの幻想郷</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 03 Aug 2020 19:24:01 +0000</lastBuildDate><atom:link href="https://example.com/tags/3par/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 03 Aug 2020 19:24:01 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/3par/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>记一次博科光交排障</title>
-        <link>https://example.com/post/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%8D%9A%E7%A7%91%E5%85%89%E4%BA%A4%E6%8E%92%E9%9A%9C/</link>
+        <link>https://suikaremilia.github.io/post/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%8D%9A%E7%A7%91%E5%85%89%E4%BA%A4%E6%8E%92%E9%9A%9C/</link>
         <pubDate>Mon, 03 Aug 2020 19:24:01 +0000</pubDate>
         
-        <guid>https://example.com/post/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%8D%9A%E7%A7%91%E5%85%89%E4%BA%A4%E6%8E%92%E9%9A%9C/</guid>
+        <guid>https://suikaremilia.github.io/post/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%8D%9A%E7%A7%91%E5%85%89%E4%BA%A4%E6%8E%92%E9%9A%9C/</guid>
         <description>&lt;p&gt;最近一台3PAR一直报CRC错误，3PAR的排障还算简单，就几条命令分析一下输出。&lt;br&gt;
 然而，这次故障比较诡异：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;

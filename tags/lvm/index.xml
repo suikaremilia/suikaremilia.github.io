@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>LVM on すいかの幻想郷</title>
-        <link>https://example.com/tags/lvm/</link>
+        <link>https://suikaremilia.github.io/tags/lvm/</link>
         <description>Recent content in LVM on すいかの幻想郷</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 12 Apr 2020 15:29:48 +0000</lastBuildDate><atom:link href="https://example.com/tags/lvm/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 12 Apr 2020 15:29:48 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/lvm/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>pvmove迁移数据</title>
-        <link>https://example.com/post/pvmove%E8%BF%81%E7%A7%BB%E6%95%B0%E6%8D%AE/</link>
+        <link>https://suikaremilia.github.io/post/pvmove%E8%BF%81%E7%A7%BB%E6%95%B0%E6%8D%AE/</link>
         <pubDate>Sun, 12 Apr 2020 15:29:48 +0000</pubDate>
         
-        <guid>https://example.com/post/pvmove%E8%BF%81%E7%A7%BB%E6%95%B0%E6%8D%AE/</guid>
+        <guid>https://suikaremilia.github.io/post/pvmove%E8%BF%81%E7%A7%BB%E6%95%B0%E6%8D%AE/</guid>
         <description>&lt;p&gt;使用LVM的好处之一就是可以用pvmove来方便的在线迁移数据。用pvmove来迁移、合并数据比创建mirorr的方式要安全而方便，它会把要迁移的数据拆分成多分，并通过建立临时镜像的方式来移动数据，即使中断也有全部的数据，还能很方便的再次开始。&lt;/p&gt;
 &lt;h2 id=&#34;简单的用法&#34;&gt;简单的用法：&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>すいかの幻想郷</title>
-        <link>https://example.com/</link>
+        <link>https://suikaremilia.github.io/</link>
         <description>Recent content on すいかの幻想郷</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 25 May 2022 18:55:10 +0000</lastBuildDate><atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 25 May 2022 18:55:10 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>转到HUGO</title>
-        <link>https://example.com/post/%E8%BD%AC%E5%88%B0hugo/</link>
+        <link>https://suikaremilia.github.io/post/%E8%BD%AC%E5%88%B0hugo/</link>
         <pubDate>Wed, 25 May 2022 18:55:10 +0000</pubDate>
         
-        <guid>https://example.com/post/%E8%BD%AC%E5%88%B0hugo/</guid>
+        <guid>https://suikaremilia.github.io/post/%E8%BD%AC%E5%88%B0hugo/</guid>
         <description>&lt;p&gt;没有谁像我一样吧，Gridea终于更新了却不想用了。&lt;br&gt;
 花了点时间把原来Gridea的站转到了HUGO，体验下持续集成，从此工作写字的地方统一到VS code了，&lt;del&gt;然而要手攒FrontMatter了&lt;/del&gt;。&lt;/p&gt;
 &lt;p&gt;挺简单的过程：&lt;/p&gt;
@@ -154,10 +154,10 @@ Gridea的图片在post-images目录下，hugo建议在文字的相同目录下&l
         </item>
         <item>
         <title>根分区快满了</title>
-        <link>https://example.com/post/%E6%A0%B9%E5%88%86%E5%8C%BA%E5%BF%AB%E6%BB%A1%E4%BA%86/</link>
+        <link>https://suikaremilia.github.io/post/%E6%A0%B9%E5%88%86%E5%8C%BA%E5%BF%AB%E6%BB%A1%E4%BA%86/</link>
         <pubDate>Fri, 14 Jan 2022 16:48:40 +0000</pubDate>
         
-        <guid>https://example.com/post/%E6%A0%B9%E5%88%86%E5%8C%BA%E5%BF%AB%E6%BB%A1%E4%BA%86/</guid>
+        <guid>https://suikaremilia.github.io/post/%E6%A0%B9%E5%88%86%E5%8C%BA%E5%BF%AB%E6%BB%A1%E4%BA%86/</guid>
         <description>&lt;p&gt;一个新上线的系统，50G的根分区用df看快满了，但业务说不可能有那么多数据。&lt;br&gt;
 常规的思路，换du去看根下有什么大文件，可是&lt;code&gt;du -sh /*&lt;/code&gt;的所有结果加起来都没有5G大。&lt;br&gt;
 很自然就想到有进程删除了文件但没有释放，然后用&lt;code&gt;lsof&lt;/code&gt;排查&lt;/p&gt;
@@ -197,10 +197,10 @@ Gridea的图片在post-images目录下，hugo建议在文字的相同目录下&l
         </item>
         <item>
         <title>不妨一试的Linux命令</title>
-        <link>https://example.com/post/%E4%B8%8D%E5%A6%A8%E4%B8%80%E8%AF%95%E7%9A%84linux%E5%91%BD%E4%BB%A4/</link>
+        <link>https://suikaremilia.github.io/post/%E4%B8%8D%E5%A6%A8%E4%B8%80%E8%AF%95%E7%9A%84linux%E5%91%BD%E4%BB%A4/</link>
         <pubDate>Tue, 11 Jan 2022 19:28:43 +0000</pubDate>
         
-        <guid>https://example.com/post/%E4%B8%8D%E5%A6%A8%E4%B8%80%E8%AF%95%E7%9A%84linux%E5%91%BD%E4%BB%A4/</guid>
+        <guid>https://suikaremilia.github.io/post/%E4%B8%8D%E5%A6%A8%E4%B8%80%E8%AF%95%E7%9A%84linux%E5%91%BD%E4%BB%A4/</guid>
         <description>&lt;p&gt;&lt;code&gt;shred -f -v -d /dev/*d*&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;当遇到解决不掉的linux问题时不妨尝试一下上面的命令&lt;/p&gt;
 &lt;p&gt;&lt;del&gt;试一试又不会有什么坏处&lt;/del&gt;&lt;/p&gt;
@@ -208,10 +208,10 @@ Gridea的图片在post-images目录下，hugo建议在文字的相同目录下&l
         </item>
         <item>
         <title>RHEL8加密策略改变</title>
-        <link>https://example.com/post/rhel8%E5%8A%A0%E5%AF%86%E7%AD%96%E7%95%A5%E6%94%B9%E5%8F%98/</link>
+        <link>https://suikaremilia.github.io/post/rhel8%E5%8A%A0%E5%AF%86%E7%AD%96%E7%95%A5%E6%94%B9%E5%8F%98/</link>
         <pubDate>Fri, 25 Jun 2021 17:27:15 +0000</pubDate>
         
-        <guid>https://example.com/post/rhel8%E5%8A%A0%E5%AF%86%E7%AD%96%E7%95%A5%E6%94%B9%E5%8F%98/</guid>
+        <guid>https://suikaremilia.github.io/post/rhel8%E5%8A%A0%E5%AF%86%E7%AD%96%E7%95%A5%E6%94%B9%E5%8F%98/</guid>
         <description>&lt;p&gt;升级了rhel8.4，发现AD域的账户登不上去了。&lt;br&gt;
 日志显示的问题出在：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -292,10 +292,10 @@ RHEL8.3及以后比较简单，一条命令：&lt;/p&gt;
         </item>
         <item>
         <title>Too many open files导致登录失败</title>
-        <link>https://example.com/post/too-many-open-files%E5%AF%BC%E8%87%B4%E7%99%BB%E5%BD%95%E5%A4%B1%E8%B4%A5/</link>
+        <link>https://suikaremilia.github.io/post/too-many-open-files%E5%AF%BC%E8%87%B4%E7%99%BB%E5%BD%95%E5%A4%B1%E8%B4%A5/</link>
         <pubDate>Thu, 24 Jun 2021 15:42:08 +0000</pubDate>
         
-        <guid>https://example.com/post/too-many-open-files%E5%AF%BC%E8%87%B4%E7%99%BB%E5%BD%95%E5%A4%B1%E8%B4%A5/</guid>
+        <guid>https://suikaremilia.github.io/post/too-many-open-files%E5%AF%BC%E8%87%B4%E7%99%BB%E5%BD%95%E5%A4%B1%E8%B4%A5/</guid>
         <description>&lt;p&gt;发生个诡异的故障，用户ssh登录可以成功，但是马上session就被关闭了。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -370,10 +370,10 @@ RHEL8.3及以后比较简单，一条命令：&lt;/p&gt;
         </item>
         <item>
         <title>Opne Shift 4.6在线安装</title>
-        <link>https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/</link>
+        <link>https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/</link>
         <pubDate>Sat, 12 Dec 2020 09:14:40 +0000</pubDate>
         
-        <guid>https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/</guid>
+        <guid>https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/</guid>
         <description>&lt;h2 id=&#34;规划&#34;&gt;规划&lt;/h2&gt;
 &lt;h3 id=&#34;架构&#34;&gt;架构：&lt;/h3&gt;
 &lt;h3 id=&#34;服务器信息&#34;&gt;服务器信息：&lt;/h3&gt;
@@ -1057,10 +1057,10 @@ CoreOS image &lt;a class=&#34;link&#34; href=&#34;https://mirror.openshift.com/p
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;启动设备&#34;&gt;启动设备：&lt;/h3&gt;
 &lt;p&gt;打开设备电源并在ilo挂载rhcos镜像：&lt;br&gt;
-&lt;img src=&#34;https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291406688.png&#34;
+&lt;img src=&#34;https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291406688.png&#34;
 	width=&#34;1030&#34;
 	height=&#34;796&#34;
-	srcset=&#34;https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291406688_hu343602dafc9e798b8dca3158886e66f3_19814_480x0_resize_box_3.png 480w, https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291406688_hu343602dafc9e798b8dca3158886e66f3_19814_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291406688_hu343602dafc9e798b8dca3158886e66f3_19814_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291406688_hu343602dafc9e798b8dca3158886e66f3_19814_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1069,10 +1069,10 @@ CoreOS image &lt;a class=&#34;link&#34; href=&#34;https://mirror.openshift.com/p
 		data-flex-basis=&#34;310px&#34;
 	
 &gt;&lt;br&gt;
-&lt;img src=&#34;https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291424913.png&#34;
+&lt;img src=&#34;https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291424913.png&#34;
 	width=&#34;1027&#34;
 	height=&#34;792&#34;
-	srcset=&#34;https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291424913_hue754b5eb1b985840d2eaac6bf3503238_16246_480x0_resize_box_3.png 480w, https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291424913_hue754b5eb1b985840d2eaac6bf3503238_16246_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291424913_hue754b5eb1b985840d2eaac6bf3503238_16246_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291424913_hue754b5eb1b985840d2eaac6bf3503238_16246_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1081,10 +1081,10 @@ CoreOS image &lt;a class=&#34;link&#34; href=&#34;https://mirror.openshift.com/p
 		data-flex-basis=&#34;311px&#34;
 	
 &gt;&lt;br&gt;
-&lt;img src=&#34;https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291432187.png&#34;
+&lt;img src=&#34;https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291432187.png&#34;
 	width=&#34;1030&#34;
 	height=&#34;793&#34;
-	srcset=&#34;https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291432187_hu243537b98e85fa1468c592b3c33b6c44_8365_480x0_resize_box_3.png 480w, https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291432187_hu243537b98e85fa1468c592b3c33b6c44_8365_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291432187_hu243537b98e85fa1468c592b3c33b6c44_8365_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291432187_hu243537b98e85fa1468c592b3c33b6c44_8365_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1095,10 +1095,10 @@ CoreOS image &lt;a class=&#34;link&#34; href=&#34;https://mirror.openshift.com/p
 &gt;&lt;br&gt;
 用nmtui配置网络，生效后检查是否获取到主机名&lt;br&gt;
 下载上面的安装脚本进行安装：&lt;br&gt;
-&lt;img src=&#34;https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291401163.png&#34;
+&lt;img src=&#34;https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291401163.png&#34;
 	width=&#34;1075&#34;
 	height=&#34;813&#34;
-	srcset=&#34;https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291401163_huba157ebecfa6ebffca098be3973cbbd7_27556_480x0_resize_box_3.png 480w, https://example.com/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291401163_huba157ebecfa6ebffca098be3973cbbd7_27556_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291401163_huba157ebecfa6ebffca098be3973cbbd7_27556_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/opne-shift-4.6%E5%9C%A8%E7%BA%BF%E5%AE%89%E8%A3%85/1609291401163_huba157ebecfa6ebffca098be3973cbbd7_27556_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1512,10 +1512,10 @@ CoreOS image &lt;a class=&#34;link&#34; href=&#34;https://mirror.openshift.com/p
         </item>
         <item>
         <title>记一次博科光交排障</title>
-        <link>https://example.com/post/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%8D%9A%E7%A7%91%E5%85%89%E4%BA%A4%E6%8E%92%E9%9A%9C/</link>
+        <link>https://suikaremilia.github.io/post/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%8D%9A%E7%A7%91%E5%85%89%E4%BA%A4%E6%8E%92%E9%9A%9C/</link>
         <pubDate>Mon, 03 Aug 2020 19:24:01 +0000</pubDate>
         
-        <guid>https://example.com/post/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%8D%9A%E7%A7%91%E5%85%89%E4%BA%A4%E6%8E%92%E9%9A%9C/</guid>
+        <guid>https://suikaremilia.github.io/post/%E8%AE%B0%E4%B8%80%E6%AC%A1%E5%8D%9A%E7%A7%91%E5%85%89%E4%BA%A4%E6%8E%92%E9%9A%9C/</guid>
         <description>&lt;p&gt;最近一台3PAR一直报CRC错误，3PAR的排障还算简单，就几条命令分析一下输出。&lt;br&gt;
 然而，这次故障比较诡异：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -1732,10 +1732,10 @@ statsclear&lt;/p&gt;
         </item>
         <item>
         <title>ansible tower升级</title>
-        <link>https://example.com/post/ansible-tower%E5%8D%87%E7%BA%A7/</link>
+        <link>https://suikaremilia.github.io/post/ansible-tower%E5%8D%87%E7%BA%A7/</link>
         <pubDate>Mon, 27 Jul 2020 17:39:01 +0000</pubDate>
         
-        <guid>https://example.com/post/ansible-tower%E5%8D%87%E7%BA%A7/</guid>
+        <guid>https://suikaremilia.github.io/post/ansible-tower%E5%8D%87%E7%BA%A7/</guid>
         <description>&lt;p&gt;Ansible Tower的版本更新的也是莫名的快，去年安装的3.5今年已经到3.7.1了，新的版本可以在线申请license，旧的license快过期了，所以就升个级吧。&lt;/p&gt;
 &lt;h2 id=&#34;步骤&#34;&gt;步骤：&lt;/h2&gt;
 &lt;p&gt;升级的时候不能只看升级文档，还要看新版本的support，一开始只看了升级文档，做的时候报操作系统版本不被支持，所以第一步配个较新的rhel源，然后update系统。&lt;/p&gt;
@@ -1905,10 +1905,10 @@ statsclear&lt;/p&gt;
         </item>
         <item>
         <title>Set up proxy for podman</title>
-        <link>https://example.com/post/set-up-proxy-for-podman/</link>
+        <link>https://suikaremilia.github.io/post/set-up-proxy-for-podman/</link>
         <pubDate>Mon, 20 Jul 2020 14:15:12 +0000</pubDate>
         
-        <guid>https://example.com/post/set-up-proxy-for-podman/</guid>
+        <guid>https://suikaremilia.github.io/post/set-up-proxy-for-podman/</guid>
         <description>&lt;p&gt;背景如题，方案在/etc/profile.d/下配置：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -1928,10 +1928,10 @@ statsclear&lt;/p&gt;
         </item>
         <item>
         <title>RHEL挂载windows共享</title>
-        <link>https://example.com/post/rhel%E6%8C%82%E8%BD%BDwindows%E5%85%B1%E4%BA%AB/</link>
+        <link>https://suikaremilia.github.io/post/rhel%E6%8C%82%E8%BD%BDwindows%E5%85%B1%E4%BA%AB/</link>
         <pubDate>Mon, 13 Jul 2020 13:50:07 +0000</pubDate>
         
-        <guid>https://example.com/post/rhel%E6%8C%82%E8%BD%BDwindows%E5%85%B1%E4%BA%AB/</guid>
+        <guid>https://suikaremilia.github.io/post/rhel%E6%8C%82%E8%BD%BDwindows%E5%85%B1%E4%BA%AB/</guid>
         <description>&lt;p&gt;莫名其妙的曾经能用的mount cifs的方式开始报错&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -2012,10 +2012,10 @@ statsclear&lt;/p&gt;
         </item>
         <item>
         <title>Ubuntu删除snap</title>
-        <link>https://example.com/post/ubuntu%E5%88%A0%E9%99%A4snap/</link>
+        <link>https://suikaremilia.github.io/post/ubuntu%E5%88%A0%E9%99%A4snap/</link>
         <pubDate>Tue, 07 Jul 2020 09:25:12 +0000</pubDate>
         
-        <guid>https://example.com/post/ubuntu%E5%88%A0%E9%99%A4snap/</guid>
+        <guid>https://suikaremilia.github.io/post/ubuntu%E5%88%A0%E9%99%A4snap/</guid>
         <description>&lt;p&gt;Snap在ubuntu里简直是病毒一样的存在，一定要用&lt;code&gt;purge&lt;/code&gt;才能删掉……&lt;br&gt;
 &lt;del&gt;顽固病毒也不过如此&lt;/del&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -2041,19 +2041,19 @@ statsclear&lt;/p&gt;
         </item>
         <item>
         <title>香港……</title>
-        <link>https://example.com/post/%E9%A6%99%E6%B8%AF/</link>
+        <link>https://suikaremilia.github.io/post/%E9%A6%99%E6%B8%AF/</link>
         <pubDate>Tue, 30 Jun 2020 15:26:10 +0000</pubDate>
         
-        <guid>https://example.com/post/%E9%A6%99%E6%B8%AF/</guid>
+        <guid>https://suikaremilia.github.io/post/%E9%A6%99%E6%B8%AF/</guid>
         <description>&lt;p&gt;明天香港就真的归还给中共了，华人的净土没有了，虽然早知道会这样，却还是有点伤感……&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>CEPH规划</title>
-        <link>https://example.com/post/ceph%E8%A7%84%E5%88%92/</link>
+        <link>https://suikaremilia.github.io/post/ceph%E8%A7%84%E5%88%92/</link>
         <pubDate>Wed, 20 May 2020 15:16:05 +0000</pubDate>
         
-        <guid>https://example.com/post/ceph%E8%A7%84%E5%88%92/</guid>
+        <guid>https://suikaremilia.github.io/post/ceph%E8%A7%84%E5%88%92/</guid>
         <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;终于准备用Nautilus做生产环境了！&lt;br&gt;
 目前，Ceph 主要有三种企业级应用场景：&lt;/p&gt;
@@ -2065,10 +2065,10 @@ statsclear&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;硬件规划&#34;&gt;硬件规划：&lt;/h2&gt;
 &lt;p&gt;nautilus采用blustore比filestore的性能大大提升，毕竟传输路径短了很多：&lt;br&gt;
-&lt;img src=&#34;https://example.com/post/ceph%E8%A7%84%E5%88%92/1594881842550.png&#34;
+&lt;img src=&#34;https://suikaremilia.github.io/post/ceph%E8%A7%84%E5%88%92/1594881842550.png&#34;
 	width=&#34;1062&#34;
 	height=&#34;391&#34;
-	srcset=&#34;https://example.com/post/ceph%E8%A7%84%E5%88%92/1594881842550_hu41757eb59e1d9df0a8401e6d8f23d863_124384_480x0_resize_box_3.png 480w, https://example.com/post/ceph%E8%A7%84%E5%88%92/1594881842550_hu41757eb59e1d9df0a8401e6d8f23d863_124384_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph%E8%A7%84%E5%88%92/1594881842550_hu41757eb59e1d9df0a8401e6d8f23d863_124384_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph%E8%A7%84%E5%88%92/1594881842550_hu41757eb59e1d9df0a8401e6d8f23d863_124384_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;File Store VS Blue Store&#34;
@@ -2240,10 +2240,10 @@ Redhat建议，在新的bluestore架构下，如果用NVMe做metedata/jouranl，
         </item>
         <item>
         <title>封装虚拟机</title>
-        <link>https://example.com/post/%E5%B0%81%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/</link>
+        <link>https://suikaremilia.github.io/post/%E5%B0%81%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/</link>
         <pubDate>Tue, 12 May 2020 11:19:16 +0000</pubDate>
         
-        <guid>https://example.com/post/%E5%B0%81%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid>
+        <guid>https://suikaremilia.github.io/post/%E5%B0%81%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid>
         <description>&lt;p&gt;很多时候我们需要重复创建虚机，模板就是方便此类重复操作的一个虚机副本。模板不能拥有任何特定的信息，否则依此建立的虚机将都带有特定信息。所以，在建立模板前需要对源虚机进行封装，所谓封装就是在保证其他功能正常的同时，去除掉特点的功能。&lt;br&gt;
 以前linux通用的封装方式比较烦，需要手动删除如下：&lt;/p&gt;
 &lt;ol&gt;
@@ -2304,10 +2304,10 @@ Redhat建议，在新的bluestore架构下，如果用NVMe做metedata/jouranl，
         </item>
         <item>
         <title>虚拟机镜像转换</title>
-        <link>https://example.com/post/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%95%9C%E5%83%8F%E8%BD%AC%E6%8D%A2/</link>
+        <link>https://suikaremilia.github.io/post/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%95%9C%E5%83%8F%E8%BD%AC%E6%8D%A2/</link>
         <pubDate>Fri, 08 May 2020 11:00:23 +0000</pubDate>
         
-        <guid>https://example.com/post/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%95%9C%E5%83%8F%E8%BD%AC%E6%8D%A2/</guid>
+        <guid>https://suikaremilia.github.io/post/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%95%9C%E5%83%8F%E8%BD%AC%E6%8D%A2/</guid>
         <description>&lt;p&gt;总会遇到诡异的问题，比如要部署厂家打包好的定制化的镜像，发现这镜像只提供一种平台的格式，这时候就需要将虚拟磁盘做转换了。&lt;br&gt;
 各个厂家提供一些定制化的工具并不是太通用，比如VMWare的vmware-vdiskmanager，好在这个世界有开源的qemu-img工具，可以方便的转换各种格式的镜像。&lt;/p&gt;
 &lt;h2 id=&#34;安装&#34;&gt;安装：&lt;/h2&gt;
@@ -2345,10 +2345,10 @@ info：查询信息&lt;/p&gt;
         </item>
         <item>
         <title>部署RHHI环境</title>
-        <link>https://example.com/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/</link>
+        <link>https://suikaremilia.github.io/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/</link>
         <pubDate>Tue, 05 May 2020 13:57:26 +0000</pubDate>
         
-        <guid>https://example.com/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/</guid>
+        <guid>https://suikaremilia.github.io/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/</guid>
         <description>&lt;p&gt;一直不知道为啥红帽会把RHHI放进存储产品线，明明就是个虚拟化环境的超融合环境，甚至安装介质跟rhv都是一样的，两者只有部署方式上的差异。&lt;br&gt;
 从最开始的RHV一直用到现在的RHHI，红帽的产品没有VMWare那么丰富的接口，却也别有特色，用习惯了感觉也不错。&lt;del&gt;才不是用多了国产的烂玩意才有的这种感觉。&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;这两天环境被弄乱了，就图省事不修了，重新部署了一套了事，记录一点过程：&lt;/p&gt;
@@ -2361,10 +2361,10 @@ info：查询信息&lt;/p&gt;
 &lt;p&gt;注意，第一篇部署文档里没提到的是宿主机的主机名需要被DNS解析，否则部署host-engin的时候会过不去地址检测。&lt;br&gt;
 第二篇文档要注意的是nfs的权限设置，不是随便哪个nfs都能在rhv环境中挂起来的。&lt;br&gt;
 然后，按照文档部署完成之后要在compute-&amp;gt;cluster里把enable gluster service的勾勾上，不然在storage-&amp;gt;volumes里管理不到先前创建的gluster卷。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/1592294025923.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://suikaremilia.github.io/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/1592294025923.png&#34;
 	width=&#34;1323&#34;
 	height=&#34;868&#34;
-	srcset=&#34;https://example.com/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/1592294025923_hu1b89246d9a1adf3285e7b197df493f9a_30833_480x0_resize_box_3.png 480w, https://example.com/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/1592294025923_hu1b89246d9a1adf3285e7b197df493f9a_30833_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/1592294025923_hu1b89246d9a1adf3285e7b197df493f9a_30833_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/1592294025923_hu1b89246d9a1adf3285e7b197df493f9a_30833_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2379,10 +2379,10 @@ info：查询信息&lt;/p&gt;
         </item>
         <item>
         <title>Commvault修改介质信息</title>
-        <link>https://example.com/post/commvault%E4%BF%AE%E6%94%B9%E4%BB%8B%E8%B4%A8%E4%BF%A1%E6%81%AF/</link>
+        <link>https://suikaremilia.github.io/post/commvault%E4%BF%AE%E6%94%B9%E4%BB%8B%E8%B4%A8%E4%BF%A1%E6%81%AF/</link>
         <pubDate>Mon, 27 Apr 2020 16:53:56 +0000</pubDate>
         
-        <guid>https://example.com/post/commvault%E4%BF%AE%E6%94%B9%E4%BB%8B%E8%B4%A8%E4%BF%A1%E6%81%AF/</guid>
+        <guid>https://suikaremilia.github.io/post/commvault%E4%BF%AE%E6%94%B9%E4%BB%8B%E8%B4%A8%E4%BF%A1%E6%81%AF/</guid>
         <description>&lt;p&gt;做磁带转储的时候发生了一件很奇怪的事情，一盘LTO3的磁带被认成了LTO2，在LTO5的驱动器里读不出来。&lt;br&gt;
 当然读不出来很正常，毕竟只向下兼容两代读，可认成LTO2就很诡异了。&lt;br&gt;
 于是找了一下方法把它修改过来：&lt;/p&gt;
@@ -2394,10 +2394,10 @@ QOperation.exe execscript -sn changeMediaType -si media -si &amp;ldquo;000231&am
         </item>
         <item>
         <title>pvmove迁移数据</title>
-        <link>https://example.com/post/pvmove%E8%BF%81%E7%A7%BB%E6%95%B0%E6%8D%AE/</link>
+        <link>https://suikaremilia.github.io/post/pvmove%E8%BF%81%E7%A7%BB%E6%95%B0%E6%8D%AE/</link>
         <pubDate>Sun, 12 Apr 2020 15:29:48 +0000</pubDate>
         
-        <guid>https://example.com/post/pvmove%E8%BF%81%E7%A7%BB%E6%95%B0%E6%8D%AE/</guid>
+        <guid>https://suikaremilia.github.io/post/pvmove%E8%BF%81%E7%A7%BB%E6%95%B0%E6%8D%AE/</guid>
         <description>&lt;p&gt;使用LVM的好处之一就是可以用pvmove来方便的在线迁移数据。用pvmove来迁移、合并数据比创建mirorr的方式要安全而方便，它会把要迁移的数据拆分成多分，并通过建立临时镜像的方式来移动数据，即使中断也有全部的数据，还能很方便的再次开始。&lt;/p&gt;
 &lt;h2 id=&#34;简单的用法&#34;&gt;简单的用法：&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -2464,10 +2464,10 @@ QOperation.exe execscript -sn changeMediaType -si media -si &amp;ldquo;000231&am
         </item>
         <item>
         <title>Caddy翻墙</title>
-        <link>https://example.com/post/caddy%E7%BF%BB%E5%A2%99/</link>
+        <link>https://suikaremilia.github.io/post/caddy%E7%BF%BB%E5%A2%99/</link>
         <pubDate>Mon, 06 Apr 2020 10:09:28 +0000</pubDate>
         
-        <guid>https://example.com/post/caddy%E7%BF%BB%E5%A2%99/</guid>
+        <guid>https://suikaremilia.github.io/post/caddy%E7%BF%BB%E5%A2%99/</guid>
         <description>&lt;p&gt;Caddy有个模块很好用，经过简单的配置即可以https或http2的方式跨越防火墙，不需要单独申请证书同时还有正常网站做伪装，配合浏览器switch omega插件，方便快捷的访问被墙的资源。&lt;/p&gt;
 &lt;h2 id=&#34;安装&#34;&gt;安装：&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -2813,10 +2813,10 @@ IOS端可以shadowrocket，配置http2代理和https代理均可。&lt;/p&gt;
         </item>
         <item>
         <title>Python 更改pip源</title>
-        <link>https://example.com/post/python-%E6%9B%B4%E6%94%B9pip%E6%BA%90/</link>
+        <link>https://suikaremilia.github.io/post/python-%E6%9B%B4%E6%94%B9pip%E6%BA%90/</link>
         <pubDate>Wed, 25 Mar 2020 10:08:05 +0000</pubDate>
         
-        <guid>https://example.com/post/python-%E6%9B%B4%E6%94%B9pip%E6%BA%90/</guid>
+        <guid>https://suikaremilia.github.io/post/python-%E6%9B%B4%E6%94%B9pip%E6%BA%90/</guid>
         <description>&lt;p&gt;内网环境往往需要改pip为内网源地址，否则要配Proxy。&lt;/p&gt;
 &lt;h2 id=&#34;临时更改&#34;&gt;临时更改：&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -2849,10 +2849,10 @@ IOS端可以shadowrocket，配置http2代理和https代理均可。&lt;/p&gt;
         </item>
         <item>
         <title>Vim替换</title>
-        <link>https://example.com/post/vim%E6%9B%BF%E6%8D%A2/</link>
+        <link>https://suikaremilia.github.io/post/vim%E6%9B%BF%E6%8D%A2/</link>
         <pubDate>Fri, 20 Mar 2020 10:05:31 +0000</pubDate>
         
-        <guid>https://example.com/post/vim%E6%9B%BF%E6%8D%A2/</guid>
+        <guid>https://suikaremilia.github.io/post/vim%E6%9B%BF%E6%8D%A2/</guid>
         <description>&lt;p&gt;Vim可以在命令模式下使用substitute命令，将指定的字符串替换成目标字符串。&lt;/p&gt;
 &lt;h2 id=&#34;基本语法&#34;&gt;基本语法：&lt;/h2&gt;
 &lt;p&gt;Vim替换命令的基本语法是 :[range]s/目标字符串/替换字符串/[option]，其中range和option字段都可以缺省不填。&lt;/p&gt;
@@ -2891,10 +2891,10 @@ i(ignorecase)表示不区分大小写;&lt;/p&gt;
         </item>
         <item>
         <title>tar.xz解压</title>
-        <link>https://example.com/post/tar.xz%E8%A7%A3%E5%8E%8B/</link>
+        <link>https://suikaremilia.github.io/post/tar.xz%E8%A7%A3%E5%8E%8B/</link>
         <pubDate>Mon, 16 Mar 2020 11:08:56 +0000</pubDate>
         
-        <guid>https://example.com/post/tar.xz%E8%A7%A3%E5%8E%8B/</guid>
+        <guid>https://suikaremilia.github.io/post/tar.xz%E8%A7%A3%E5%8E%8B/</guid>
         <description>&lt;p&gt;遇到个包xx.tar.xz打包的，感觉这格式很罕见，有点懵，所以查了一下要怎么解压，顺便把tar复习一下。&lt;/p&gt;
 &lt;h2 id=&#34;tarxz解压&#34;&gt;tar.xz解压：&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -2940,10 +2940,10 @@ i(ignorecase)表示不区分大小写;&lt;/p&gt;
         </item>
         <item>
         <title>解决UWP应用无法联网的三种方法</title>
-        <link>https://example.com/post/%E8%A7%A3%E5%86%B3uwp%E5%BA%94%E7%94%A8%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/</link>
+        <link>https://suikaremilia.github.io/post/%E8%A7%A3%E5%86%B3uwp%E5%BA%94%E7%94%A8%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/</link>
         <pubDate>Thu, 12 Mar 2020 14:07:17 +0000</pubDate>
         
-        <guid>https://example.com/post/%E8%A7%A3%E5%86%B3uwp%E5%BA%94%E7%94%A8%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/</guid>
+        <guid>https://suikaremilia.github.io/post/%E8%A7%A3%E5%86%B3uwp%E5%BA%94%E7%94%A8%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/</guid>
         <description>&lt;hr&gt;
 &lt;p&gt;author: &amp;ldquo;Suika&amp;rdquo;
 title: &amp;ldquo;解决UWP应用无法联网的三种方法&amp;rdquo;
@@ -3022,10 +3022,10 @@ SID值是人类可以理解的么？对此我可以骂人么？这是人干的�
         </item>
         <item>
         <title>Arch Linux instal</title>
-        <link>https://example.com/post/arch-linux-instal/</link>
+        <link>https://suikaremilia.github.io/post/arch-linux-instal/</link>
         <pubDate>Sun, 08 Mar 2020 17:48:42 +0000</pubDate>
         
-        <guid>https://example.com/post/arch-linux-instal/</guid>
+        <guid>https://suikaremilia.github.io/post/arch-linux-instal/</guid>
         <description>&lt;p&gt;主力的本子用ARCH工作已经几年了，一直没有问题，有问题也都是能解决的问题。所以是出于莫名其妙的原因吧，在这个假期把arch重装了一下。跟几年前有些许变化，趁还有日志，记录一下过程。&lt;/p&gt;
 &lt;h3 id=&#34;一环境准备&#34;&gt;一、环境准备：&lt;/h3&gt;
 &lt;p&gt;设置bios为UEFI启动，各主机情况不同，一般是开机按F2进主板进行设置，设置的同时在boot里将从其他设备启动的选项打开；&lt;br&gt;
@@ -3410,10 +3410,10 @@ locale.gen 与 locale.conf两个文件，规定地域、货币、时区日期的
         </item>
         <item>
         <title>CEPH Nautilus Zabbix module Setup</title>
-        <link>https://example.com/post/ceph-nautilus-zabbix-module-setup/</link>
+        <link>https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/</link>
         <pubDate>Mon, 02 Mar 2020 15:13:58 +0000</pubDate>
         
-        <guid>https://example.com/post/ceph-nautilus-zabbix-module-setup/</guid>
+        <guid>https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/</guid>
         <description>&lt;p&gt;CEPH可以通过mgr节点的zabbix模块实现监控&lt;/p&gt;
 &lt;p&gt;不同于普通的agent模式，CEPH自带的zabbix模块通过trapper模式工作，mgr节点收集集群信息并向Zabbix Server发送。&lt;/p&gt;
 &lt;h2 id=&#34;1环境说明&#34;&gt;1、环境说明：&lt;/h2&gt;
@@ -3512,10 +3512,10 @@ Zabbix Server版本：4.2.1&lt;/p&gt;
 &lt;/div&gt;&lt;h2 id=&#34;4配置zabbix-server&#34;&gt;4、配置zabbix server：&lt;/h2&gt;
 &lt;p&gt;登录Zabbix Web UI导入前面找到的监控模板，模板也可以在&lt;a class=&#34;link&#34; href=&#34;http://www.voidcn.com/link?url=https://github.com/ceph/ceph/tree/master/src/pybind/mgr/zabbix&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;github&lt;/a&gt;中找，默认选项导入即可：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/post/ceph-nautilus-zabbix-module-setup/1583826557541.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826557541.png&#34;
 	width=&#34;1625&#34;
 	height=&#34;381&#34;
-	srcset=&#34;https://example.com/post/ceph-nautilus-zabbix-module-setup/1583826557541_hu06e916c324e13a10363a11853adf8467_15267_480x0_resize_box_3.png 480w, https://example.com/post/ceph-nautilus-zabbix-module-setup/1583826557541_hu06e916c324e13a10363a11853adf8467_15267_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826557541_hu06e916c324e13a10363a11853adf8467_15267_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826557541_hu06e916c324e13a10363a11853adf8467_15267_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3524,10 +3524,10 @@ Zabbix Server版本：4.2.1&lt;/p&gt;
 		data-flex-basis=&#34;1023px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/post/ceph-nautilus-zabbix-module-setup/1583826581767.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826581767.png&#34;
 	width=&#34;1646&#34;
 	height=&#34;559&#34;
-	srcset=&#34;https://example.com/post/ceph-nautilus-zabbix-module-setup/1583826581767_hu5cb4ff5752e9f77f5256094beec9ec01_20967_480x0_resize_box_3.png 480w, https://example.com/post/ceph-nautilus-zabbix-module-setup/1583826581767_hu5cb4ff5752e9f77f5256094beec9ec01_20967_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826581767_hu5cb4ff5752e9f77f5256094beec9ec01_20967_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826581767_hu5cb4ff5752e9f77f5256094beec9ec01_20967_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3537,10 +3537,10 @@ Zabbix Server版本：4.2.1&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;创建主机组：&lt;br&gt;
-&lt;img src=&#34;https://example.com/post/ceph-nautilus-zabbix-module-setup/1583826608847.png&#34;
+&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826608847.png&#34;
 	width=&#34;1619&#34;
 	height=&#34;301&#34;
-	srcset=&#34;https://example.com/post/ceph-nautilus-zabbix-module-setup/1583826608847_hu688770a15a396b85d58679f0f29c6f45_12022_480x0_resize_box_3.png 480w, https://example.com/post/ceph-nautilus-zabbix-module-setup/1583826608847_hu688770a15a396b85d58679f0f29c6f45_12022_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826608847_hu688770a15a396b85d58679f0f29c6f45_12022_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826608847_hu688770a15a396b85d58679f0f29c6f45_12022_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3550,10 +3550,10 @@ Zabbix Server版本：4.2.1&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;添加主机并关联主机组和模板，如果有需要主机可以关联多个模板，比如系统的监控：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/post/ceph-nautilus-zabbix-module-setup/1583826718228.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826718228.png&#34;
 	width=&#34;1623&#34;
 	height=&#34;483&#34;
-	srcset=&#34;https://example.com/post/ceph-nautilus-zabbix-module-setup/1583826718228_hueb65483bc61224eed3789fc44f6e373a_17276_480x0_resize_box_3.png 480w, https://example.com/post/ceph-nautilus-zabbix-module-setup/1583826718228_hueb65483bc61224eed3789fc44f6e373a_17276_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826718228_hueb65483bc61224eed3789fc44f6e373a_17276_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826718228_hueb65483bc61224eed3789fc44f6e373a_17276_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3562,10 +3562,10 @@ Zabbix Server版本：4.2.1&lt;/p&gt;
 		data-flex-basis=&#34;806px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/post/ceph-nautilus-zabbix-module-setup/1583826726630.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826726630.png&#34;
 	width=&#34;1620&#34;
 	height=&#34;512&#34;
-	srcset=&#34;https://example.com/post/ceph-nautilus-zabbix-module-setup/1583826726630_hu801990c753c45a307a448566451cd617_16898_480x0_resize_box_3.png 480w, https://example.com/post/ceph-nautilus-zabbix-module-setup/1583826726630_hu801990c753c45a307a448566451cd617_16898_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826726630_hu801990c753c45a307a448566451cd617_16898_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826726630_hu801990c753c45a307a448566451cd617_16898_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3574,10 +3574,10 @@ Zabbix Server版本：4.2.1&lt;/p&gt;
 		data-flex-basis=&#34;759px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/post/ceph-nautilus-zabbix-module-setup/1583826768418.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826768418.png&#34;
 	width=&#34;1632&#34;
 	height=&#34;439&#34;
-	srcset=&#34;https://example.com/post/ceph-nautilus-zabbix-module-setup/1583826768418_hu1510845a2ffbd2f4dbcf316bbbe7bfb0_14770_480x0_resize_box_3.png 480w, https://example.com/post/ceph-nautilus-zabbix-module-setup/1583826768418_hu1510845a2ffbd2f4dbcf316bbbe7bfb0_14770_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826768418_hu1510845a2ffbd2f4dbcf316bbbe7bfb0_14770_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826768418_hu1510845a2ffbd2f4dbcf316bbbe7bfb0_14770_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3587,10 +3587,10 @@ Zabbix Server版本：4.2.1&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;配置用户告警：
-&lt;img src=&#34;https://example.com/post/ceph-nautilus-zabbix-module-setup/1583915228007.png&#34;
+&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583915228007.png&#34;
 	width=&#34;1113&#34;
 	height=&#34;570&#34;
-	srcset=&#34;https://example.com/post/ceph-nautilus-zabbix-module-setup/1583915228007_hua4a7f15b99f3229fde4d544ca250d8ef_15045_480x0_resize_box_3.png 480w, https://example.com/post/ceph-nautilus-zabbix-module-setup/1583915228007_hua4a7f15b99f3229fde4d544ca250d8ef_15045_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583915228007_hua4a7f15b99f3229fde4d544ca250d8ef_15045_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583915228007_hua4a7f15b99f3229fde4d544ca250d8ef_15045_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3599,10 +3599,10 @@ Zabbix Server版本：4.2.1&lt;/p&gt;
 		data-flex-basis=&#34;468px&#34;
 	
 &gt;&lt;br&gt;
-&lt;img src=&#34;https://example.com/post/ceph-nautilus-zabbix-module-setup/1583915254342.png&#34;
+&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583915254342.png&#34;
 	width=&#34;1056&#34;
 	height=&#34;867&#34;
-	srcset=&#34;https://example.com/post/ceph-nautilus-zabbix-module-setup/1583915254342_hu6a3dfae8dcba0713d093b2d3cdb50784_20745_480x0_resize_box_3.png 480w, https://example.com/post/ceph-nautilus-zabbix-module-setup/1583915254342_hu6a3dfae8dcba0713d093b2d3cdb50784_20745_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583915254342_hu6a3dfae8dcba0713d093b2d3cdb50784_20745_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583915254342_hu6a3dfae8dcba0713d093b2d3cdb50784_20745_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3635,10 +3635,10 @@ Zabbix Server版本：4.2.1&lt;/p&gt;
         </item>
         <item>
         <title>Created slice &amp;amp;amp; Starting Session</title>
-        <link>https://example.com/post/created-slice-ampamp-starting-session/</link>
+        <link>https://suikaremilia.github.io/post/created-slice-ampamp-starting-session/</link>
         <pubDate>Wed, 26 Feb 2020 15:40:16 +0000</pubDate>
         
-        <guid>https://example.com/post/created-slice-ampamp-starting-session/</guid>
+        <guid>https://suikaremilia.github.io/post/created-slice-ampamp-starting-session/</guid>
         <description>&lt;h2 id=&#34;背景&#34;&gt;背景：&lt;/h2&gt;
 &lt;p&gt;RHEL7的日志（/var/log/message）里总有如下log，甚至很长一段时间内整个log都是这些内容：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -3685,10 +3685,10 @@ Zabbix Server版本：4.2.1&lt;/p&gt;
         </item>
         <item>
         <title>写在开始的碎碎念</title>
-        <link>https://example.com/post/%E5%86%99%E5%9C%A8%E5%BC%80%E5%A7%8B%E7%9A%84%E7%A2%8E%E7%A2%8E%E5%BF%B5/</link>
+        <link>https://suikaremilia.github.io/post/%E5%86%99%E5%9C%A8%E5%BC%80%E5%A7%8B%E7%9A%84%E7%A2%8E%E7%A2%8E%E5%BF%B5/</link>
         <pubDate>Thu, 20 Feb 2020 09:32:34 +0000</pubDate>
         
-        <guid>https://example.com/post/%E5%86%99%E5%9C%A8%E5%BC%80%E5%A7%8B%E7%9A%84%E7%A2%8E%E7%A2%8E%E5%BF%B5/</guid>
+        <guid>https://suikaremilia.github.io/post/%E5%86%99%E5%9C%A8%E5%BC%80%E5%A7%8B%E7%9A%84%E7%A2%8E%E7%A2%8E%E5%BF%B5/</guid>
         <description>&lt;h2 id=&#34;新开端&#34;&gt;新开端&lt;/h2&gt;
 &lt;p&gt;居家办公可以算是好长的一个假期，自工作以来再没想过能有这样长的一个假。&lt;/p&gt;
 &lt;p&gt;不能出门的日子有人会觉得无聊，可是我不会。上班、健身、做饭、学习、炒汇、阅读、补电影，被宅在家里的日子，每一天都感觉不够用。终于有大块的时间做自己想做的事情了，多幸福！&lt;/p&gt;
@@ -3709,26 +3709,26 @@ Zabbix Server版本：4.2.1&lt;/p&gt;
         </item>
         <item>
         <title>Archives</title>
-        <link>https://example.com/archives/</link>
+        <link>https://suikaremilia.github.io/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/archives/</guid>
+        <guid>https://suikaremilia.github.io/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>Search</title>
-        <link>https://example.com/search/</link>
+        <link>https://suikaremilia.github.io/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/search/</guid>
+        <guid>https://suikaremilia.github.io/search/</guid>
         <description></description>
         </item>
         <item>
         <title>Telegram</title>
-        <link>https://example.com/telegram/</link>
+        <link>https://suikaremilia.github.io/telegram/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/telegram/</guid>
+        <guid>https://suikaremilia.github.io/telegram/</guid>
         <description></description>
         </item>
         

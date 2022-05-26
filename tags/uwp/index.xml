@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>UWP on すいかの幻想郷</title>
-        <link>https://example.com/tags/uwp/</link>
+        <link>https://suikaremilia.github.io/tags/uwp/</link>
         <description>Recent content in UWP on すいかの幻想郷</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 12 Mar 2020 14:07:17 +0000</lastBuildDate><atom:link href="https://example.com/tags/uwp/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 12 Mar 2020 14:07:17 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/uwp/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>解决UWP应用无法联网的三种方法</title>
-        <link>https://example.com/post/%E8%A7%A3%E5%86%B3uwp%E5%BA%94%E7%94%A8%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/</link>
+        <link>https://suikaremilia.github.io/post/%E8%A7%A3%E5%86%B3uwp%E5%BA%94%E7%94%A8%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/</link>
         <pubDate>Thu, 12 Mar 2020 14:07:17 +0000</pubDate>
         
-        <guid>https://example.com/post/%E8%A7%A3%E5%86%B3uwp%E5%BA%94%E7%94%A8%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/</guid>
+        <guid>https://suikaremilia.github.io/post/%E8%A7%A3%E5%86%B3uwp%E5%BA%94%E7%94%A8%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/</guid>
         <description>&lt;hr&gt;
 &lt;p&gt;author: &amp;ldquo;Suika&amp;rdquo;
 title: &amp;ldquo;解决UWP应用无法联网的三种方法&amp;rdquo;

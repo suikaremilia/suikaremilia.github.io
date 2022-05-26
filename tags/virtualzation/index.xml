@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Virtualzation on すいかの幻想郷</title>
-        <link>https://example.com/tags/virtualzation/</link>
+        <link>https://suikaremilia.github.io/tags/virtualzation/</link>
         <description>Recent content in Virtualzation on すいかの幻想郷</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 12 May 2020 11:19:16 +0000</lastBuildDate><atom:link href="https://example.com/tags/virtualzation/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 12 May 2020 11:19:16 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/virtualzation/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>封装虚拟机</title>
-        <link>https://example.com/post/%E5%B0%81%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/</link>
+        <link>https://suikaremilia.github.io/post/%E5%B0%81%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/</link>
         <pubDate>Tue, 12 May 2020 11:19:16 +0000</pubDate>
         
-        <guid>https://example.com/post/%E5%B0%81%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid>
+        <guid>https://suikaremilia.github.io/post/%E5%B0%81%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid>
         <description>&lt;p&gt;很多时候我们需要重复创建虚机，模板就是方便此类重复操作的一个虚机副本。模板不能拥有任何特定的信息，否则依此建立的虚机将都带有特定信息。所以，在建立模板前需要对源虚机进行封装，所谓封装就是在保证其他功能正常的同时，去除掉特点的功能。&lt;br&gt;
 以前linux通用的封装方式比较烦，需要手动删除如下：&lt;/p&gt;
 &lt;ol&gt;
@@ -72,10 +72,10 @@
         </item>
         <item>
         <title>虚拟机镜像转换</title>
-        <link>https://example.com/post/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%95%9C%E5%83%8F%E8%BD%AC%E6%8D%A2/</link>
+        <link>https://suikaremilia.github.io/post/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%95%9C%E5%83%8F%E8%BD%AC%E6%8D%A2/</link>
         <pubDate>Fri, 08 May 2020 11:00:23 +0000</pubDate>
         
-        <guid>https://example.com/post/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%95%9C%E5%83%8F%E8%BD%AC%E6%8D%A2/</guid>
+        <guid>https://suikaremilia.github.io/post/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%95%9C%E5%83%8F%E8%BD%AC%E6%8D%A2/</guid>
         <description>&lt;p&gt;总会遇到诡异的问题，比如要部署厂家打包好的定制化的镜像，发现这镜像只提供一种平台的格式，这时候就需要将虚拟磁盘做转换了。&lt;br&gt;
 各个厂家提供一些定制化的工具并不是太通用，比如VMWare的vmware-vdiskmanager，好在这个世界有开源的qemu-img工具，可以方便的转换各种格式的镜像。&lt;/p&gt;
 &lt;h2 id=&#34;安装&#34;&gt;安装：&lt;/h2&gt;
@@ -113,10 +113,10 @@ info：查询信息&lt;/p&gt;
         </item>
         <item>
         <title>部署RHHI环境</title>
-        <link>https://example.com/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/</link>
+        <link>https://suikaremilia.github.io/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/</link>
         <pubDate>Tue, 05 May 2020 13:57:26 +0000</pubDate>
         
-        <guid>https://example.com/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/</guid>
+        <guid>https://suikaremilia.github.io/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/</guid>
         <description>&lt;p&gt;一直不知道为啥红帽会把RHHI放进存储产品线，明明就是个虚拟化环境的超融合环境，甚至安装介质跟rhv都是一样的，两者只有部署方式上的差异。&lt;br&gt;
 从最开始的RHV一直用到现在的RHHI，红帽的产品没有VMWare那么丰富的接口，却也别有特色，用习惯了感觉也不错。&lt;del&gt;才不是用多了国产的烂玩意才有的这种感觉。&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;这两天环境被弄乱了，就图省事不修了，重新部署了一套了事，记录一点过程：&lt;/p&gt;
@@ -129,10 +129,10 @@ info：查询信息&lt;/p&gt;
 &lt;p&gt;注意，第一篇部署文档里没提到的是宿主机的主机名需要被DNS解析，否则部署host-engin的时候会过不去地址检测。&lt;br&gt;
 第二篇文档要注意的是nfs的权限设置，不是随便哪个nfs都能在rhv环境中挂起来的。&lt;br&gt;
 然后，按照文档部署完成之后要在compute-&amp;gt;cluster里把enable gluster service的勾勾上，不然在storage-&amp;gt;volumes里管理不到先前创建的gluster卷。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/1592294025923.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://suikaremilia.github.io/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/1592294025923.png&#34;
 	width=&#34;1323&#34;
 	height=&#34;868&#34;
-	srcset=&#34;https://example.com/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/1592294025923_hu1b89246d9a1adf3285e7b197df493f9a_30833_480x0_resize_box_3.png 480w, https://example.com/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/1592294025923_hu1b89246d9a1adf3285e7b197df493f9a_30833_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/1592294025923_hu1b89246d9a1adf3285e7b197df493f9a_30833_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/1592294025923_hu1b89246d9a1adf3285e7b197df493f9a_30833_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

@@ -15,7 +15,7 @@ Zabbix Server版本：4.2.1
 1  # ceph zabbix config-set zabbix_host zabbix.test.com   指定zabbix_sender的位置：
 1 2 3 4 5 6  # which zabbix_sender /usr/bin/zabbix_sender # ceph zabbix config-set zabbix_sender /usr/bin/zabbix_sender Configuration option zabbix_sender updated   指定identifier，这里很奇怪，只能是某个mgr节点的主机名，其他的可以设置成功但是发送失败，不知道我哪里配的有问题：'><title>CEPH Nautilus Zabbix module Setup</title>
 
-<link rel='canonical' href='https://example.com/post/ceph-nautilus-zabbix-module-setup/'>
+<link rel='canonical' href='https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/'>
 
 <link rel="stylesheet" href="/scss/style.min.450926226e724574a6b936335ea06111f8aeb253d932c86cb2cc807341cd2889.css"><meta property='og:title' content='CEPH Nautilus Zabbix module Setup'>
 <meta property='og:description' content='CEPH可以通过mgr节点的zabbix模块实现监控
@@ -31,7 +31,7 @@ Zabbix Server版本：4.2.1
 1  # ceph mgr module enable zabbix   指定zabbix server，如果有多个可以用&amp;quot;,&amp;ldquo;隔开，并且可以添加&amp;rdquo;:&amp;ldquo;来指定服务器端口，此处只有最简单的配置：
 1  # ceph zabbix config-set zabbix_host zabbix.test.com   指定zabbix_sender的位置：
 1 2 3 4 5 6  # which zabbix_sender /usr/bin/zabbix_sender # ceph zabbix config-set zabbix_sender /usr/bin/zabbix_sender Configuration option zabbix_sender updated   指定identifier，这里很奇怪，只能是某个mgr节点的主机名，其他的可以设置成功但是发送失败，不知道我哪里配的有问题：'>
-<meta property='og:url' content='https://example.com/post/ceph-nautilus-zabbix-module-setup/'>
+<meta property='og:url' content='https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/'>
 <meta property='og:site_name' content='すいかの幻想郷'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='CEPH' /><meta property='article:tag' content='Monitor' /><meta property='article:published_time' content='2020-03-02T15:13:58&#43;00:00'/><meta property='article:modified_time' content='2020-03-02T15:13:58&#43;00:00'/>
 <meta name="twitter:title" content="CEPH Nautilus Zabbix module Setup">
@@ -49,6 +49,17 @@ Zabbix Server版本：4.2.1
 1  # ceph zabbix config-set zabbix_host zabbix.test.com   指定zabbix_sender的位置：
 1 2 3 4 5 6  # which zabbix_sender /usr/bin/zabbix_sender # ceph zabbix config-set zabbix_sender /usr/bin/zabbix_sender Configuration option zabbix_sender updated   指定identifier，这里很奇怪，只能是某个mgr节点的主机名，其他的可以设置成功但是发送失败，不知道我哪里配的有问题：">
     <link rel="shortcut icon" href="/favicon.ico" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RNEHT80K8P"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-RNEHT80K8P', { 'anonymize_ip': false });
+}
+</script>
 
     </head>
     <body class="

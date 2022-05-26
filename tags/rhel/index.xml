@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>RHEL on すいかの幻想郷</title>
-        <link>https://example.com/tags/rhel/</link>
+        <link>https://suikaremilia.github.io/tags/rhel/</link>
         <description>Recent content in RHEL on すいかの幻想郷</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 25 Jun 2021 17:27:15 +0000</lastBuildDate><atom:link href="https://example.com/tags/rhel/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 25 Jun 2021 17:27:15 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/rhel/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>RHEL8加密策略改变</title>
-        <link>https://example.com/post/rhel8%E5%8A%A0%E5%AF%86%E7%AD%96%E7%95%A5%E6%94%B9%E5%8F%98/</link>
+        <link>https://suikaremilia.github.io/post/rhel8%E5%8A%A0%E5%AF%86%E7%AD%96%E7%95%A5%E6%94%B9%E5%8F%98/</link>
         <pubDate>Fri, 25 Jun 2021 17:27:15 +0000</pubDate>
         
-        <guid>https://example.com/post/rhel8%E5%8A%A0%E5%AF%86%E7%AD%96%E7%95%A5%E6%94%B9%E5%8F%98/</guid>
+        <guid>https://suikaremilia.github.io/post/rhel8%E5%8A%A0%E5%AF%86%E7%AD%96%E7%95%A5%E6%94%B9%E5%8F%98/</guid>
         <description>&lt;p&gt;升级了rhel8.4，发现AD域的账户登不上去了。&lt;br&gt;
 日志显示的问题出在：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -92,10 +92,10 @@ RHEL8.3及以后比较简单，一条命令：&lt;/p&gt;
         </item>
         <item>
         <title>Created slice &amp;amp;amp; Starting Session</title>
-        <link>https://example.com/post/created-slice-ampamp-starting-session/</link>
+        <link>https://suikaremilia.github.io/post/created-slice-ampamp-starting-session/</link>
         <pubDate>Wed, 26 Feb 2020 15:40:16 +0000</pubDate>
         
-        <guid>https://example.com/post/created-slice-ampamp-starting-session/</guid>
+        <guid>https://suikaremilia.github.io/post/created-slice-ampamp-starting-session/</guid>
         <description>&lt;h2 id=&#34;背景&#34;&gt;背景：&lt;/h2&gt;
 &lt;p&gt;RHEL7的日志（/var/log/message）里总有如下log，甚至很长一段时间内整个log都是这些内容：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;

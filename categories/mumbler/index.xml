@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Opinion on すいかの幻想郷</title>
-        <link>https://example.com/categories/mumbler/</link>
+        <link>https://suikaremilia.github.io/categories/mumbler/</link>
         <description>Recent content in Opinion on すいかの幻想郷</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 25 May 2022 18:55:10 +0000</lastBuildDate><atom:link href="https://example.com/categories/mumbler/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 25 May 2022 18:55:10 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/categories/mumbler/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>转到HUGO</title>
-        <link>https://example.com/post/%E8%BD%AC%E5%88%B0hugo/</link>
+        <link>https://suikaremilia.github.io/post/%E8%BD%AC%E5%88%B0hugo/</link>
         <pubDate>Wed, 25 May 2022 18:55:10 +0000</pubDate>
         
-        <guid>https://example.com/post/%E8%BD%AC%E5%88%B0hugo/</guid>
+        <guid>https://suikaremilia.github.io/post/%E8%BD%AC%E5%88%B0hugo/</guid>
         <description>&lt;p&gt;没有谁像我一样吧，Gridea终于更新了却不想用了。&lt;br&gt;
 花了点时间把原来Gridea的站转到了HUGO，体验下持续集成，从此工作写字的地方统一到VS code了，&lt;del&gt;然而要手攒FrontMatter了&lt;/del&gt;。&lt;/p&gt;
 &lt;p&gt;挺简单的过程：&lt;/p&gt;
@@ -154,19 +154,19 @@ Gridea的图片在post-images目录下，hugo建议在文字的相同目录下&l
         </item>
         <item>
         <title>香港……</title>
-        <link>https://example.com/post/%E9%A6%99%E6%B8%AF/</link>
+        <link>https://suikaremilia.github.io/post/%E9%A6%99%E6%B8%AF/</link>
         <pubDate>Tue, 30 Jun 2020 15:26:10 +0000</pubDate>
         
-        <guid>https://example.com/post/%E9%A6%99%E6%B8%AF/</guid>
+        <guid>https://suikaremilia.github.io/post/%E9%A6%99%E6%B8%AF/</guid>
         <description>&lt;p&gt;明天香港就真的归还给中共了，华人的净土没有了，虽然早知道会这样，却还是有点伤感……&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>写在开始的碎碎念</title>
-        <link>https://example.com/post/%E5%86%99%E5%9C%A8%E5%BC%80%E5%A7%8B%E7%9A%84%E7%A2%8E%E7%A2%8E%E5%BF%B5/</link>
+        <link>https://suikaremilia.github.io/post/%E5%86%99%E5%9C%A8%E5%BC%80%E5%A7%8B%E7%9A%84%E7%A2%8E%E7%A2%8E%E5%BF%B5/</link>
         <pubDate>Thu, 20 Feb 2020 09:32:34 +0000</pubDate>
         
-        <guid>https://example.com/post/%E5%86%99%E5%9C%A8%E5%BC%80%E5%A7%8B%E7%9A%84%E7%A2%8E%E7%A2%8E%E5%BF%B5/</guid>
+        <guid>https://suikaremilia.github.io/post/%E5%86%99%E5%9C%A8%E5%BC%80%E5%A7%8B%E7%9A%84%E7%A2%8E%E7%A2%8E%E5%BF%B5/</guid>
         <description>&lt;h2 id=&#34;新开端&#34;&gt;新开端&lt;/h2&gt;
 &lt;p&gt;居家办公可以算是好长的一个假期，自工作以来再没想过能有这样长的一个假。&lt;/p&gt;
 &lt;p&gt;不能出门的日子有人会觉得无聊，可是我不会。上班、健身、做饭、学习、炒汇、阅读、补电影，被宅在家里的日子，每一天都感觉不够用。终于有大块的时间做自己想做的事情了，多幸福！&lt;/p&gt;
