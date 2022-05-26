@@ -1,29 +1,14 @@
-baseurl: https://example.com
+baseurl: https://suikaremilia.github.io/
 languageCode: en-us
 theme: hugo-theme-stack
 paginate: 6
 title: すいかの幻想郷 
 
-#languages:
-#    en:
-#        languageName: English
-#        title: Example Site
-#        weight: 1
-#    zh-cn:
-#        languageName: 中文
-#        title: 演示站点
-#        weight: 2
-#    ar:
-#        languageName: عربي
-#        languagedirection: rtl
-#        title: موقع تجريبي
-#        weight: 3
-
 # Change it to your Disqus shortname before using
-disqusShortname: すいかの幻想郷
+#disqusShortname: すいかの幻想郷
 
 # GA Tracking ID
-googleAnalytics:
+googleAnalytics: G-RNEHT80K8P
 
 # Theme i18n support
 # Available values: ar, ca, de, el, en, es, fr, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
