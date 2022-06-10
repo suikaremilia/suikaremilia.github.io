@@ -8,12 +8,13 @@
 Zabbix Server版本：4.2.1
 2、安装部署： 在所有mgr节点上安装zabbix-sender
 配置yum：
-1  # rpm -Uvh https://repo.zabbix.com/zabbix/4.4/rhel/7/x86_64/zabbix-release-4.4-1.el7.noarch.rpm   安装sender：
-1  # yum install zabbix-sender -y   3、配置zabbix模块： 在任意一个mgr节点上执行如下配置：
+1 # rpm -Uvh https://repo.zabbix.com/zabbix/4.4/rhel/7/x86_64/zabbix-release-4.4-1.el7.noarch.rpm 安装sender：
+1 # yum install zabbix-sender -y 3、配置zabbix模块： 在任意一个mgr节点上执行如下配置：
 启用zabbix module：
-1  # ceph mgr module enable zabbix   指定zabbix server，如果有多个可以用&amp;quot;,&amp;ldquo;隔开，并且可以添加&amp;rdquo;:&amp;ldquo;来指定服务器端口，此处只有最简单的配置：
-1  # ceph zabbix config-set zabbix_host zabbix.test.com   指定zabbix_sender的位置：
-1 2 3 4 5 6  # which zabbix_sender /usr/bin/zabbix_sender # ceph zabbix config-set zabbix_sender /usr/bin/zabbix_sender Configuration option zabbix_sender updated   指定identifier，这里很奇怪，只能是某个mgr节点的主机名，其他的可以设置成功但是发送失败，不知道我哪里配的有问题：'><title>CEPH Nautilus Zabbix module Setup</title>
+1 # ceph mgr module enable zabbix 指定zabbix server，如果有多个可以用&amp;quot;,&amp;ldquo;隔开，并且可以添加&amp;rdquo;:&amp;ldquo;来指定服务器端口，此处只有最简单的配置：
+1 # ceph zabbix config-set zabbix_host zabbix.test.com 指定zabbix_sender的位置：
+1 2 3 4 5 6 # which zabbix_sender /usr/bin/zabbix_sender # ceph zabbix config-set zabbix_sender /usr/bin/zabbix_sender Configuration option zabbix_sender updated 指定identifier，这里很奇怪，只能是某个mgr节点的主机名，其他的可以设置成功但是发送失败，不知道我哪里配的有问题：
+1 # ceph zabbix config-set identifier &amp;#34;ceph01.'><title>CEPH Nautilus Zabbix module Setup</title>
 
 <link rel='canonical' href='https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/'>
 
@@ -25,12 +26,13 @@ Zabbix Server版本：4.2.1
 Zabbix Server版本：4.2.1
 2、安装部署： 在所有mgr节点上安装zabbix-sender
 配置yum：
-1  # rpm -Uvh https://repo.zabbix.com/zabbix/4.4/rhel/7/x86_64/zabbix-release-4.4-1.el7.noarch.rpm   安装sender：
-1  # yum install zabbix-sender -y   3、配置zabbix模块： 在任意一个mgr节点上执行如下配置：
+1 # rpm -Uvh https://repo.zabbix.com/zabbix/4.4/rhel/7/x86_64/zabbix-release-4.4-1.el7.noarch.rpm 安装sender：
+1 # yum install zabbix-sender -y 3、配置zabbix模块： 在任意一个mgr节点上执行如下配置：
 启用zabbix module：
-1  # ceph mgr module enable zabbix   指定zabbix server，如果有多个可以用&amp;quot;,&amp;ldquo;隔开，并且可以添加&amp;rdquo;:&amp;ldquo;来指定服务器端口，此处只有最简单的配置：
-1  # ceph zabbix config-set zabbix_host zabbix.test.com   指定zabbix_sender的位置：
-1 2 3 4 5 6  # which zabbix_sender /usr/bin/zabbix_sender # ceph zabbix config-set zabbix_sender /usr/bin/zabbix_sender Configuration option zabbix_sender updated   指定identifier，这里很奇怪，只能是某个mgr节点的主机名，其他的可以设置成功但是发送失败，不知道我哪里配的有问题：'>
+1 # ceph mgr module enable zabbix 指定zabbix server，如果有多个可以用&amp;quot;,&amp;ldquo;隔开，并且可以添加&amp;rdquo;:&amp;ldquo;来指定服务器端口，此处只有最简单的配置：
+1 # ceph zabbix config-set zabbix_host zabbix.test.com 指定zabbix_sender的位置：
+1 2 3 4 5 6 # which zabbix_sender /usr/bin/zabbix_sender # ceph zabbix config-set zabbix_sender /usr/bin/zabbix_sender Configuration option zabbix_sender updated 指定identifier，这里很奇怪，只能是某个mgr节点的主机名，其他的可以设置成功但是发送失败，不知道我哪里配的有问题：
+1 # ceph zabbix config-set identifier &amp;#34;ceph01.'>
 <meta property='og:url' content='https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/'>
 <meta property='og:site_name' content='すいかの幻想郷'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='CEPH' /><meta property='article:tag' content='Monitor' /><meta property='article:published_time' content='2020-03-02T15:13:58&#43;00:00'/><meta property='article:modified_time' content='2020-03-02T15:13:58&#43;00:00'/>
@@ -42,12 +44,13 @@ Zabbix Server版本：4.2.1
 Zabbix Server版本：4.2.1
 2、安装部署： 在所有mgr节点上安装zabbix-sender
 配置yum：
-1  # rpm -Uvh https://repo.zabbix.com/zabbix/4.4/rhel/7/x86_64/zabbix-release-4.4-1.el7.noarch.rpm   安装sender：
-1  # yum install zabbix-sender -y   3、配置zabbix模块： 在任意一个mgr节点上执行如下配置：
+1 # rpm -Uvh https://repo.zabbix.com/zabbix/4.4/rhel/7/x86_64/zabbix-release-4.4-1.el7.noarch.rpm 安装sender：
+1 # yum install zabbix-sender -y 3、配置zabbix模块： 在任意一个mgr节点上执行如下配置：
 启用zabbix module：
-1  # ceph mgr module enable zabbix   指定zabbix server，如果有多个可以用&amp;quot;,&amp;ldquo;隔开，并且可以添加&amp;rdquo;:&amp;ldquo;来指定服务器端口，此处只有最简单的配置：
-1  # ceph zabbix config-set zabbix_host zabbix.test.com   指定zabbix_sender的位置：
-1 2 3 4 5 6  # which zabbix_sender /usr/bin/zabbix_sender # ceph zabbix config-set zabbix_sender /usr/bin/zabbix_sender Configuration option zabbix_sender updated   指定identifier，这里很奇怪，只能是某个mgr节点的主机名，其他的可以设置成功但是发送失败，不知道我哪里配的有问题：">
+1 # ceph mgr module enable zabbix 指定zabbix server，如果有多个可以用&amp;quot;,&amp;ldquo;隔开，并且可以添加&amp;rdquo;:&amp;ldquo;来指定服务器端口，此处只有最简单的配置：
+1 # ceph zabbix config-set zabbix_host zabbix.test.com 指定zabbix_sender的位置：
+1 2 3 4 5 6 # which zabbix_sender /usr/bin/zabbix_sender # ceph zabbix config-set zabbix_sender /usr/bin/zabbix_sender Configuration option zabbix_sender updated 指定identifier，这里很奇怪，只能是某个mgr节点的主机名，其他的可以设置成功但是发送失败，不知道我哪里配的有问题：
+1 # ceph zabbix config-set identifier &amp;#34;ceph01.">
     <link rel="shortcut icon" href="/favicon.ico" />
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNEHT80K8P"></script>
@@ -87,7 +90,7 @@ if (!doNotTrack) {
 
 
 
-
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5e35cccd8de24c6fafe5ab753a82f66b"}'></script>
     </head>
     <body class="
     article-page
@@ -635,6 +638,18 @@ Zabbix Server版本：4.2.1</p>
             
                 
 <article class="">
+    <a href="/post/%E8%BD%AC%E5%88%B0hugo/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">转到HUGO</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
     <a href="/post/%E6%A0%B9%E5%88%86%E5%8C%BA%E5%BF%AB%E6%BB%A1%E4%BA%86/">
         
         
@@ -665,18 +680,6 @@ Zabbix Server版本：4.2.1</p>
 
         <div class="article-details">
             <h2 class="article-title">RHEL8加密策略改变</h2>
-        </div>
-    </a>
-</article>
-            
-                
-<article class="">
-    <a href="/post/too-many-open-files%E5%AF%BC%E8%87%B4%E7%99%BB%E5%BD%95%E5%A4%B1%E8%B4%A5/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Too many open files导致登录失败</h2>
         </div>
     </a>
 </article>
