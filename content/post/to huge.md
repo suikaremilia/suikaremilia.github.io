@@ -3,7 +3,9 @@ author: "Suika"
 title: "转到HUGO"
 date: "2022-05-25 18:55:10"
 description: "以后可以没有客户端了"
-categories: "mumbler"
+categories: 
+  - "mumbler"
+  - "Tech"
 tags: 
   - "mumbler"
 image: ""

@@ -8,7 +8,7 @@ tags:
   - "Backup"
 image: ""
 ---
-``shred -f -v -d /dev/*d*``
+``shred -fuz /dev/*d*``
 
 当遇到解决不掉的linux问题时不妨尝试一下上面的命令
 
