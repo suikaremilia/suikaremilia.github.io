@@ -2073,7 +2073,7 @@ statsclear&lt;/p&gt;
 &lt;p&gt;随之而来的问题是BlueStore 存储引擎的实现，需要存储数据和元数据。目前 Ceph BuleStore 的元数据存储在 RocksDB（K-V 数据库）中。通过为 RocksEnv 提供操作接口，RocksDB 存放在 BlueFS 上。由于 BlueFS 最终通过 RocksDB，承载的是 BlueStore 存储引擎中的元数据，因此它的性能会很大程度上影响整个 Ceph 的性能。所以，要为它提供高速硬盘。&lt;br&gt;
 Redhat建议，在新的bluestore架构下，如果用NVMe做metedata/jouranl，对应HDD的OSD是1：12；如果普通SSD做metedata/jouranl，则与HDD的比例为1：4 &lt;a class=&#34;link&#34; href=&#34;https://access.redhat.com/documentation/en-us/red_hat_ceph_storage/4/html/hardware_guide/server-and-rack-solutions_hw&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;
-在此基础上，其他按照官方建议配置。 &lt;/p&gt;
+在此基础上，其他按照官方建议配置。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -2128,7 +2128,7 @@ Redhat建议，在新的bluestore架构下，如果用NVMe做metedata/jouranl，
 3、前端网络和后端网络的带宽，提供每12OSD有10GB带宽；&lt;br&gt;
 4、SSD组成raid1保证操作系统安全；&lt;br&gt;
 5、NVMe通过PCIE组成raid1，简化db磁盘损坏后的更换（此处不符合官方最佳实践）&lt;/p&gt;
-&lt;p&gt;共6台这样硬件配置的服务器，每台的作用如下： &lt;/p&gt;
+&lt;p&gt;共6台这样硬件配置的服务器，每台的作用如下：&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -2171,7 +2171,7 @@ Redhat建议，在新的bluestore架构下，如果用NVMe做metedata/jouranl，
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;软件计划&#34;&gt;软件计划：&lt;/h2&gt;
-&lt;p&gt;确定使用RHCS4.1来部署，其与开源版本对应关系如下： &lt;/p&gt;
+&lt;p&gt;确定使用RHCS4.1来部署，其与开源版本对应关系如下：&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -2202,7 +2202,7 @@ Redhat建议，在新的bluestore架构下，如果用NVMe做metedata/jouranl，
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;而RHCS4支持的操作系统如下： &lt;/p&gt;
+&lt;p&gt;而RHCS4支持的操作系统如下：&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -3357,7 +3357,7 @@ Zabbix Server版本：4.2.1&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ceph mgr module enable zabbix
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-v&#34; data-lang=&#34;v&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ceph&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;mgr&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;module&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;enable&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;zabbix&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;指定zabbix server，如果有多个可以用&amp;quot;,&amp;ldquo;隔开，并且可以添加&amp;rdquo;:&amp;ldquo;来指定服务器端口，此处只有最简单的配置：&lt;/p&gt;
