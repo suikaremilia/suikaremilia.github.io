@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>tape on すいかの幻想郷</title>
-        <link>https://suikaremilia.github.io/tags/tape/</link>
-        <description>Recent content in tape on すいかの幻想郷</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Mon, 27 Apr 2020 16:53:56 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/tape/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Commvault修改介质信息</title>
-        <link>https://suikaremilia.github.io/post/commvault%E4%BF%AE%E6%94%B9%E4%BB%8B%E8%B4%A8%E4%BF%A1%E6%81%AF/</link>
-        <pubDate>Mon, 27 Apr 2020 16:53:56 +0000</pubDate>
-        
-        <guid>https://suikaremilia.github.io/post/commvault%E4%BF%AE%E6%94%B9%E4%BB%8B%E8%B4%A8%E4%BF%A1%E6%81%AF/</guid>
-        <description>&lt;p&gt;做磁带转储的时候发生了一件很奇怪的事情，一盘LTO3的磁带被认成了LTO2，在LTO5的驱动器里读不出来。&lt;br&gt;
-当然读不出来很正常，毕竟只向下兼容两代读，可认成LTO2就很诡异了。&lt;br&gt;
-于是找了一下方法把它修改过来：&lt;/p&gt;
-&lt;p&gt;1、CV管理员登录：&lt;br&gt;
-cd到安装目录然后qlogin，按提示输入用户名和密码；&lt;/p&gt;
-&lt;p&gt;2、对要操作的介质执行：&lt;br&gt;
-QOperation.exe execscript -sn changeMediaType -si media -si &amp;ldquo;000231&amp;rdquo; -si &amp;ldquo;ULTRIUM V3&amp;rdquo;&lt;/p&gt;
-</description>
-        </item>
-        
-    </channel>
+  <channel>
+    <title>tape on 小熊猫快站起来</title>
+    <link>https://suikaremilia.github.io/tags/tape/</link>
+    <description>Recent content in tape on 小熊猫快站起来</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 27 Apr 2020 16:53:56 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/tape/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Commvault修改介质信息</title>
+      <link>https://suikaremilia.github.io/post/commvault/</link>
+      <pubDate>Mon, 27 Apr 2020 16:53:56 +0000</pubDate>
+      
+      <guid>https://suikaremilia.github.io/post/commvault/</guid>
+      <description>做磁带转储的时候发生了一件很奇怪的事情，一盘LTO3的磁带被认成了LTO2，在LTO5的驱动器里读不出来。
+当然读不出来很正常，毕竟只向下兼容两代读，可认成LTO2就很诡异了。
+于是找了一下方法把它修改过来：
+1、CV管理员登录：
+cd到安装目录然后qlogin，按提示输入用户名和密码；
+2、对要操作的介质执行：
+QOperation.exe execscript -sn changeMediaType -si media -si &amp;ldquo;000231&amp;rdquo; -si &amp;ldquo;ULTRIUM V3&amp;rdquo;</description>
+    </item>
+    
+  </channel>
 </rss>
