@@ -1,31 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>RHHI on 小熊猫快站起来</title>
-    <link>https://suikaremilia.github.io/tags/rhhi/</link>
-    <description>Recent content in RHHI on 小熊猫快站起来</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 05 May 2020 13:57:26 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/rhhi/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>部署RHHI环境</title>
-      <link>https://suikaremilia.github.io/post/rhhi/</link>
-      <pubDate>Tue, 05 May 2020 13:57:26 +0000</pubDate>
-      
-      <guid>https://suikaremilia.github.io/post/rhhi/</guid>
-      <description>一直不知道为啥红帽会把RHHI放进存储产品线，明明就是个虚拟化环境的超融合环境，甚至安装介质跟rhv都是一样的，两者只有部署方式上的差异。
-从最开始的RHV一直用到现在的RHHI，红帽的产品没有VMWare那么丰富的接口，却也别有特色，用习惯了感觉也不错。才不是用多了国产的烂玩意才有的这种感觉。
-这两天环境被弄乱了，就图省事不修了，重新部署了一套了事，记录一点过程：
-首先，要有RHVH的订阅，没有就去下ovirt，rhv对应的开源版本就是它；
-其次，红帽对此的文档已经很详细了，也不需要帐号就可以阅读，相关的两篇文档如下：
-https://access.redhat.com/documentation/en-us/red_hat_hyperconverged_infrastructure_for_virtualization/1.7/html/deploying_red_hat_hyperconverged_infrastructure_for_virtualization/deployment_workflow#enabling-software-repositories
-https://access.redhat.com/documentation/en-us/red_hat_virtualization/4.4-beta/html/administration_guide/sect-preparing_and_adding_nfs_storage
-注意，第一篇部署文档里没提到的是宿主机的主机名需要被DNS解析，否则部署host-engin的时候会过不去地址检测。
-第二篇文档要注意的是nfs的权限设置，不是随便哪个nfs都能在rhv环境中挂起来的。
-然后，按照文档部署完成之后要在compute-&amp;gt;cluster里把enable gluster service的勾勾上，不然在storage-&amp;gt;volumes里管理不到先前创建的gluster卷。
-最后，就可以慢慢用了，从rhv2到3再到如今的4.3，改变还是蛮大的，也明显越来越好用了。虽然不是主流产品，但是如果有超融合需求，不妨尝试一下，毕竟有免费的开源版本ovirt。
-但是4.3的RHV有个最坑的地方，由于宿主机是基于RHEL7的系统，因此无法将RHEL8的系统做成模板，因为rhel8中xfs有新特性，而这点居然写在了RHV4.4的文档里，而不是4.3的……</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>RHHI on すいかの幻想郷</title>
+        <link>https://suikaremilia.github.io/tags/rhhi/</link>
+        <description>Recent content in RHHI on すいかの幻想郷</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 05 May 2020 13:57:26 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/rhhi/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>部署RHHI环境</title>
+        <link>https://suikaremilia.github.io/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/</link>
+        <pubDate>Tue, 05 May 2020 13:57:26 +0000</pubDate>
+        
+        <guid>https://suikaremilia.github.io/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/</guid>
+        <description>&lt;p&gt;一直不知道为啥红帽会把RHHI放进存储产品线，明明就是个虚拟化环境的超融合环境，甚至安装介质跟rhv都是一样的，两者只有部署方式上的差异。&lt;br&gt;
+从最开始的RHV一直用到现在的RHHI，红帽的产品没有VMWare那么丰富的接口，却也别有特色，用习惯了感觉也不错。&lt;del&gt;才不是用多了国产的烂玩意才有的这种感觉。&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;这两天环境被弄乱了，就图省事不修了，重新部署了一套了事，记录一点过程：&lt;/p&gt;
+&lt;p&gt;首先，要有RHVH的订阅，没有就去下ovirt，rhv对应的开源版本就是它；&lt;br&gt;
+其次，红帽对此的文档已经很详细了，也不需要帐号就可以阅读，相关的两篇文档如下：&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://access.redhat.com/documentation/en-us/red_hat_hyperconverged_infrastructure_for_virtualization/1.7/html/deploying_red_hat_hyperconverged_infrastructure_for_virtualization/deployment_workflow#enabling-software-repositories&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://access.redhat.com/documentation/en-us/red_hat_hyperconverged_infrastructure_for_virtualization/1.7/html/deploying_red_hat_hyperconverged_infrastructure_for_virtualization/deployment_workflow#enabling-software-repositories&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://access.redhat.com/documentation/en-us/red_hat_virtualization/4.4-beta/html/administration_guide/sect-preparing_and_adding_nfs_storage&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://access.redhat.com/documentation/en-us/red_hat_virtualization/4.4-beta/html/administration_guide/sect-preparing_and_adding_nfs_storage&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;注意，第一篇部署文档里没提到的是宿主机的主机名需要被DNS解析，否则部署host-engin的时候会过不去地址检测。&lt;br&gt;
+第二篇文档要注意的是nfs的权限设置，不是随便哪个nfs都能在rhv环境中挂起来的。&lt;br&gt;
+然后，按照文档部署完成之后要在compute-&amp;gt;cluster里把enable gluster service的勾勾上，不然在storage-&amp;gt;volumes里管理不到先前创建的gluster卷。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://suikaremilia.github.io/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/1592294025923.png&#34;
+	width=&#34;1323&#34;
+	height=&#34;868&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/1592294025923_hu1b89246d9a1adf3285e7b197df493f9a_30833_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/%E9%83%A8%E7%BD%B2rhhi%E7%8E%AF%E5%A2%83/1592294025923_hu1b89246d9a1adf3285e7b197df493f9a_30833_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;365px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;最后，就可以慢慢用了，从rhv2到3再到如今的4.3，改变还是蛮大的，也明显越来越好用了。虽然不是主流产品，但是如果有超融合需求，不妨尝试一下，毕竟有免费的开源版本ovirt。&lt;br&gt;
+但是4.3的RHV有个最坑的地方，由于宿主机是基于RHEL7的系统，因此无法将RHEL8的系统做成模板，因为rhel8中xfs有新特性，而这点居然写在了RHV4.4的文档里，而不是4.3的……&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

@@ -1,45 +1,93 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>UWP on 小熊猫快站起来</title>
-    <link>https://suikaremilia.github.io/tags/uwp/</link>
-    <description>Recent content in UWP on 小熊猫快站起来</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 12 Mar 2020 14:07:17 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/uwp/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>解决UWP应用无法联网的三种方法</title>
-      <link>https://suikaremilia.github.io/post/uwp-no-internet/</link>
-      <pubDate>Thu, 12 Mar 2020 14:07:17 +0000</pubDate>
-      
-      <guid>https://suikaremilia.github.io/post/uwp-no-internet/</guid>
-      <description>author: &amp;ldquo;Suika&amp;rdquo; title: &amp;ldquo;解决UWP应用无法联网的三种方法&amp;rdquo; date: &amp;ldquo;2020-03-12 14:07:17&amp;rdquo; description: &amp;ldquo;怎么会有UWP这种东西&amp;rdquo; categories: &amp;ldquo;Tech&amp;rdquo; tags:
-&amp;ldquo;UWP&amp;rdquo; “Proxy” image: &amp;quot;&amp;quot; surface Pro 6又坏了，微软的硬件好垃圾，一年多坏了3次，再不会买了，影响工作效率。每次送修的结果就是所有东西都要重配一遍，这次是换机，更彻底一点。然后，又遇到了当初第一次用surface的时候遇到的问题——UWP应用联网。于是把备份的一篇文字直接拿来解决这个问题，再发一遍方便以后找。
-从Arch到Win10各种不适应，最近这种不适应在一个始料未及的事情上表现的尤为明显——只要开了全局代理，微软自家的UWP程序就无法联网了。
-对此，在下也是服气。
-然而，发现问题不解决不是吾辈的作风，于是开始找各种解决方案，顺带了解了一下UWP。
-这玩意出来也好几年了，一直不温不火的，以至于我从来没有注意到还有这么个玩意。据说所有UWP应用均运行在被称为App Container的虚拟沙箱环境中，其安全性胜于传统的EXE应用。但问题也出在这里，安全的同时它阻止了网络流量发送到本机（即loopback），即阻止了UWP应用访问 localhost。没有访问回环地址的权限，也意味着即便系统设置中启用了本地代理，UWP应用也无法访问本地代理服务器。
-按照官方的解决方案，貌似可以用CheckNetIsolation命令来解决这个问题，MSDN轻描淡写的写着命令：
-checknetisolation loopbackexempt -a -n= UWP应用容器名 checknetisolation loopbackexempt -a -p= UWP应用SID 可是谁告诉我UWP的SID去哪里找？UWP的应用容器名称又是啥？
-有一种找SID的方法，通过注册表获取：
-win+r的运行里输入Regedit打开注册表编辑器，然后定位到
-HKEY_CURRENT_USERSoftwareClassesLocal Settings Software MicrosoftWindows CurrentVersion App Container Mappings 接着在左边的注册表项中找到你想解除网络隔离的应用，右边的 DisplayName 就是应用名称，而左边那一大串字符就是应用的SID值了。
-SID值是人类可以理解的么？对此我可以骂人么？这是人干的事？我不能骂人么？那我还有什么话好说。
-这方法还是放弃的好！
-官方的解决方案如此复杂，按照问题发生后最简单的思路去解决，那就是关闭代理。
-这简单粗暴的方法确实可行，唯一的问题是关闭代理这事在国内是我不能接受的。
-接着搜索，互联网给出的答案是网络调试工具Fiddler，然后左上角的WinConfig按钮，排除不要的UWP应用。
-可是，Fiddler这工具用来干这个岂不是太大材小用了？
-最终，我找到了这个——Windows-Loopback-Exemption-Manager
-Github上的项目，看来遭这问题困扰的人好多啊
-https://github.com/tiagonmas/Windows-Loopback-Exemption-Manager
-好了，这玩意跟Fiddler用法差不多，功能更单一，仅此而已。
-哦，这东西还有一个坑，就是邮件，用这种方法邮件还是没办法添加Gmail不知道是为啥。
-以上就是三种解决方案，其实只能算两种:
-如果想简单粗暴，那么关闭代理是最直接的,这简直不能算解决方案；
-不然，就Fiddle或是Windows-Loopback-Exemption-Manager这两者虽然有坑都还可以接受；
-我想没有人愿意手动去一条条命令敲吧，光是找SID的工作就是非人类的。</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>UWP on すいかの幻想郷</title>
+        <link>https://suikaremilia.github.io/tags/uwp/</link>
+        <description>Recent content in UWP on すいかの幻想郷</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 12 Mar 2020 14:07:17 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/uwp/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>解决UWP应用无法联网的三种方法</title>
+        <link>https://suikaremilia.github.io/post/%E8%A7%A3%E5%86%B3uwp%E5%BA%94%E7%94%A8%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/</link>
+        <pubDate>Thu, 12 Mar 2020 14:07:17 +0000</pubDate>
+        
+        <guid>https://suikaremilia.github.io/post/%E8%A7%A3%E5%86%B3uwp%E5%BA%94%E7%94%A8%E6%97%A0%E6%B3%95%E8%81%94%E7%BD%91%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95/</guid>
+        <description>&lt;hr&gt;
+&lt;p&gt;author: &amp;ldquo;Suika&amp;rdquo;
+title: &amp;ldquo;解决UWP应用无法联网的三种方法&amp;rdquo;
+date: &amp;ldquo;2020-03-12 14:07:17&amp;rdquo;
+description: &amp;ldquo;怎么会有UWP这种东西&amp;rdquo;
+categories: &amp;ldquo;Tech&amp;rdquo;
+tags:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;UWP&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;“Proxy”
+image: &amp;quot;&amp;quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;surface Pro 6又坏了，微软的硬件好垃圾，一年多坏了3次，再不会买了，影响工作效率。每次送修的结果就是所有东西都要重配一遍，这次是换机，更彻底一点。然后，又遇到了当初第一次用surface的时候遇到的问题——UWP应用联网。于是把备份的一篇文字直接拿来解决这个问题，再发一遍方便以后找。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;从Arch到Win10各种不适应，最近这种不适应在一个始料未及的事情上表现的尤为明显——只要开了全局代理，微软自家的UWP程序就无法联网了。&lt;/p&gt;
+&lt;p&gt;对此，在下也是服气。&lt;/p&gt;
+&lt;p&gt;然而，发现问题不解决不是吾辈的作风，于是开始找各种解决方案，顺带了解了一下UWP。&lt;/p&gt;
+&lt;p&gt;这玩意出来也好几年了，一直不温不火的，以至于我从来没有注意到还有这么个玩意。据说所有UWP应用均运行在被称为App Container的虚拟沙箱环境中，其安全性胜于传统的EXE应用。但问题也出在这里，安全的同时它阻止了网络流量发送到本机（即loopback），即阻止了UWP应用访问 localhost。没有访问回环地址的权限，也意味着即便系统设置中启用了本地代理，UWP应用也无法访问本地代理服务器。&lt;/p&gt;
+&lt;p&gt;按照官方的解决方案，貌似可以用CheckNetIsolation命令来解决这个问题，MSDN轻描淡写的写着命令：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;checknetisolation loopbackexempt -a -n= UWP应用容器名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;checknetisolation loopbackexempt -a -p= UWP应用SID
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;可是谁告诉我UWP的SID去哪里找？UWP的应用容器名称又是啥？&lt;/p&gt;
+&lt;p&gt;有一种找SID的方法，通过注册表获取：&lt;/p&gt;
+&lt;p&gt;win+r的运行里输入Regedit打开注册表编辑器，然后定位到&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;HKEY_CURRENT_USERSoftwareClassesLocal 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Settings
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Software
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;MicrosoftWindows
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;CurrentVersion
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;App
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Container
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Mappings 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;接着在左边的注册表项中找到你想解除网络隔离的应用，右边的 DisplayName 就是应用名称，而左边那一大串字符就是应用的SID值了。&lt;br&gt;
+SID值是人类可以理解的么？对此我可以骂人么？这是人干的事？我不能骂人么？那我还有什么话好说。&lt;/p&gt;
+&lt;p&gt;这方法还是放弃的好！&lt;/p&gt;
+&lt;p&gt;官方的解决方案如此复杂，按照问题发生后最简单的思路去解决，那就是关闭代理。&lt;/p&gt;
+&lt;p&gt;这简单粗暴的方法确实可行，唯一的问题是关闭代理这事在国内是我不能接受的。&lt;/p&gt;
+&lt;p&gt;接着搜索，互联网给出的答案是网络调试工具Fiddler，然后左上角的WinConfig按钮，排除不要的UWP应用。&lt;/p&gt;
+&lt;p&gt;可是，Fiddler这工具用来干这个岂不是太大材小用了？&lt;/p&gt;
+&lt;p&gt;最终，我找到了这个——&lt;strong&gt;Windows-Loopback-Exemption-Manager&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Github上的项目，看来遭这问题困扰的人好多啊&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/tiagonmas/Windows-Loopback-Exemption-Manager&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://github.com/tiagonmas/Windows-Loopback-Exemption-Manager&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;好了，这玩意跟Fiddler用法差不多，功能更单一，仅此而已。&lt;/p&gt;
+&lt;p&gt;哦，这东西还有一个坑，就是邮件，用这种方法邮件还是没办法添加Gmail不知道是为啥。&lt;/p&gt;
+&lt;p&gt;以上就是三种解决方案，其实只能算两种:&lt;/p&gt;
+&lt;p&gt;如果&lt;strong&gt;想简单粗暴&lt;/strong&gt;，那么关闭代理是最直接的,这简直不能算解决方案；&lt;br&gt;
+不然，&lt;strong&gt;就Fiddle或是Windows-Loopback-Exemption-Manager&lt;/strong&gt;这两者虽然有坑都还可以接受；&lt;/p&gt;
+&lt;p&gt;我想没有人愿意手动去一条条命令敲吧，光是找SID的工作就是非人类的。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

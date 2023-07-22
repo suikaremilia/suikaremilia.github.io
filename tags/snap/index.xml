@@ -1,23 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Snap on 小熊猫快站起来</title>
-    <link>https://suikaremilia.github.io/tags/snap/</link>
-    <description>Recent content in Snap on 小熊猫快站起来</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 07 Jul 2020 09:25:12 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/snap/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Ubuntu删除snap</title>
-      <link>https://suikaremilia.github.io/post/ubuntu-delete-snap/</link>
-      <pubDate>Tue, 07 Jul 2020 09:25:12 +0000</pubDate>
-      
-      <guid>https://suikaremilia.github.io/post/ubuntu-delete-snap/</guid>
-      <description>Snap在ubuntu里简直是病毒一样的存在，一定要用purge才能删掉……
-顽固病毒也不过如此
-# apt autoremove --purge snapd 更彻底一点：
-# rm -rf /var/cache/snapd # rm -rf ~/snap </description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Snap on すいかの幻想郷</title>
+        <link>https://suikaremilia.github.io/tags/snap/</link>
+        <description>Recent content in Snap on すいかの幻想郷</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 07 Jul 2020 09:25:12 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/snap/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Ubuntu删除snap</title>
+        <link>https://suikaremilia.github.io/post/ubuntu%E5%88%A0%E9%99%A4snap/</link>
+        <pubDate>Tue, 07 Jul 2020 09:25:12 +0000</pubDate>
+        
+        <guid>https://suikaremilia.github.io/post/ubuntu%E5%88%A0%E9%99%A4snap/</guid>
+        <description>&lt;p&gt;Snap在ubuntu里简直是病毒一样的存在，一定要用&lt;code&gt;purge&lt;/code&gt;才能删掉……&lt;br&gt;
+&lt;del&gt;顽固病毒也不过如此&lt;/del&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# apt autoremove --purge snapd&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;更彻底一点：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# rm -rf /var/cache/snapd&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# rm -rf ~/snap&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
 </rss>
