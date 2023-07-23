@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <title>Vim替换 // 小熊猫快站起来</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.115.4">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Suika" />
+    <meta name="description" content="VIM是最好的编辑器" />
+    <link rel="stylesheet" href="/css/main.min.f82e6642d2aa2ebd057ad3fab895ff231dd8f2c343218b39db0d271dc039bc4c.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Vim替换"/>
+<meta name="twitter:description" content="VIM是最好的编辑器"/>
+
+    <meta property="og:title" content="Vim替换" />
+<meta property="og:description" content="VIM是最好的编辑器" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://suikaremilia.github.io/post/vim-s/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-03-20T10:05:31+00:00" />
+<meta property="article:modified_time" content="2020-03-20T10:05:31+00:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://suikaremilia.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="Suika" /></a>
+      <span class="app-header-title">小熊猫快站起来</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+              ✰  
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Long forex, Short the world.</p>
+      <div class="app-header-social">
+        
+          <a href="https://t.me/Suikachat_bot" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-send">
+  <title>telegram</title>
+  <line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+</svg>
+          </a>
+        
+          <a href="mailto:suika@kadama.eu.org" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-mail">
+  <title>Mail</title>
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Vim替换</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Mar 20, 2020
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://suikaremilia.github.io/tags/vim/">vim</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>Vim可以在命令模式下使用substitute命令，将指定的字符串替换成目标字符串。</p>
+<h2 id="基本语法">基本语法：</h2>
+<p>Vim替换命令的基本语法是 :[range]s/目标字符串/替换字符串/[option]，其中range和option字段都可以缺省不填。</p>
+<p><strong>range:</strong> 表示搜索范围，默认表示当前行;
+也可以是以逗号隔开的两个数字，例如1,20表示从第1到第20行;
+也可以是特殊字符，与其他地方的默认习俗一致，其中%表示整个文件</p>
+<p><strong>s</strong> 即substitute的简写，表示执行替换字符串操作;</p>
+<p><strong>option:</strong> 表示操作类型，默认只对第一个匹配的字符进行替换；
+常见字段值有：g(global)表示全局替换;
+c(comfirm)表示操作时需要确认;
+i(ignorecase)表示不区分大小写;</p>
+<h2 id="简单实例">简单实例</h2>
+<p><strong>替换当前行第一个 VIM 为 sakuya</strong>
+<code>:s/VIM/sakuya/</code></p>
+<p><strong>替换当前行所有 VIM 为 sakuya</strong>
+<code>:s/VIM/sakuya/g </code></p>
+<p><strong>替换第 n 行开始到最后一行中每一行的第一个 VIM 为 sakuya</strong>
+<code>:n,$s/VIM/sakuya/ </code></p>
+<p><strong>替换第 n 行开始到最后一行中每一行所有 VIM 为 sakuya</strong></p>
+<p><code>:n,$s/VIM/sakuya/g </code>
+<strong>替换每一行的第一个 VIM 为 sakuya</strong></p>
+<p><code>:%s/VIM/sakuya/</code>
+等同于：
+<code>:g/VIM/s//sakuya/</code></p>
+<p><strong>替换每一行中所有 VIM 为 sakuya</strong>
+<code>:%s/VIM/sakuya/g</code>
+等同于：
+<code>:g/VIM/s//sakuya/g</code></p>
+<p><strong>可以使用 # 作为分隔符，此时中间出现的 / 不会作为分隔符，例如：替换当前行第一个 VIM/ 为 sakuya/</strong>
+<code>:s#VIM/#sakuya/# </code></p>
+<p><strong>全文的行首加入//字符，批量注释时非常有用，/进行转义后才可以替换</strong>
+<code>:%s/^/\/\//</code></p>
+<p><strong>将所有行尾多余的空格删除</strong>
+<code>:%s= *$==</code></p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

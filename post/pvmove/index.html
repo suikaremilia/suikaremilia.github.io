@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <title>pvmove迁移数据 // 小熊猫快站起来</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.115.4">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Suika" />
+    <meta name="description" content="别怕，这是个安全操作" />
+    <link rel="stylesheet" href="/css/main.min.f82e6642d2aa2ebd057ad3fab895ff231dd8f2c343218b39db0d271dc039bc4c.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="pvmove迁移数据"/>
+<meta name="twitter:description" content="别怕，这是个安全操作"/>
+
+    <meta property="og:title" content="pvmove迁移数据" />
+<meta property="og:description" content="别怕，这是个安全操作" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://suikaremilia.github.io/post/pvmove/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-04-12T15:29:48+00:00" />
+<meta property="article:modified_time" content="2020-04-12T15:29:48+00:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://suikaremilia.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="Suika" /></a>
+      <span class="app-header-title">小熊猫快站起来</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+              ✰  
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Long forex, Short the world.</p>
+      <div class="app-header-social">
+        
+          <a href="https://t.me/Suikachat_bot" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-send">
+  <title>telegram</title>
+  <line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+</svg>
+          </a>
+        
+          <a href="mailto:suika@kadama.eu.org" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-mail">
+  <title>Mail</title>
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">pvmove迁移数据</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Apr 12, 2020
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://suikaremilia.github.io/tags/pvmove/">pvmove</a>
+              <a class="tag" href="https://suikaremilia.github.io/tags/lvm/">LVM</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>使用LVM的好处之一就是可以用pvmove来方便的在线迁移数据。用pvmove来迁移、合并数据比创建mirorr的方式要安全而方便，它会把要迁移的数据拆分成多分，并通过建立临时镜像的方式来移动数据，即使中断也有全部的数据，还能很方便的再次开始。</p>
+<h2 id="简单的用法">简单的用法：</h2>
+<pre tabindex="0"><code>pvmove /dev/sdc1
+</code></pre><p>将/dev/sdc1上的数据迁移到vg中的其他物理卷</p>
+<pre tabindex="0"><code>pvmove -n MYLV /dev/sdc1
+</code></pre><p>将MYLV迁移到物理卷/dev/sdc1</p>
+<pre tabindex="0"><code>pvmove -b /dev/sdc1 /dev/sdd1
+</code></pre><p>pvmove的最常用用法，在后台迁移/dev/sdc1的数据到/dev/sdd1</p>
+<pre tabindex="0"><code>pvmove -i5 /dev/sdc1
+</code></pre><p>查询pvmove的进度，每5s输出一次结果。可以随时执行以查询迁移进度，后面不指定迁移的磁盘则会显示所有pvmove的进度</p>
+<pre tabindex="0"><code>lvs -a -o +devices
+</code></pre><p>另一种查询迁移进度的方式</p>
+<h2 id="迁移完成后">迁移完成后：</h2>
+<pre tabindex="0"><code>vgreduce /dev/sda
+pvremove /dev/sda
+</code></pre><p>迁移完成后即可将不用的物理卷从vg中剔除，把它的PV属性去掉</p>
+<h2 id="注意">注意：</h2>
+<p>虽然可以在线迁移，但仍会增大CPU、MEMORY、IO的开销，所以尽量在不忙的时候做操作。</p>
+<p>如果要迁移clvmd管理的集群LVM，则需要确保cmirrord服务安装并开启。</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

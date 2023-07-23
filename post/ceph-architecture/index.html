@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <title>CEPH规划 // 小熊猫快站起来</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.115.4">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Suika" />
+    <meta name="description" content="CEPH so hard" />
+    <link rel="stylesheet" href="/css/main.min.f82e6642d2aa2ebd057ad3fab895ff231dd8f2c343218b39db0d271dc039bc4c.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CEPH规划"/>
+<meta name="twitter:description" content="CEPH so hard"/>
+
+    <meta property="og:title" content="CEPH规划" />
+<meta property="og:description" content="CEPH so hard" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://suikaremilia.github.io/post/ceph-architecture/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-05-20T15:16:05+00:00" />
+<meta property="article:modified_time" content="2020-05-20T15:16:05+00:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://suikaremilia.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="Suika" /></a>
+      <span class="app-header-title">小熊猫快站起来</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+              ✰  
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Long forex, Short the world.</p>
+      <div class="app-header-social">
+        
+          <a href="https://t.me/Suikachat_bot" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-send">
+  <title>telegram</title>
+  <line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+</svg>
+          </a>
+        
+          <a href="mailto:suika@kadama.eu.org" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-mail">
+  <title>Mail</title>
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">CEPH规划</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          May 20, 2020
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://suikaremilia.github.io/tags/ceph/">CEPH</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h2 id="背景">背景</h2>
+<p>终于准备用Nautilus做生产环境了！<br>
+目前，Ceph 主要有三种企业级应用场景：</p>
+<ul>
+<li>IOPS 密集型：这种类型的场景通常是支撑在虚拟化/私有云上运行数据库。如在 OpenStack 上运行 Mysql、MariaDB 或 PostgreSQL 等。IOPS 密集型场景对磁盘的性能要求较高，最好使用全闪架构。如果使用混合架构，机械盘转速需要 1.2 万，并使用高速盘存储频繁写操作的日志或元数据。</li>
+<li>高吞吐量型：这种类型的应用场景主要是大块数据传输，如图像、视频、音频文件等。高吞吐量型磁盘的要求没有 IOPS 密集型高，但需要配置较高的网络。同时也需要配置 SSD 来处理写日志。</li>
+<li>高容量型：这种场景主要用于存储归档、离线数据。它对磁盘的容量要求高，对性能无过多要求。写日志也可以存储在 HDD 上。<br>
+此次计划部署一套带宽型的用来提供S3服务，所以部署第二种就好。</li>
+</ul>
+<h2 id="硬件规划">硬件规划：</h2>
+<p>nautilus采用blustore比filestore的性能大大提升，毕竟传输路径短了很多：<br>
+<img src="1594881842550.png" alt="File Store VS Blue Store"></p>
+<p>随之而来的问题是BlueStore 存储引擎的实现，需要存储数据和元数据。目前 Ceph BuleStore 的元数据存储在 RocksDB（K-V 数据库）中。通过为 RocksEnv 提供操作接口，RocksDB 存放在 BlueFS 上。由于 BlueFS 最终通过 RocksDB，承载的是 BlueStore 存储引擎中的元数据，因此它的性能会很大程度上影响整个 Ceph 的性能。所以，要为它提供高速硬盘。<br>
+Redhat建议，在新的bluestore架构下，如果用NVMe做metedata/jouranl，对应HDD的OSD是1：12；如果普通SSD做metedata/jouranl，则与HDD的比例为1：4 <a href="https://access.redhat.com/documentation/en-us/red_hat_ceph_storage/4/html/hardware_guide/server-and-rack-solutions_hw"><!-- raw HTML omitted -->1<!-- raw HTML omitted --></a>
+在此基础上，其他按照官方建议配置。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Device</th>
+<th style="text-align:left">Size</th>
+<th style="text-align:left">Count</th>
+<th style="text-align:left">Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CPU</td>
+<td style="text-align:left">Inter Xeon 6252</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Memor</td>
+<td style="text-align:left">32GB</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">DISK</td>
+<td style="text-align:left">4TB</td>
+<td style="text-align:left">12</td>
+<td style="text-align:left">OSD</td>
+</tr>
+<tr>
+<td style="text-align:left">SSD</td>
+<td style="text-align:left">480GB</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">Operation</td>
+</tr>
+<tr>
+<td style="text-align:left">NVMe</td>
+<td style="text-align:left">4TB</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left">blockk.db</td>
+</tr>
+<tr>
+<td style="text-align:left">Network</td>
+<td style="text-align:left">10GB</td>
+<td style="text-align:left">2</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<p>以上配置保证了：<br>
+1、每HDD的OSD至少对应5GB内存；<br>
+2、每2 GHZ CPU每0.5 Cores每HDD；<br>
+3、前端网络和后端网络的带宽，提供每12OSD有10GB带宽；<br>
+4、SSD组成raid1保证操作系统安全；<br>
+5、NVMe通过PCIE组成raid1，简化db磁盘损坏后的更换（此处不符合官方最佳实践）</p>
+<p>共6台这样硬件配置的服务器，每台的作用如下：</p>
+<table>
+<thead>
+<tr>
+<th>hostname</th>
+<th>IP addr</th>
+<th>Roles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rhcs01-st</td>
+<td>10.64.0.80 <!-- raw HTML omitted -->10.64.4.80</td>
+<td>OSD <!-- raw HTML omitted -->MON<!-- raw HTML omitted -->MGR</td>
+</tr>
+<tr>
+<td>rhcs02-st</td>
+<td>10.64.0.81 <!-- raw HTML omitted -->10.64.4.81</td>
+<td>OSD <!-- raw HTML omitted -->RGW<!-- raw HTML omitted -->MDS</td>
+</tr>
+<tr>
+<td>rhcs03-st</td>
+<td>10.64.0.82 <!-- raw HTML omitted -->10.64.4.82</td>
+<td>OSD <!-- raw HTML omitted -->MON<!-- raw HTML omitted -->MGR</td>
+</tr>
+<tr>
+<td>rhcs04-st</td>
+<td>10.64.0.83 <!-- raw HTML omitted -->10.64.4.83</td>
+<td>OSD <!-- raw HTML omitted -->RGW<!-- raw HTML omitted -->MDS</td>
+</tr>
+<tr>
+<td>rhcs05-st</td>
+<td>10.64.0.84 <!-- raw HTML omitted -->10.64.4.84</td>
+<td>OSD <!-- raw HTML omitted -->MON<!-- raw HTML omitted -->MGR</td>
+</tr>
+<tr>
+<td>rhcs06-st</td>
+<td>10.64.0.85 <!-- raw HTML omitted -->10.64.4.86</td>
+<td>OSD <!-- raw HTML omitted -->RGW<!-- raw HTML omitted -->MDS</td>
+</tr>
+</tbody>
+</table>
+<h2 id="软件计划">软件计划：</h2>
+<p>确定使用RHCS4.1来部署，其与开源版本对应关系如下：</p>
+<table>
+<thead>
+<tr>
+<th>Upstream Code Name</th>
+<th>Downstream Release Name</th>
+<th>Red Hat Ceph Storage Package Version (RHEL 8.x)</th>
+<th>Red Hat Ceph Storage Package Version (RHEL 7.x)</th>
+<th>Red Hat Ceph Ansible Package Version 	Release Month</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nautilus 	Red Hat Ceph Storage 4.1</td>
+<td>14.2.8-59.el8cp</td>
+<td>14.2.8-50.el7cp</td>
+<td>ceph-ansible-4.0.23-1</td>
+<td>June, 2020</td>
+<td></td>
+</tr>
+<tr>
+<td>Nautilus</td>
+<td>Red Hat Ceph Storage 4.0</td>
+<td>14.2.4-125.el8cp</td>
+<td>14.2.4-51.el7cp</td>
+<td>ceph-ansible-4.0.14-1</td>
+<td>January, 2020</td>
+</tr>
+</tbody>
+</table>
+<p>而RHCS4支持的操作系统如下：</p>
+<table>
+<thead>
+<tr>
+<th>Vendor</th>
+<th>Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Redhat Enterprise Linux</td>
+<td>8.2<!-- raw HTML omitted -->8.1</td>
+</tr>
+<tr>
+<td>Redhat Enterprise Linux</td>
+<td>7.8<!-- raw HTML omitted -->7.7</td>
+</tr>
+</tbody>
+</table>
+<p>因此，系统选用RHEL8.2</p>
+<h2 id="小结">小结</h2>
+<p>选定了软件版本后，按标准来配置即可。由于是分布式存储，主要还是考虑硬盘和网络，而硬盘的配置跟存储整个架构有很大关系。</p>
+<h2 id="参考文档">参考文档：</h2>
+<p><a href="https://access.redhat.com/documentation/en-us/red_hat_ceph_storage/4/html/hardware_guide/index">https://access.redhat.com/documentation/en-us/red_hat_ceph_storage/4/html/hardware_guide/index</a></p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="zh-cn">
+  <head>
+    <title>Arch Linux instal // 小熊猫快站起来</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.115.4">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Suika" />
+    <meta name="description" content="Arch is great" />
+    <link rel="stylesheet" href="/css/main.min.f82e6642d2aa2ebd057ad3fab895ff231dd8f2c343218b39db0d271dc039bc4c.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Arch Linux instal"/>
+<meta name="twitter:description" content="Arch is great"/>
+
+    <meta property="og:title" content="Arch Linux instal" />
+<meta property="og:description" content="Arch is great" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://suikaremilia.github.io/post/arch-linux-install/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-03-08T17:48:42+00:00" />
+<meta property="article:modified_time" content="2020-03-08T17:48:42+00:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://suikaremilia.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="Suika" /></a>
+      <span class="app-header-title">小熊猫快站起来</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+              ✰  
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Long forex, Short the world.</p>
+      <div class="app-header-social">
+        
+          <a href="https://t.me/Suikachat_bot" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-send">
+  <title>telegram</title>
+  <line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+</svg>
+          </a>
+        
+          <a href="mailto:suika@kadama.eu.org" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-mail">
+  <title>Mail</title>
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Arch Linux instal</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Mar 8, 2020
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://suikaremilia.github.io/tags/arch/">Arch</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <p>主力的本子用ARCH工作已经几年了，一直没有问题，有问题也都是能解决的问题。所以是出于莫名其妙的原因吧，在这个假期把arch重装了一下。跟几年前有些许变化，趁还有日志，记录一下过程。</p>
+<h3 id="一环境准备">一、环境准备：</h3>
+<p>设置bios为UEFI启动，各主机情况不同，一般是开机按F2进主板进行设置，设置的同时在boot里将从其他设备启动的选项打开；<br>
+现在没有本子不是UEFI启动了吧，如果有就去看官方文档吧，这篇不适合做参考。<br>
+下载最新的arch linux的<a href="https://www.archlinux.org/download/">ISO镜像</a>，然后制作启动U盘。<br>
+我是在现有的arch上用dd做的：</p>
+<pre tabindex="0"><code>dd if=archlinux.iso of=/dev/sdb bs=1M
+</code></pre><p>然后，用U盘引导启动，进入live CD的系统后再确认一下启动方式是什么：</p>
+<pre tabindex="0"><code># ls  /sys/firmware/efi/efivars
+</code></pre><p>如果此目录下有文件则为UEFI，否则请重新检查bios设置。<br>
+国内的主机默认美国键盘就好，不需要做任何更改。</p>
+<h3 id="二连接到网络">二、连接到网络：</h3>
+<p>有线默认是dhcp的，插上网线自动获取地址即可，无线稍微复杂一点，可选的工具也很多，我习惯用netctl这工具。<br>
+检查网卡名称：</p>
+<pre tabindex="0"><code>ip link
+</code></pre><p>拷贝并修改配置文件：</p>
+<pre tabindex="0"><code># cp /etc/netctl/examples/wireless-wpa /etc/netctl/ihangzhou
+# vim /etc/netctl/ihangzhou
+</code></pre><p>修改了以下标记了的内容：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Description<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;A simple WPA encrypted wireless connection&#39;</span>
+</span></span><span style="display:flex;"><span>Interface<span style="color:#f92672">=</span>~~wlp2s0~~
+</span></span><span style="display:flex;"><span>Connection<span style="color:#f92672">=</span>wireless
+</span></span><span style="display:flex;"><span>Security<span style="color:#f92672">=</span>wpa
+</span></span><span style="display:flex;"><span>IP<span style="color:#f92672">=</span>dhcp
+</span></span><span style="display:flex;"><span>ESSID<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;~~i-hangzhou~~&#39;</span>
+</span></span><span style="display:flex;"><span>Key<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;~~xxxxxx~~&#39;</span>   
+</span></span><span style="display:flex;"><span>wifi的密码
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Uncomment this if your ssid is hidden</span>
+</span></span><span style="display:flex;"><span>Hidden<span style="color:#f92672">=</span>*~~yes~~*         
+</span></span><span style="display:flex;"><span>是否是隐藏的网络，如不是则在此行前面加#将其注释掉，默认注就是注释的
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Set a priority for automatic profile selection</span>
+</span></span><span style="display:flex;"><span>Priority<span style="color:#f92672">=</span><span style="color:#ae81ff">10</span>
+</span></span></code></pre></div><p>启用配置：</p>
+<pre tabindex="0"><code>cd /etc/netctl/
+netctl start ihangzhou
+</code></pre><p>如果没有报错应该就会获取到地址，有报错就检查一下哪里错了。<br>
+确认一下地址，并看下联通性，这时候百度有了它唯一的用处：</p>
+<pre tabindex="0"><code># ip a
+# ping www.baidu.com
+</code></pre><h3 id="三磁盘分区">三、磁盘分区：</h3>
+<p>磁盘分区和文件系统都算常识吧，有兴趣的去看wiki或google，此次只是记录下简单的使用GPT分区和brtfs的过程。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># parted /dev/sdx</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>parted<span style="color:#f92672">)</span> mklabel gpt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>parted<span style="color:#f92672">)</span> mkpart ESP fat32 1M 150M 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>parted<span style="color:#f92672">)</span> set <span style="color:#ae81ff">1</span> boot on
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>parted<span style="color:#f92672">)</span> mkpart primary brtfs 151M 15G 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>parted<span style="color:#f92672">)</span> mkpart primary brtfs 24.5G 100%
+</span></span></code></pre></div><p><strong>将分区格式化：</strong></p>
+<pre tabindex="0"><code># lsblk /dev/sdx
+# mkfs.vfat -F32 /dev/sdxY
+# mkfs.brtfs /dev/sdxZ
+</code></pre><p><strong>创立挂载点并挂载分区：</strong></p>
+<pre tabindex="0"><code># mount /dev/sdxZ /mnt
+根分区要先挂载，然后再创建其他挂载点
+# mkdir /mnt/home
+# mount /dev/sdxW /mnt/home
+# mkdir -p /mnt/boot
+# mount /dev/sdXY /mnt/boot
+</code></pre><p>我没有创建swap分区，我觉得内存足够大够用了。</p>
+<h3 id="四安装系统">四、安装系统：</h3>
+<p><strong>选用合适的安装镜像地址</strong><br>
+要根据网络情况来调整，列表中排的越靠前的镜像站优先级越高，同时理论地理位置越近的镜像站速度越快，国内墙是主要考虑因素，按实际情况调整即可，以获得尽量大的下载速度为主要目标。<br>
+更改镜像列表后请务必强制刷新。</p>
+<pre tabindex="0"><code># vim /etc/pacman.d/mirrorlist
+# pacman -Syy
+</code></pre><p><strong>安装基本软件包</strong></p>
+<pre tabindex="0"><code># pacstrap /mnt base linux linux-firmware
+</code></pre><p>此处也可以同时安装其他的软件包，把包名加在后面即可</p>
+<p><strong>生成 fstab：</strong><br>
+最好用-U参数，使用设备UUID而不是别名进行挂载</p>
+<pre tabindex="0"><code># genfstab -U -p /mnt &gt;&gt; /mnt/etc/fstab
+</code></pre><h3 id="五配置环境">五、配置环境：</h3>
+<p>进入安装好的系统：</p>
+<pre tabindex="0"><code># arch-chroot /mnt
+</code></pre><p><strong>调整时间：</strong><br>
+开启NTP同步：</p>
+<pre tabindex="0"><code># timedatectl set-ntp true
+</code></pre><p>选择时区：</p>
+<pre tabindex="0"><code># tzselect
+# ln -s /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+</code></pre><p>同步硬件时间：</p>
+<pre tabindex="0"><code># hwclock --systohc
+</code></pre><p><strong>本地化设置：</strong><br>
+locale.gen 与 locale.conf两个文件，规定地域、货币、时区日期的格式、字符排列方式和其他本地化标准等等，非常重要。</p>
+<p><code>/etc/locale.gen</code>是一个仅包含注释文档的文本文件。指定需要的本地化类型，只需移除对应行前面的注释符号（＃）即可，建议选择带UTF-8的选项，之后再生成locale信息：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># vim /etc/locale.gen</span>
+</span></span><span style="display:flex;"><span>en_US.UTF-8 UTF-8
+</span></span><span style="display:flex;"><span>zh_CN.UTF-8 UTF-8
+</span></span><span style="display:flex;"><span>zh_TW.UTF-8 UTF-8
+</span></span><span style="display:flex;"><span>ja_JP.UTF-8 UTF-8
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># locale-gen</span>
+</span></span></code></pre></div><p>创建 locale.conf 并提本地化选项：</p>
+<pre tabindex="0"><code># echo LANG=en_US.UTF-8 &gt; /etc/locale.conf
+</code></pre><p><strong>创建初始ramdisk环境:</strong><br>
+打开需要的钩子，比如lvm什么的，然后生成Initramfs</p>
+<pre tabindex="0"><code># vim /etc/mkinitcpio.conf 
+# mkinitcpio -p linux
+</code></pre><p><strong>设置root密码：</strong></p>
+<pre tabindex="0"><code># passwd
+</code></pre><p><strong>安装启动器：</strong><br>
+再次确认一下分区挂载情况，尤其是boot分区，不正确还可以调整：</p>
+<pre tabindex="0"><code># lsblk
+</code></pre><p>启动器有很多可选，grub2太传统，这次选择了syslinux，如果要好看可以选rEFInd。<br>
+<del>我才不会说是搞了半天搞不定rEFInd才换syslinux的，逃</del></p>
+<pre tabindex="0"><code># pacman -S syslinux
+# syslinux-install_update -i -a -m
+</code></pre><p><strong>安装其他包：</strong></p>
+<pre tabindex="0"><code># pacman -S networkmanager wpa_supplicant dialog bash-completion dhcpd
+</code></pre><p><strong>重启进入系统：</strong></p>
+<pre tabindex="0"><code># exit
+# reboot
+</code></pre><p><strong>其他设置：</strong><br>
+联网：</p>
+<pre tabindex="0"><code># nmtui
+</code></pre><p>设置主机名：</p>
+<pre tabindex="0"><code># hostnamectl set-hostname XXX
+</code></pre><p>添加管理员帐号：</p>
+<pre tabindex="0"><code># useradd -m -g users -G wheel -s /bin/bash xxx
+# passwd xxx
+</code></pre><p><strong>更新一下系统：</strong></p>
+<pre tabindex="0"><code># pacman -Syyu
+</code></pre><p>然后就完成了，后面图形什么的是另外的事。<br>
+我用了xfce4做图形桌面，fcitx做输入法，挺好用的。</p>
+<h3 id="六其他工具">六、其他工具：</h3>
+<p>如今arch的安装其实很简单，手操一遍有助于对linux工作方式和启动的理解。如果不想手动的操作，github上有专门的辅助部署的项目，比较完善的有<a href="https://github.com/helmuthdu/aui">helmuthdu/aui</a>连后面的图形和软件一起都搞定了，只有你能进入live CD环境并联网。</p>
+<blockquote>
+<p><a href="https://wiki.archlinux.org/index.php/Installation_guide">https://wiki.archlinux.org/index.php/Installation_guide</a><br>
+<a href="https://wiki.archlinux.org/index.php/General_recommendations">https://wiki.archlinux.org/index.php/General_recommendations</a><br>
+<a href="https://wiki.archlinux.org/index.php/List_of_applications">https://wiki.archlinux.org/index.php/List_of_applications</a><br>
+<a href="https://telegra.ph/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85ARCH-LINUX-07-18">https://telegra.ph/%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%85ARCH-LINUX-07-18</a></p>
+</blockquote>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
