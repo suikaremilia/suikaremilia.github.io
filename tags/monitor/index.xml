@@ -1,36 +1,236 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Monitor on 小熊猫快站起来</title>
-    <link>https://suikaremilia.github.io/tags/monitor/</link>
-    <description>Recent content in Monitor on 小熊猫快站起来</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Mon, 02 Mar 2020 15:13:58 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/monitor/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>CEPH Nautilus Zabbix module Setup</title>
-      <link>https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/</link>
-      <pubDate>Mon, 02 Mar 2020 15:13:58 +0000</pubDate>
-      
-      <guid>https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/</guid>
-      <description>CEPH可以通过mgr节点的zabbix模块实现监控
-不同于普通的agent模式，CEPH自带的zabbix模块通过trapper模式工作，mgr节点收集集群信息并向Zabbix Server发送。
-1、环境说明： 3节点CEPH集群，每个node都是mgr节点;
-部署Nautilus 14.2.7；
-Zabbix Server版本：4.2.1
-2、安装部署： 在所有mgr节点上安装zabbix-sender
-配置yum：
-# rpm -Uvh https://repo.zabbix.com/zabbix/4.4/rhel/7/x86_64/zabbix-release-4.4-1.el7.noarch.rpm 安装sender：
-# yum install zabbix-sender -y 3、配置zabbix模块： 在任意一个mgr节点上执行如下配置：
-启用zabbix module：
-# ceph mgr module enable zabbix 指定zabbix server，如果有多个可以用&amp;quot;,&amp;ldquo;隔开，并且可以添加&amp;rdquo;:&amp;ldquo;来指定服务器端口，此处只有最简单的配置：
-# ceph zabbix config-set zabbix_host zabbix.test.com 指定zabbix_sender的位置：
-# which zabbix_sender /usr/bin/zabbix_sender # ceph zabbix config-set zabbix_sender /usr/bin/zabbix_sender Configuration option zabbix_sender updated 指定identifier，这里很奇怪，只能是某个mgr节点的主机名，其他的可以设置成功但是发送失败，不知道我哪里配的有问题：
-# ceph zabbix config-set identifier &amp;#34;ceph01.test.com&amp;#34; 后面如果有需要可以定义server的端口等，命令跟前面的相仿，这里就不配了。
-查看一下当前的配置：
-# ceph zabbix config-show 查看一下自带的监控模板，后面会用到：
-# find / -iname zabbix_template.</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Monitor on すいかの幻想郷</title>
+        <link>https://suikaremilia.github.io/tags/monitor/</link>
+        <description>Recent content in Monitor on すいかの幻想郷</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 02 Mar 2020 15:13:58 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/monitor/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>CEPH Nautilus Zabbix module Setup</title>
+        <link>https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/</link>
+        <pubDate>Mon, 02 Mar 2020 15:13:58 +0000</pubDate>
+        
+        <guid>https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/</guid>
+        <description>&lt;p&gt;CEPH可以通过mgr节点的zabbix模块实现监控&lt;/p&gt;
+&lt;p&gt;不同于普通的agent模式，CEPH自带的zabbix模块通过trapper模式工作，mgr节点收集集群信息并向Zabbix Server发送。&lt;/p&gt;
+&lt;h2 id=&#34;1环境说明&#34;&gt;1、环境说明：&lt;/h2&gt;
+&lt;p&gt;3节点CEPH集群，每个node都是mgr节点;&lt;br&gt;
+部署Nautilus 14.2.7；&lt;br&gt;
+Zabbix Server版本：4.2.1&lt;/p&gt;
+&lt;h2 id=&#34;2安装部署&#34;&gt;2、安装部署：&lt;/h2&gt;
+&lt;p&gt;在所有mgr节点上安装zabbix-sender&lt;br&gt;
+&lt;strong&gt;配置yum：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# rpm -Uvh https://repo.zabbix.com/zabbix/4.4/rhel/7/x86_64/zabbix-release-4.4-1.el7.noarch.rpm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;安装sender：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# yum install zabbix-sender -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;3配置zabbix模块&#34;&gt;3、配置zabbix模块：&lt;/h2&gt;
+&lt;p&gt;在任意一个mgr节点上执行如下配置：&lt;br&gt;
+启用zabbix module：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-v&#34; data-lang=&#34;v&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ceph&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;mgr&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;module&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;enable&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;zabbix&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;指定zabbix server，如果有多个可以用&amp;quot;,&amp;ldquo;隔开，并且可以添加&amp;rdquo;:&amp;ldquo;来指定服务器端口，此处只有最简单的配置：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ceph zabbix config-set zabbix_host zabbix.test.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;指定zabbix_sender的位置：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# which zabbix_sender 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/bin/zabbix_sender
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ceph zabbix config-set zabbix_sender /usr/bin/zabbix_sender
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Configuration option zabbix_sender updated
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;指定identifier，这里很奇怪，只能是某个mgr节点的主机名，其他的可以设置成功但是发送失败，不知道我哪里配的有问题：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ceph zabbix config-set identifier &amp;#34;ceph01.test.com&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;后面如果有需要可以定义server的端口等，命令跟前面的相仿，这里就不配了。&lt;br&gt;
+查看一下当前的配置：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ceph zabbix config-show
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;查看一下自带的监控模板，后面会用到：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# find / -iname zabbix_template.xml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/share/ceph/mgr/zabbix/zabbix_template.xml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;4配置zabbix-server&#34;&gt;4、配置zabbix server：&lt;/h2&gt;
+&lt;p&gt;登录Zabbix Web UI导入前面找到的监控模板，模板也可以在&lt;a class=&#34;link&#34; href=&#34;http://www.voidcn.com/link?url=https://github.com/ceph/ceph/tree/master/src/pybind/mgr/zabbix&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;github&lt;/a&gt;中找，默认选项导入即可：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826557541.png&#34;
+	width=&#34;1625&#34;
+	height=&#34;381&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826557541_hu06e916c324e13a10363a11853adf8467_15267_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826557541_hu06e916c324e13a10363a11853adf8467_15267_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;426&#34;
+		data-flex-basis=&#34;1023px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826581767.png&#34;
+	width=&#34;1646&#34;
+	height=&#34;559&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826581767_hu5cb4ff5752e9f77f5256094beec9ec01_20967_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826581767_hu5cb4ff5752e9f77f5256094beec9ec01_20967_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;294&#34;
+		data-flex-basis=&#34;706px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;创建主机组：&lt;br&gt;
+&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826608847.png&#34;
+	width=&#34;1619&#34;
+	height=&#34;301&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826608847_hu688770a15a396b85d58679f0f29c6f45_12022_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826608847_hu688770a15a396b85d58679f0f29c6f45_12022_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;537&#34;
+		data-flex-basis=&#34;1290px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;添加主机并关联主机组和模板，如果有需要主机可以关联多个模板，比如系统的监控：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826718228.png&#34;
+	width=&#34;1623&#34;
+	height=&#34;483&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826718228_hueb65483bc61224eed3789fc44f6e373a_17276_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826718228_hueb65483bc61224eed3789fc44f6e373a_17276_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;336&#34;
+		data-flex-basis=&#34;806px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826726630.png&#34;
+	width=&#34;1620&#34;
+	height=&#34;512&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826726630_hu801990c753c45a307a448566451cd617_16898_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826726630_hu801990c753c45a307a448566451cd617_16898_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;316&#34;
+		data-flex-basis=&#34;759px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826768418.png&#34;
+	width=&#34;1632&#34;
+	height=&#34;439&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826768418_hu1510845a2ffbd2f4dbcf316bbbe7bfb0_14770_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826768418_hu1510845a2ffbd2f4dbcf316bbbe7bfb0_14770_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;371&#34;
+		data-flex-basis=&#34;892px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;配置用户告警：
+&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583915228007.png&#34;
+	width=&#34;1113&#34;
+	height=&#34;570&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583915228007_hua4a7f15b99f3229fde4d544ca250d8ef_15045_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583915228007_hua4a7f15b99f3229fde4d544ca250d8ef_15045_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;195&#34;
+		data-flex-basis=&#34;468px&#34;
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583915254342.png&#34;
+	width=&#34;1056&#34;
+	height=&#34;867&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583915254342_hu6a3dfae8dcba0713d093b2d3cdb50784_20745_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583915254342_hu6a3dfae8dcba0713d093b2d3cdb50784_20745_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;121&#34;
+		data-flex-basis=&#34;292px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;至此配置完成。&lt;/p&gt;
+&lt;h2 id=&#34;5测试配置&#34;&gt;5、测试配置&lt;/h2&gt;
+&lt;p&gt;任意一台mgr节点测试：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ceph zabbix send 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Sending data to Zabbix
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果发送不成功会导致ceph健康状态告警，检查端口通信情况及zabbix server的trapper模式是否被禁用，以及上面的步骤是不是哪里配置错了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.ceph.com/docs/master/mgr/zabbix&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.ceph.com/docs/master/mgr/zabbix/&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/lbjstill/p/12169820.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.cnblogs.com/lbjstill/p/12169820.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

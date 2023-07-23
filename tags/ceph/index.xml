@@ -1,51 +1,426 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>CEPH on 小熊猫快站起来</title>
-    <link>https://suikaremilia.github.io/tags/ceph/</link>
-    <description>Recent content in CEPH on 小熊猫快站起来</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Wed, 20 May 2020 15:16:05 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/ceph/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>CEPH规划</title>
-      <link>https://suikaremilia.github.io/post/ceph-architecture/</link>
-      <pubDate>Wed, 20 May 2020 15:16:05 +0000</pubDate>
-      
-      <guid>https://suikaremilia.github.io/post/ceph-architecture/</guid>
-      <description>背景 终于准备用Nautilus做生产环境了！
-目前，Ceph 主要有三种企业级应用场景：
-IOPS 密集型：这种类型的场景通常是支撑在虚拟化/私有云上运行数据库。如在 OpenStack 上运行 Mysql、MariaDB 或 PostgreSQL 等。IOPS 密集型场景对磁盘的性能要求较高，最好使用全闪架构。如果使用混合架构，机械盘转速需要 1.2 万，并使用高速盘存储频繁写操作的日志或元数据。 高吞吐量型：这种类型的应用场景主要是大块数据传输，如图像、视频、音频文件等。高吞吐量型磁盘的要求没有 IOPS 密集型高，但需要配置较高的网络。同时也需要配置 SSD 来处理写日志。 高容量型：这种场景主要用于存储归档、离线数据。它对磁盘的容量要求高，对性能无过多要求。写日志也可以存储在 HDD 上。
-此次计划部署一套带宽型的用来提供S3服务，所以部署第二种就好。 硬件规划： nautilus采用blustore比filestore的性能大大提升，毕竟传输路径短了很多：
-随之而来的问题是BlueStore 存储引擎的实现，需要存储数据和元数据。目前 Ceph BuleStore 的元数据存储在 RocksDB（K-V 数据库）中。通过为 RocksEnv 提供操作接口，RocksDB 存放在 BlueFS 上。由于 BlueFS 最终通过 RocksDB，承载的是 BlueStore 存储引擎中的元数据，因此它的性能会很大程度上影响整个 Ceph 的性能。所以，要为它提供高速硬盘。
-Redhat建议，在新的bluestore架构下，如果用NVMe做metedata/jouranl，对应HDD的OSD是1：12；如果普通SSD做metedata/jouranl，则与HDD的比例为1：4 1 在此基础上，其他按照官方建议配置。
-Device Size Count Use CPU Inter Xeon 6252 2 Memor 32GB DISK 4TB 12 OSD SSD 480GB 2 Operation NVMe 4TB 2 blockk.</description>
-    </item>
-    
-    <item>
-      <title>CEPH Nautilus Zabbix module Setup</title>
-      <link>https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/</link>
-      <pubDate>Mon, 02 Mar 2020 15:13:58 +0000</pubDate>
-      
-      <guid>https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/</guid>
-      <description>CEPH可以通过mgr节点的zabbix模块实现监控
-不同于普通的agent模式，CEPH自带的zabbix模块通过trapper模式工作，mgr节点收集集群信息并向Zabbix Server发送。
-1、环境说明： 3节点CEPH集群，每个node都是mgr节点;
-部署Nautilus 14.2.7；
-Zabbix Server版本：4.2.1
-2、安装部署： 在所有mgr节点上安装zabbix-sender
-配置yum：
-# rpm -Uvh https://repo.zabbix.com/zabbix/4.4/rhel/7/x86_64/zabbix-release-4.4-1.el7.noarch.rpm 安装sender：
-# yum install zabbix-sender -y 3、配置zabbix模块： 在任意一个mgr节点上执行如下配置：
-启用zabbix module：
-# ceph mgr module enable zabbix 指定zabbix server，如果有多个可以用&amp;quot;,&amp;ldquo;隔开，并且可以添加&amp;rdquo;:&amp;ldquo;来指定服务器端口，此处只有最简单的配置：
-# ceph zabbix config-set zabbix_host zabbix.test.com 指定zabbix_sender的位置：
-# which zabbix_sender /usr/bin/zabbix_sender # ceph zabbix config-set zabbix_sender /usr/bin/zabbix_sender Configuration option zabbix_sender updated 指定identifier，这里很奇怪，只能是某个mgr节点的主机名，其他的可以设置成功但是发送失败，不知道我哪里配的有问题：
-# ceph zabbix config-set identifier &amp;#34;ceph01.test.com&amp;#34; 后面如果有需要可以定义server的端口等，命令跟前面的相仿，这里就不配了。
-查看一下当前的配置：
-# ceph zabbix config-show 查看一下自带的监控模板，后面会用到：
-# find / -iname zabbix_template.</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>CEPH on すいかの幻想郷</title>
+        <link>https://suikaremilia.github.io/tags/ceph/</link>
+        <description>Recent content in CEPH on すいかの幻想郷</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 20 May 2020 15:16:05 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/ceph/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>CEPH规划</title>
+        <link>https://suikaremilia.github.io/post/ceph%E8%A7%84%E5%88%92/</link>
+        <pubDate>Wed, 20 May 2020 15:16:05 +0000</pubDate>
+        
+        <guid>https://suikaremilia.github.io/post/ceph%E8%A7%84%E5%88%92/</guid>
+        <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;终于准备用Nautilus做生产环境了！&lt;br&gt;
+目前，Ceph 主要有三种企业级应用场景：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IOPS 密集型：这种类型的场景通常是支撑在虚拟化/私有云上运行数据库。如在 OpenStack 上运行 Mysql、MariaDB 或 PostgreSQL 等。IOPS 密集型场景对磁盘的性能要求较高，最好使用全闪架构。如果使用混合架构，机械盘转速需要 1.2 万，并使用高速盘存储频繁写操作的日志或元数据。&lt;/li&gt;
+&lt;li&gt;高吞吐量型：这种类型的应用场景主要是大块数据传输，如图像、视频、音频文件等。高吞吐量型磁盘的要求没有 IOPS 密集型高，但需要配置较高的网络。同时也需要配置 SSD 来处理写日志。&lt;/li&gt;
+&lt;li&gt;高容量型：这种场景主要用于存储归档、离线数据。它对磁盘的容量要求高，对性能无过多要求。写日志也可以存储在 HDD 上。&lt;br&gt;
+此次计划部署一套带宽型的用来提供S3服务，所以部署第二种就好。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;硬件规划&#34;&gt;硬件规划：&lt;/h2&gt;
+&lt;p&gt;nautilus采用blustore比filestore的性能大大提升，毕竟传输路径短了很多：&lt;br&gt;
+&lt;img src=&#34;https://suikaremilia.github.io/post/ceph%E8%A7%84%E5%88%92/1594881842550.png&#34;
+	width=&#34;1062&#34;
+	height=&#34;391&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph%E8%A7%84%E5%88%92/1594881842550_hu41757eb59e1d9df0a8401e6d8f23d863_124384_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph%E8%A7%84%E5%88%92/1594881842550_hu41757eb59e1d9df0a8401e6d8f23d863_124384_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;File Store VS Blue Store&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;271&#34;
+		data-flex-basis=&#34;651px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;随之而来的问题是BlueStore 存储引擎的实现，需要存储数据和元数据。目前 Ceph BuleStore 的元数据存储在 RocksDB（K-V 数据库）中。通过为 RocksEnv 提供操作接口，RocksDB 存放在 BlueFS 上。由于 BlueFS 最终通过 RocksDB，承载的是 BlueStore 存储引擎中的元数据，因此它的性能会很大程度上影响整个 Ceph 的性能。所以，要为它提供高速硬盘。&lt;br&gt;
+Redhat建议，在新的bluestore架构下，如果用NVMe做metedata/jouranl，对应HDD的OSD是1：12；如果普通SSD做metedata/jouranl，则与HDD的比例为1：4 &lt;a class=&#34;link&#34; href=&#34;https://access.redhat.com/documentation/en-us/red_hat_ceph_storage/4/html/hardware_guide/server-and-rack-solutions_hw&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;!-- raw HTML omitted --&gt;1&lt;!-- raw HTML omitted --&gt;&lt;/a&gt;
+在此基础上，其他按照官方建议配置。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Device&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Size&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Count&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Use&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;CPU&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Inter Xeon 6252&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Memor&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;32GB&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;DISK&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;4TB&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;12&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;OSD&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;SSD&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;480GB&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Operation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;NVMe&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;4TB&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;blockk.db&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Network&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;10GB&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;以上配置保证了：&lt;br&gt;
+1、每HDD的OSD至少对应5GB内存；&lt;br&gt;
+2、每2 GHZ CPU每0.5 Cores每HDD；&lt;br&gt;
+3、前端网络和后端网络的带宽，提供每12OSD有10GB带宽；&lt;br&gt;
+4、SSD组成raid1保证操作系统安全；&lt;br&gt;
+5、NVMe通过PCIE组成raid1，简化db磁盘损坏后的更换（此处不符合官方最佳实践）&lt;/p&gt;
+&lt;p&gt;共6台这样硬件配置的服务器，每台的作用如下：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;hostname&lt;/th&gt;
+&lt;th&gt;IP addr&lt;/th&gt;
+&lt;th&gt;Roles&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;rhcs01-st&lt;/td&gt;
+&lt;td&gt;10.64.0.80 &lt;!-- raw HTML omitted --&gt;10.64.4.80&lt;/td&gt;
+&lt;td&gt;OSD &lt;!-- raw HTML omitted --&gt;MON&lt;!-- raw HTML omitted --&gt;MGR&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;rhcs02-st&lt;/td&gt;
+&lt;td&gt;10.64.0.81 &lt;!-- raw HTML omitted --&gt;10.64.4.81&lt;/td&gt;
+&lt;td&gt;OSD &lt;!-- raw HTML omitted --&gt;RGW&lt;!-- raw HTML omitted --&gt;MDS&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;rhcs03-st&lt;/td&gt;
+&lt;td&gt;10.64.0.82 &lt;!-- raw HTML omitted --&gt;10.64.4.82&lt;/td&gt;
+&lt;td&gt;OSD &lt;!-- raw HTML omitted --&gt;MON&lt;!-- raw HTML omitted --&gt;MGR&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;rhcs04-st&lt;/td&gt;
+&lt;td&gt;10.64.0.83 &lt;!-- raw HTML omitted --&gt;10.64.4.83&lt;/td&gt;
+&lt;td&gt;OSD &lt;!-- raw HTML omitted --&gt;RGW&lt;!-- raw HTML omitted --&gt;MDS&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;rhcs05-st&lt;/td&gt;
+&lt;td&gt;10.64.0.84 &lt;!-- raw HTML omitted --&gt;10.64.4.84&lt;/td&gt;
+&lt;td&gt;OSD &lt;!-- raw HTML omitted --&gt;MON&lt;!-- raw HTML omitted --&gt;MGR&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;rhcs06-st&lt;/td&gt;
+&lt;td&gt;10.64.0.85 &lt;!-- raw HTML omitted --&gt;10.64.4.86&lt;/td&gt;
+&lt;td&gt;OSD &lt;!-- raw HTML omitted --&gt;RGW&lt;!-- raw HTML omitted --&gt;MDS&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;软件计划&#34;&gt;软件计划：&lt;/h2&gt;
+&lt;p&gt;确定使用RHCS4.1来部署，其与开源版本对应关系如下：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Upstream Code Name&lt;/th&gt;
+&lt;th&gt;Downstream Release Name&lt;/th&gt;
+&lt;th&gt;Red Hat Ceph Storage Package Version (RHEL 8.x)&lt;/th&gt;
+&lt;th&gt;Red Hat Ceph Storage Package Version (RHEL 7.x)&lt;/th&gt;
+&lt;th&gt;Red Hat Ceph Ansible Package Version 	Release Month&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Nautilus 	Red Hat Ceph Storage 4.1&lt;/td&gt;
+&lt;td&gt;14.2.8-59.el8cp&lt;/td&gt;
+&lt;td&gt;14.2.8-50.el7cp&lt;/td&gt;
+&lt;td&gt;ceph-ansible-4.0.23-1&lt;/td&gt;
+&lt;td&gt;June, 2020&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Nautilus&lt;/td&gt;
+&lt;td&gt;Red Hat Ceph Storage 4.0&lt;/td&gt;
+&lt;td&gt;14.2.4-125.el8cp&lt;/td&gt;
+&lt;td&gt;14.2.4-51.el7cp&lt;/td&gt;
+&lt;td&gt;ceph-ansible-4.0.14-1&lt;/td&gt;
+&lt;td&gt;January, 2020&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;而RHCS4支持的操作系统如下：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Vendor&lt;/th&gt;
+&lt;th&gt;Version&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Redhat Enterprise Linux&lt;/td&gt;
+&lt;td&gt;8.2&lt;!-- raw HTML omitted --&gt;8.1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Redhat Enterprise Linux&lt;/td&gt;
+&lt;td&gt;7.8&lt;!-- raw HTML omitted --&gt;7.7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;因此，系统选用RHEL8.2&lt;/p&gt;
+&lt;h2 id=&#34;小结&#34;&gt;小结&lt;/h2&gt;
+&lt;p&gt;选定了软件版本后，按标准来配置即可。由于是分布式存储，主要还是考虑硬盘和网络，而硬盘的配置跟存储整个架构有很大关系。&lt;/p&gt;
+&lt;h2 id=&#34;参考文档&#34;&gt;参考文档：&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://access.redhat.com/documentation/en-us/red_hat_ceph_storage/4/html/hardware_guide/index&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://access.redhat.com/documentation/en-us/red_hat_ceph_storage/4/html/hardware_guide/index&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>CEPH Nautilus Zabbix module Setup</title>
+        <link>https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/</link>
+        <pubDate>Mon, 02 Mar 2020 15:13:58 +0000</pubDate>
+        
+        <guid>https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/</guid>
+        <description>&lt;p&gt;CEPH可以通过mgr节点的zabbix模块实现监控&lt;/p&gt;
+&lt;p&gt;不同于普通的agent模式，CEPH自带的zabbix模块通过trapper模式工作，mgr节点收集集群信息并向Zabbix Server发送。&lt;/p&gt;
+&lt;h2 id=&#34;1环境说明&#34;&gt;1、环境说明：&lt;/h2&gt;
+&lt;p&gt;3节点CEPH集群，每个node都是mgr节点;&lt;br&gt;
+部署Nautilus 14.2.7；&lt;br&gt;
+Zabbix Server版本：4.2.1&lt;/p&gt;
+&lt;h2 id=&#34;2安装部署&#34;&gt;2、安装部署：&lt;/h2&gt;
+&lt;p&gt;在所有mgr节点上安装zabbix-sender&lt;br&gt;
+&lt;strong&gt;配置yum：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# rpm -Uvh https://repo.zabbix.com/zabbix/4.4/rhel/7/x86_64/zabbix-release-4.4-1.el7.noarch.rpm
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;安装sender：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# yum install zabbix-sender -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;3配置zabbix模块&#34;&gt;3、配置zabbix模块：&lt;/h2&gt;
+&lt;p&gt;在任意一个mgr节点上执行如下配置：&lt;br&gt;
+启用zabbix module：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-v&#34; data-lang=&#34;v&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;#&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;ceph&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;mgr&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;module&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;enable&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;zabbix&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;指定zabbix server，如果有多个可以用&amp;quot;,&amp;ldquo;隔开，并且可以添加&amp;rdquo;:&amp;ldquo;来指定服务器端口，此处只有最简单的配置：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ceph zabbix config-set zabbix_host zabbix.test.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;指定zabbix_sender的位置：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# which zabbix_sender 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/bin/zabbix_sender
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ceph zabbix config-set zabbix_sender /usr/bin/zabbix_sender
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Configuration option zabbix_sender updated
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;指定identifier，这里很奇怪，只能是某个mgr节点的主机名，其他的可以设置成功但是发送失败，不知道我哪里配的有问题：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ceph zabbix config-set identifier &amp;#34;ceph01.test.com&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;后面如果有需要可以定义server的端口等，命令跟前面的相仿，这里就不配了。&lt;br&gt;
+查看一下当前的配置：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ceph zabbix config-show
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;查看一下自带的监控模板，后面会用到：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# find / -iname zabbix_template.xml
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/usr/share/ceph/mgr/zabbix/zabbix_template.xml
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;4配置zabbix-server&#34;&gt;4、配置zabbix server：&lt;/h2&gt;
+&lt;p&gt;登录Zabbix Web UI导入前面找到的监控模板，模板也可以在&lt;a class=&#34;link&#34; href=&#34;http://www.voidcn.com/link?url=https://github.com/ceph/ceph/tree/master/src/pybind/mgr/zabbix&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;github&lt;/a&gt;中找，默认选项导入即可：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826557541.png&#34;
+	width=&#34;1625&#34;
+	height=&#34;381&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826557541_hu06e916c324e13a10363a11853adf8467_15267_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826557541_hu06e916c324e13a10363a11853adf8467_15267_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;426&#34;
+		data-flex-basis=&#34;1023px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826581767.png&#34;
+	width=&#34;1646&#34;
+	height=&#34;559&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826581767_hu5cb4ff5752e9f77f5256094beec9ec01_20967_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826581767_hu5cb4ff5752e9f77f5256094beec9ec01_20967_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;294&#34;
+		data-flex-basis=&#34;706px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;创建主机组：&lt;br&gt;
+&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826608847.png&#34;
+	width=&#34;1619&#34;
+	height=&#34;301&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826608847_hu688770a15a396b85d58679f0f29c6f45_12022_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826608847_hu688770a15a396b85d58679f0f29c6f45_12022_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;537&#34;
+		data-flex-basis=&#34;1290px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;添加主机并关联主机组和模板，如果有需要主机可以关联多个模板，比如系统的监控：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826718228.png&#34;
+	width=&#34;1623&#34;
+	height=&#34;483&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826718228_hueb65483bc61224eed3789fc44f6e373a_17276_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826718228_hueb65483bc61224eed3789fc44f6e373a_17276_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;336&#34;
+		data-flex-basis=&#34;806px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826726630.png&#34;
+	width=&#34;1620&#34;
+	height=&#34;512&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826726630_hu801990c753c45a307a448566451cd617_16898_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826726630_hu801990c753c45a307a448566451cd617_16898_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;316&#34;
+		data-flex-basis=&#34;759px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826768418.png&#34;
+	width=&#34;1632&#34;
+	height=&#34;439&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826768418_hu1510845a2ffbd2f4dbcf316bbbe7bfb0_14770_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583826768418_hu1510845a2ffbd2f4dbcf316bbbe7bfb0_14770_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;371&#34;
+		data-flex-basis=&#34;892px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;配置用户告警：
+&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583915228007.png&#34;
+	width=&#34;1113&#34;
+	height=&#34;570&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583915228007_hua4a7f15b99f3229fde4d544ca250d8ef_15045_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583915228007_hua4a7f15b99f3229fde4d544ca250d8ef_15045_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;195&#34;
+		data-flex-basis=&#34;468px&#34;
+	
+&gt;&lt;br&gt;
+&lt;img src=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583915254342.png&#34;
+	width=&#34;1056&#34;
+	height=&#34;867&#34;
+	srcset=&#34;https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583915254342_hu6a3dfae8dcba0713d093b2d3cdb50784_20745_480x0_resize_box_3.png 480w, https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/1583915254342_hu6a3dfae8dcba0713d093b2d3cdb50784_20745_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;121&#34;
+		data-flex-basis=&#34;292px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;至此配置完成。&lt;/p&gt;
+&lt;h2 id=&#34;5测试配置&#34;&gt;5、测试配置&lt;/h2&gt;
+&lt;p&gt;任意一台mgr节点测试：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# ceph zabbix send 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Sending data to Zabbix
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果发送不成功会导致ceph健康状态告警，检查端口通信情况及zabbix server的trapper模式是否被禁用，以及上面的步骤是不是哪里配置错了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.ceph.com/docs/master/mgr/zabbix&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://docs.ceph.com/docs/master/mgr/zabbix/&lt;/a&gt;&lt;br&gt;
+&lt;a class=&#34;link&#34; href=&#34;https://www.cnblogs.com/lbjstill/p/12169820.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.cnblogs.com/lbjstill/p/12169820.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

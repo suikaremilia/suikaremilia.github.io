@@ -1,31 +1,53 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>vim on 小熊猫快站起来</title>
-    <link>https://suikaremilia.github.io/tags/vim/</link>
-    <description>Recent content in vim on 小熊猫快站起来</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Fri, 20 Mar 2020 10:05:31 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Vim替换</title>
-      <link>https://suikaremilia.github.io/post/vim-s/</link>
-      <pubDate>Fri, 20 Mar 2020 10:05:31 +0000</pubDate>
-      
-      <guid>https://suikaremilia.github.io/post/vim-s/</guid>
-      <description>Vim可以在命令模式下使用substitute命令，将指定的字符串替换成目标字符串。
-基本语法： Vim替换命令的基本语法是 :[range]s/目标字符串/替换字符串/[option]，其中range和option字段都可以缺省不填。
-range: 表示搜索范围，默认表示当前行; 也可以是以逗号隔开的两个数字，例如1,20表示从第1到第20行; 也可以是特殊字符，与其他地方的默认习俗一致，其中%表示整个文件
-s 即substitute的简写，表示执行替换字符串操作;
-option: 表示操作类型，默认只对第一个匹配的字符进行替换； 常见字段值有：g(global)表示全局替换; c(comfirm)表示操作时需要确认; i(ignorecase)表示不区分大小写;
-简单实例 替换当前行第一个 VIM 为 sakuya :s/VIM/sakuya/
-替换当前行所有 VIM 为 sakuya :s/VIM/sakuya/g 替换第 n 行开始到最后一行中每一行的第一个 VIM 为 sakuya :n,$s/VIM/sakuya/ 替换第 n 行开始到最后一行中每一行所有 VIM 为 sakuya
-:n,$s/VIM/sakuya/g 替换每一行的第一个 VIM 为 sakuya
-:%s/VIM/sakuya/ 等同于： :g/VIM/s//sakuya/
-替换每一行中所有 VIM 为 sakuya :%s/VIM/sakuya/g 等同于： :g/VIM/s//sakuya/g
-可以使用 # 作为分隔符，此时中间出现的 / 不会作为分隔符，例如：替换当前行第一个 VIM/ 为 sakuya/ :s#VIM/#sakuya/# 全文的行首加入//字符，批量注释时非常有用，/进行转义后才可以替换 :%s/^/\/\//
-将所有行尾多余的空格删除 :%s= *$==</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>vim on すいかの幻想郷</title>
+        <link>https://suikaremilia.github.io/tags/vim/</link>
+        <description>Recent content in vim on すいかの幻想郷</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 20 Mar 2020 10:05:31 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Vim替换</title>
+        <link>https://suikaremilia.github.io/post/vim%E6%9B%BF%E6%8D%A2/</link>
+        <pubDate>Fri, 20 Mar 2020 10:05:31 +0000</pubDate>
+        
+        <guid>https://suikaremilia.github.io/post/vim%E6%9B%BF%E6%8D%A2/</guid>
+        <description>&lt;p&gt;Vim可以在命令模式下使用substitute命令，将指定的字符串替换成目标字符串。&lt;/p&gt;
+&lt;h2 id=&#34;基本语法&#34;&gt;基本语法：&lt;/h2&gt;
+&lt;p&gt;Vim替换命令的基本语法是 :[range]s/目标字符串/替换字符串/[option]，其中range和option字段都可以缺省不填。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;range:&lt;/strong&gt; 表示搜索范围，默认表示当前行;
+也可以是以逗号隔开的两个数字，例如1,20表示从第1到第20行;
+也可以是特殊字符，与其他地方的默认习俗一致，其中%表示整个文件&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;s&lt;/strong&gt; 即substitute的简写，表示执行替换字符串操作;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;option:&lt;/strong&gt; 表示操作类型，默认只对第一个匹配的字符进行替换；
+常见字段值有：g(global)表示全局替换;
+c(comfirm)表示操作时需要确认;
+i(ignorecase)表示不区分大小写;&lt;/p&gt;
+&lt;h2 id=&#34;简单实例&#34;&gt;简单实例&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;替换当前行第一个 VIM 为 sakuya&lt;/strong&gt;
+&lt;code&gt;:s/VIM/sakuya/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;替换当前行所有 VIM 为 sakuya&lt;/strong&gt;
+&lt;code&gt;:s/VIM/sakuya/g &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;替换第 n 行开始到最后一行中每一行的第一个 VIM 为 sakuya&lt;/strong&gt;
+&lt;code&gt;:n,$s/VIM/sakuya/ &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;替换第 n 行开始到最后一行中每一行所有 VIM 为 sakuya&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;:n,$s/VIM/sakuya/g &lt;/code&gt;
+&lt;strong&gt;替换每一行的第一个 VIM 为 sakuya&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;:%s/VIM/sakuya/&lt;/code&gt;
+等同于：
+&lt;code&gt;:g/VIM/s//sakuya/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;替换每一行中所有 VIM 为 sakuya&lt;/strong&gt;
+&lt;code&gt;:%s/VIM/sakuya/g&lt;/code&gt;
+等同于：
+&lt;code&gt;:g/VIM/s//sakuya/g&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;可以使用 # 作为分隔符，此时中间出现的 / 不会作为分隔符，例如：替换当前行第一个 VIM/ 为 sakuya/&lt;/strong&gt;
+&lt;code&gt;:s#VIM/#sakuya/# &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;全文的行首加入//字符，批量注释时非常有用，/进行转义后才可以替换&lt;/strong&gt;
+&lt;code&gt;:%s/^/\/\//&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;将所有行尾多余的空格删除&lt;/strong&gt;
+&lt;code&gt;:%s= *$==&lt;/code&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

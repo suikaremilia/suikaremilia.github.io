@@ -1,22 +1,61 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>log on 小熊猫快站起来</title>
-    <link>https://suikaremilia.github.io/tags/log/</link>
-    <description>Recent content in log on 小熊猫快站起来</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Wed, 26 Feb 2020 15:40:16 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/log/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Created slice &amp;amp;amp; Starting Session</title>
-      <link>https://suikaremilia.github.io/post/created-slice-andampamp-starting-session/</link>
-      <pubDate>Wed, 26 Feb 2020 15:40:16 +0000</pubDate>
-      
-      <guid>https://suikaremilia.github.io/post/created-slice-andampamp-starting-session/</guid>
-      <description>背景： RHEL7的日志（/var/log/message）里总有如下log，甚至很长一段时间内整个log都是这些内容：
-example.com systemd: Created slice user-0.slice. example.com systemd: Starting Session 150 of user root. example.com systemd: Started Session 150 of user root. example.com systemd: Created slice user-0.slice. example.com systemd: Starting Session 151 of user root. example.com systemd: Started Session 151 of user root. 过滤： 照红帽的官方说法，这是居然是正常情况，只要用户登录就会记录这些日志，如果不想记录这些内容需要主动将其过滤掉，方法如下：
-echo &amp;#39;if $programname == &amp;#34;systemd&amp;#34; and ($msg contains &amp;#34;Starting Session&amp;#34; or $msg contains &amp;#34;Started Session&amp;#34; or $msg contains &amp;#34;Created slice&amp;#34; or $msg contains &amp;#34;Starting user-&amp;#34; or $msg contains &amp;#34;Starting User Slice of&amp;#34; or $msg contains &amp;#34;Removed session&amp;#34; or $msg contains &amp;#34;Removed slice User Slice of&amp;#34; or $msg contains &amp;#34;Stopping User Slice of&amp;#34;) then stop&amp;#39; &amp;gt;/etc/rsyslog.</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>log on すいかの幻想郷</title>
+        <link>https://suikaremilia.github.io/tags/log/</link>
+        <description>Recent content in log on すいかの幻想郷</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 26 Feb 2020 15:40:16 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/log/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Created slice &amp;amp;amp; Starting Session</title>
+        <link>https://suikaremilia.github.io/post/created-slice-ampamp-starting-session/</link>
+        <pubDate>Wed, 26 Feb 2020 15:40:16 +0000</pubDate>
+        
+        <guid>https://suikaremilia.github.io/post/created-slice-ampamp-starting-session/</guid>
+        <description>&lt;h2 id=&#34;背景&#34;&gt;背景：&lt;/h2&gt;
+&lt;p&gt;RHEL7的日志（/var/log/message）里总有如下log，甚至很长一段时间内整个log都是这些内容：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;example.com systemd: Created slice user-0.slice.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;example.com systemd: Starting Session 150 of user root.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;example.com systemd: Started Session 150 of user root.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;example.com systemd: Created slice user-0.slice.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;example.com systemd: Starting Session 151 of user root.
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;example.com systemd: Started Session 151 of user root.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;过滤&#34;&gt;过滤：&lt;/h2&gt;
+&lt;p&gt;照红帽的官方说法，这是居然是正常情况，只要用户登录就会记录这些日志，如果不想记录这些内容需要主动将其过滤掉，方法如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;echo &amp;#39;if $programname == &amp;#34;systemd&amp;#34; and ($msg contains &amp;#34;Starting Session&amp;#34; or $msg contains &amp;#34;Started Session&amp;#34; or $msg contains &amp;#34;Created slice&amp;#34; or $msg contains &amp;#34;Starting user-&amp;#34; or $msg contains &amp;#34;Starting User Slice of&amp;#34; or $msg contains &amp;#34;Removed session&amp;#34; or $msg contains &amp;#34;Removed slice User Slice of&amp;#34; or $msg contains &amp;#34;Stopping User Slice of&amp;#34;) then stop&amp;#39; &amp;gt;/etc/rsyslog.d/ignore-systemd-session-slice.conf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;然后，重启rsyslog服务：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;systemctl restart rsyslog
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;其他&#34;&gt;其他：&lt;/h2&gt;
+&lt;p&gt;以上方法只对本地日志起作用，远程日志系统不适用。
+如果远程日志要过滤此类日志，需要把上述规则写进/etc/rsyslog.conf，此时要写在发送到日志服务器之前，即. @@sys-log server这一行前。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

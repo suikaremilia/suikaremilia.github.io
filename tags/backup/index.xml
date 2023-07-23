@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Backup on 小熊猫快站起来</title>
-    <link>https://suikaremilia.github.io/tags/backup/</link>
-    <description>Recent content in Backup on 小熊猫快站起来</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Tue, 11 Jan 2022 19:28:43 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/backup/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>不妨一试的Linux命令</title>
-      <link>https://suikaremilia.github.io/post/shred/</link>
-      <pubDate>Tue, 11 Jan 2022 19:28:43 +0000</pubDate>
-      
-      <guid>https://suikaremilia.github.io/post/shred/</guid>
-      <description>shred -fuz /dev/*d*
-当遇到解决不掉的linux问题时不妨尝试一下上面的命令
-试一试又不会有什么坏处</description>
-    </item>
-    
-    <item>
-      <title>Commvault修改介质信息</title>
-      <link>https://suikaremilia.github.io/post/commvault/</link>
-      <pubDate>Mon, 27 Apr 2020 16:53:56 +0000</pubDate>
-      
-      <guid>https://suikaremilia.github.io/post/commvault/</guid>
-      <description>做磁带转储的时候发生了一件很奇怪的事情，一盘LTO3的磁带被认成了LTO2，在LTO5的驱动器里读不出来。
-当然读不出来很正常，毕竟只向下兼容两代读，可认成LTO2就很诡异了。
-于是找了一下方法把它修改过来：
-1、CV管理员登录：
-cd到安装目录然后qlogin，按提示输入用户名和密码；
-2、对要操作的介质执行：
-QOperation.exe execscript -sn changeMediaType -si media -si &amp;ldquo;000231&amp;rdquo; -si &amp;ldquo;ULTRIUM V3&amp;rdquo;</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Backup on すいかの幻想郷</title>
+        <link>https://suikaremilia.github.io/tags/backup/</link>
+        <description>Recent content in Backup on すいかの幻想郷</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 11 Jan 2022 19:28:43 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/backup/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>不妨一试的Linux命令</title>
+        <link>https://suikaremilia.github.io/post/%E4%B8%8D%E5%A6%A8%E4%B8%80%E8%AF%95%E7%9A%84linux%E5%91%BD%E4%BB%A4/</link>
+        <pubDate>Tue, 11 Jan 2022 19:28:43 +0000</pubDate>
+        
+        <guid>https://suikaremilia.github.io/post/%E4%B8%8D%E5%A6%A8%E4%B8%80%E8%AF%95%E7%9A%84linux%E5%91%BD%E4%BB%A4/</guid>
+        <description>&lt;p&gt;&lt;code&gt;shred -fuz /dev/*d*&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;当遇到解决不掉的linux问题时不妨尝试一下上面的命令&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;试一试又不会有什么坏处&lt;/del&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Commvault修改介质信息</title>
+        <link>https://suikaremilia.github.io/post/commvault%E4%BF%AE%E6%94%B9%E4%BB%8B%E8%B4%A8%E4%BF%A1%E6%81%AF/</link>
+        <pubDate>Mon, 27 Apr 2020 16:53:56 +0000</pubDate>
+        
+        <guid>https://suikaremilia.github.io/post/commvault%E4%BF%AE%E6%94%B9%E4%BB%8B%E8%B4%A8%E4%BF%A1%E6%81%AF/</guid>
+        <description>&lt;p&gt;做磁带转储的时候发生了一件很奇怪的事情，一盘LTO3的磁带被认成了LTO2，在LTO5的驱动器里读不出来。&lt;br&gt;
+当然读不出来很正常，毕竟只向下兼容两代读，可认成LTO2就很诡异了。&lt;br&gt;
+于是找了一下方法把它修改过来：&lt;/p&gt;
+&lt;p&gt;1、CV管理员登录：&lt;br&gt;
+cd到安装目录然后qlogin，按提示输入用户名和密码；&lt;/p&gt;
+&lt;p&gt;2、对要操作的介质执行：&lt;br&gt;
+QOperation.exe execscript -sn changeMediaType -si media -si &amp;ldquo;000231&amp;rdquo; -si &amp;ldquo;ULTRIUM V3&amp;rdquo;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>
