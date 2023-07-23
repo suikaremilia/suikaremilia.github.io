@@ -32,10 +32,6 @@ favicon = "/favicon.ico"
     icon = "mail"
     name = "Mail"
     url = "mailto:suika@kadama.eu.org"
-  [[params.social]]
-    icon = "rss"
-    name = "RSS"
-    url = "https://suikaremilia.github.io/index.xml"
 
   [params.style]
     darkestColor = "#242930"
