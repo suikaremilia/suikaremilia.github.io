@@ -75,3 +75,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        with:
+          personal_token: ${{ secrets.personal_token }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./public
+          commit_message: ${{ github.event.head_commit.message }}
