@@ -3,7 +3,8 @@ author: "Suika"
 title: "ansible tower升级"
 date: "2020-07-27 17:39:01"
 description: "升级是一种常态"
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "Ansible"
 image: ""

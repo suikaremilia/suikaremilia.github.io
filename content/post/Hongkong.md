@@ -3,7 +3,8 @@ author: "Suika"
 title: "香港……"
 date: "2020-06-30 15:26:10"
 description: "黑警下地狱比较好"
-categories: "mumbler"
+categories: 
+  - "mumbler"
 tags: 
   - "mumbler"
 image: ""

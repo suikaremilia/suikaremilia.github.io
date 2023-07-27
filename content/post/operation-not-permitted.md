@@ -3,7 +3,8 @@ author: "Suika"
 title: "Too many open files导致登录失败"
 date: "2021-06-24 15:42:08"
 description: "有人的地方就有人挖坑"
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "SSH"
 image: ""

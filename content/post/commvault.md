@@ -3,7 +3,8 @@ author: "Suika"
 title: "Commvault修改介质信息"
 date: "2020-04-27 16:53:56"
 description: "这年头还有用磁带的"
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "Backup"
   - "tape"

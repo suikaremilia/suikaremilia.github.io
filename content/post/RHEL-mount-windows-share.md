@@ -3,7 +3,8 @@ author: "Suika"
 title: "RHEL挂载windows共享"
 date: "2020-07-13 13:50:07"
 description: "Windows和Linux总是很难联系"
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "SMB"
 image: ""

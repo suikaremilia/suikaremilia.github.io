@@ -3,7 +3,8 @@ author: "Suika"
 title: "Ubuntu删除snap"
 date: "2020-07-07 09:25:12"
 description: "Snap虽方便，但邪教"
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "Snap"
 image: ""

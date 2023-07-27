@@ -3,7 +3,8 @@ author: "Suika"
 title: "Opne Shift 4.6在线安装"
 date: "2020-12-12 09:14:40"
 description: "OCP是个好东西，除了贵"
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "Openshift"
 image: ""

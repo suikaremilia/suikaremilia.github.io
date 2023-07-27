@@ -3,7 +3,8 @@ author: "Suika"
 title: "Created slice &amp;amp; Starting Session"
 date: "2020-02-26 15:40:16"
 description: "Logs should only record what is useful"
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "log"
   - "RHEL"

@@ -3,7 +3,8 @@ author: "Suika"
 title: "不妨一试的Linux命令"
 date: "2022-01-11 19:28:43"
 description: "把未知问题转为已知问题，我是认真的"
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "Backup"
 image: ""

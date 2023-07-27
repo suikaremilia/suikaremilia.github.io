@@ -3,7 +3,8 @@ author: "Suika"
 title: "Arch Linux instal"
 date: "2020-03-08 17:48:42"
 description: "Arch is great"
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "Arch"
 image: ""

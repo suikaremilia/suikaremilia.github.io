@@ -3,7 +3,8 @@ author: "Suika"
 title: "Set up proxy for podman"
 date: "2020-07-20 14:15:12"
 description: ""
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "Proxy"
   - "Podman"

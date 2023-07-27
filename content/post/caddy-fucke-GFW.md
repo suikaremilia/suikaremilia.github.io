@@ -3,7 +3,8 @@ author: "Suika"
 title: "Caddy翻墙"
 date: "2020-04-06 10:09:28"
 description: "Fuck GFW"
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "Proxy"
 image: ""

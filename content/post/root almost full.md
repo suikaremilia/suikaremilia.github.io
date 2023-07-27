@@ -3,7 +3,8 @@ author: "Suika"
 title: "根分区快满了"
 date: "2022-01-14 16:48:40"
 description: "流程再完善不执行有卵用"
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - ""
 image: ""

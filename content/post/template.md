@@ -3,7 +3,8 @@ author: "Suika"
 title: "封装虚拟机"
 date: "2020-05-12 11:19:16"
 description: ""
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "Virtualzation"
 image: ""

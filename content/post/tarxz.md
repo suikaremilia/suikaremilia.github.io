@@ -3,7 +3,8 @@ author: "Suika"
 title: "tar.xz解压"
 date: "2020-03-16 11:08:56"
 description: ""
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "tar"
 image: ""

@@ -3,7 +3,8 @@ author: "Suika"
 title: "Python 更改pip源"
 date: "2020-03-25 10:08:05"
 description: ""
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "PIP"
 image: ""

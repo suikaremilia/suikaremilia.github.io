@@ -3,7 +3,8 @@ author: "Suika"
 title: "写在开始的碎碎念"
 date: "2020-02-20 09:32:34"
 description: "总是喜欢自言自语"
-categories: "mumbler"
+categories: 
+  - "mumbler"
 tags: 
   - "mumbler"
 lastmod: "2022-05-25 11:19:52"

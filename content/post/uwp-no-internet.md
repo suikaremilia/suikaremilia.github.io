@@ -1,18 +1,10 @@
 ---
-title: '解决UWP应用无法联网的三种方法'
-date: 2020-03-12 14:07:17
-tags: [UWP]
-published: true
-hideInList: false
-feature: 
-isTop: false
----
----
 author: "Suika"
 title: "解决UWP应用无法联网的三种方法"
 date: "2020-03-12 14:07:17"
 description: "怎么会有UWP这种东西"
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "UWP"
   - “Proxy”

@@ -3,7 +3,8 @@ author: "Suika"
 title: "RHEL8加密策略改变"
 date: "2021-06-25 17:27:15"
 description: "这谁知道啊……"
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "RHEL"
 image: ""

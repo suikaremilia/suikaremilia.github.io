@@ -3,7 +3,8 @@ author: "Suika"
 title: "Vim替换"
 date: "2020-03-20 10:05:31"
 description: "VIM是最好的编辑器"
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "vim"
 image: ""

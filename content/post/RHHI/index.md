@@ -3,7 +3,8 @@ author: "Suika"
 title: "部署RHHI环境"
 date: "2020-05-05 13:57:26"
 description: ""
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "RHHI"
   - "Virtualzation"

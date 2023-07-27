@@ -3,7 +3,8 @@ author: "Suika"
 title: "pvmove迁移数据"
 date: "2020-04-12 15:29:48"
 description: "别怕，这是个安全操作"
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "pvmove"
   - "LVM"

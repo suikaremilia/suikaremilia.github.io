@@ -3,7 +3,8 @@ author: "Suika"
 title: "记一次博科光交排障"
 date: "2020-08-03 19:24:01"
 description: ""
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "3PAR"
   - "Brocade"

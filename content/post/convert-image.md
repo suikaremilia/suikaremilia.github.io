@@ -3,7 +3,8 @@ author: "Suika"
 title: "虚拟机镜像转换"
 date: "2020-05-08 11:00:23"
 description: ""
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "Virtualzation"
 image: ""

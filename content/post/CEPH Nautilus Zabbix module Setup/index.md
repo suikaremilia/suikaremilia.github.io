@@ -3,7 +3,8 @@ author: "Suika"
 title: "CEPH Nautilus Zabbix module Setup"
 date: "2020-03-02 15:13:58"
 description: ""
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "CEPH"
   - "Monitor"

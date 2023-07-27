@@ -3,7 +3,8 @@ author: "Suika"
 title: "CEPH规划"
 date: "2020-05-20 15:16:05"
 description: "CEPH so hard"
-categories: "Tech"
+categories: 
+  - "Tech"
 tags: 
   - "CEPH"
 image: ""
