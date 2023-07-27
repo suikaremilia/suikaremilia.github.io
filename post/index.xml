@@ -329,8 +329,7 @@ Tar选项： c – 创建压缩文件 x – 解压文件 v – 显示进度. f �
       <pubDate>Thu, 12 Mar 2020 14:07:17 +0000</pubDate>
       
       <guid>https://suikaremilia.github.io/post/uwp-no-internet/</guid>
-      <description>author: &amp;ldquo;Suika&amp;rdquo; title: &amp;ldquo;解决UWP应用无法联网的三种方法&amp;rdquo; date: &amp;ldquo;2020-03-12 14:07:17&amp;rdquo; description: &amp;ldquo;怎么会有UWP这种东西&amp;rdquo; categories: &amp;ldquo;Tech&amp;rdquo; tags:
-&amp;ldquo;UWP&amp;rdquo; “Proxy” image: &amp;quot;&amp;quot; surface Pro 6又坏了，微软的硬件好垃圾，一年多坏了3次，再不会买了，影响工作效率。每次送修的结果就是所有东西都要重配一遍，这次是换机，更彻底一点。然后，又遇到了当初第一次用surface的时候遇到的问题——UWP应用联网。于是把备份的一篇文字直接拿来解决这个问题，再发一遍方便以后找。
+      <description>surface Pro 6又坏了，微软的硬件好垃圾，一年多坏了3次，再不会买了，影响工作效率。每次送修的结果就是所有东西都要重配一遍，这次是换机，更彻底一点。然后，又遇到了当初第一次用surface的时候遇到的问题——UWP应用联网。于是把备份的一篇文字直接拿来解决这个问题，再发一遍方便以后找。
 从Arch到Win10各种不适应，最近这种不适应在一个始料未及的事情上表现的尤为明显——只要开了全局代理，微软自家的UWP程序就无法联网了。
 对此，在下也是服气。
 然而，发现问题不解决不是吾辈的作风，于是开始找各种解决方案，顺带了解了一下UWP。
