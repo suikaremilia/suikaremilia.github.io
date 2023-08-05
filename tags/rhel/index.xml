@@ -1,33 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>RHEL on 小熊猫快站起来</title>
+    <title>RHEL on Red Panda YOLO</title>
     <link>https://suikaremilia.github.io/tags/rhel/</link>
-    <description>Recent content in RHEL on 小熊猫快站起来</description>
+    <description>Recent content in RHEL on Red Panda YOLO</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en-us</language>
+    <copyright>{year}</copyright>
     <lastBuildDate>Fri, 25 Jun 2021 17:27:15 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/rhel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RHEL8加密策略改变</title>
-      <link>https://suikaremilia.github.io/post/rhel8-crypto-policies/</link>
+      <link>https://suikaremilia.github.io/posts/rhel8-crypto-policies/</link>
       <pubDate>Fri, 25 Jun 2021 17:27:15 +0000</pubDate>
       
-      <guid>https://suikaremilia.github.io/post/rhel8-crypto-policies/</guid>
-      <description>升级了rhel8.4，发现AD域的账户登不上去了。
-日志显示的问题出在：
-(2021-06-24 17:34:18): [krb5_child[39535]] [get_and_save_tgt] (0x0020): 1757: [-1765328370][KDC has no support for encryption type] (2021-06-24 17:34:18): [krb5_child[39535]] [map_krb5_error] (0x0020): 1849: [-1765328370][KDC has no support for encryption type] (2021-06-24 17:35:46): [krb5_child[39555]] [validate_tgt] (0x0020): TGT failed verification using key for [host/xxxxx@xxxx.COM]. (2021-06-24 17:35:46): [krb5_child[39555]] [get_and_save_tgt] (0x0020): 1757: [-1765328370][KDC has no support for encryption type] (2021-06-24 17:35:46): [krb5_child[39555]] [map_krb5_error] (0x0020): 1849: [-1765328370][KDC has no support for encryption type] 这是什么鬼？KDC不支持的加密类型？？？可是加密类型是default啊。
-# cat etc/crypto-policies/config DEFAULT 于是去查了一下，发现真的是加密类型变了，redhat是这么写的：</description>
+      <guid>https://suikaremilia.github.io/posts/rhel8-crypto-policies/</guid>
+      <description>升级了rhel8.4，发现AD域的账户登不上去了。</description>
     </item>
     
     <item>
       <title>Created slice &amp;amp;amp; Starting Session</title>
-      <link>https://suikaremilia.github.io/post/created-slice-andampamp-starting-session/</link>
+      <link>https://suikaremilia.github.io/posts/created-slice-andampamp-starting-session/</link>
       <pubDate>Wed, 26 Feb 2020 15:40:16 +0000</pubDate>
       
-      <guid>https://suikaremilia.github.io/post/created-slice-andampamp-starting-session/</guid>
-      <description>背景： RHEL7的日志（/var/log/message）里总有如下log，甚至很长一段时间内整个log都是这些内容：
-example.com systemd: Created slice user-0.slice. example.com systemd: Starting Session 150 of user root. example.com systemd: Started Session 150 of user root. example.com systemd: Created slice user-0.slice. example.com systemd: Starting Session 151 of user root. example.com systemd: Started Session 151 of user root. 过滤： 照红帽的官方说法，这是居然是正常情况，只要用户登录就会记录这些日志，如果不想记录这些内容需要主动将其过滤掉，方法如下：
-echo &amp;#39;if $programname == &amp;#34;systemd&amp;#34; and ($msg contains &amp;#34;Starting Session&amp;#34; or $msg contains &amp;#34;Started Session&amp;#34; or $msg contains &amp;#34;Created slice&amp;#34; or $msg contains &amp;#34;Starting user-&amp;#34; or $msg contains &amp;#34;Starting User Slice of&amp;#34; or $msg contains &amp;#34;Removed session&amp;#34; or $msg contains &amp;#34;Removed slice User Slice of&amp;#34; or $msg contains &amp;#34;Stopping User Slice of&amp;#34;) then stop&amp;#39; &amp;gt;/etc/rsyslog.</description>
+      <guid>https://suikaremilia.github.io/posts/created-slice-andampamp-starting-session/</guid>
+      <description>背景： RHEL7的日志（/var/log/message）里总有如下log，甚至很长一段时间内整个log都是这些内容：</description>
     </item>
     
   </channel>

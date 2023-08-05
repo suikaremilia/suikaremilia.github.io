@@ -5,13 +5,16 @@
     <loc>https://suikaremilia.github.io/categories/</loc>
     <lastmod>2022-05-25T18:55:10+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/tags/mumbler/</loc>
+    <loc>https://suikaremilia.github.io/posts/</loc>
     <lastmod>2022-05-25T18:55:10+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/categories/mumbler/</loc>
+    <loc>https://suikaremilia.github.io/tags/murmur/</loc>
     <lastmod>2022-05-25T18:55:10+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/</loc>
+    <loc>https://suikaremilia.github.io/categories/murmur/</loc>
+    <lastmod>2022-05-25T18:55:10+00:00</lastmod>
+  </url><url>
+    <loc>https://suikaremilia.github.io/</loc>
     <lastmod>2022-05-25T18:55:10+00:00</lastmod>
   </url><url>
     <loc>https://suikaremilia.github.io/tags/</loc>
@@ -20,37 +23,34 @@
     <loc>https://suikaremilia.github.io/categories/tech/</loc>
     <lastmod>2022-05-25T18:55:10+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/</loc>
+    <loc>https://suikaremilia.github.io/posts/to-huge/</loc>
     <lastmod>2022-05-25T18:55:10+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/to-huge/</loc>
-    <lastmod>2022-05-25T18:55:10+00:00</lastmod>
-  </url><url>
-    <loc>https://suikaremilia.github.io/post/root-almost-full/</loc>
+    <loc>https://suikaremilia.github.io/posts/root-almost-full/</loc>
     <lastmod>2022-01-14T16:48:40+00:00</lastmod>
   </url><url>
     <loc>https://suikaremilia.github.io/tags/backup/</loc>
     <lastmod>2022-01-11T19:28:43+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/shred/</loc>
+    <loc>https://suikaremilia.github.io/posts/shred/</loc>
     <lastmod>2022-01-11T19:28:43+00:00</lastmod>
   </url><url>
     <loc>https://suikaremilia.github.io/tags/rhel/</loc>
     <lastmod>2021-06-25T17:27:15+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/rhel8-crypto-policies/</loc>
+    <loc>https://suikaremilia.github.io/posts/rhel8-crypto-policies/</loc>
     <lastmod>2021-06-25T17:27:15+00:00</lastmod>
   </url><url>
     <loc>https://suikaremilia.github.io/tags/ssh/</loc>
     <lastmod>2021-06-24T15:42:08+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/operation-not-permitted/</loc>
+    <loc>https://suikaremilia.github.io/posts/operation-not-permitted/</loc>
     <lastmod>2021-06-24T15:42:08+00:00</lastmod>
   </url><url>
     <loc>https://suikaremilia.github.io/tags/openshift/</loc>
     <lastmod>2020-12-12T09:14:40+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/opneshift-46-install.md/</loc>
+    <loc>https://suikaremilia.github.io/posts/opneshift-46-install.md/</loc>
     <lastmod>2020-12-12T09:14:40+00:00</lastmod>
   </url><url>
     <loc>https://suikaremilia.github.io/tags/3par/</loc>
@@ -59,13 +59,13 @@
     <loc>https://suikaremilia.github.io/tags/brocade/</loc>
     <lastmod>2020-08-03T19:24:01+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/brocade-switch/</loc>
+    <loc>https://suikaremilia.github.io/posts/brocade-switch/</loc>
     <lastmod>2020-08-03T19:24:01+00:00</lastmod>
   </url><url>
     <loc>https://suikaremilia.github.io/tags/ansible/</loc>
     <lastmod>2020-07-27T17:39:01+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/ansible-tower-upgrade/</loc>
+    <loc>https://suikaremilia.github.io/posts/ansible-tower-upgrade/</loc>
     <lastmod>2020-07-27T17:39:01+00:00</lastmod>
   </url><url>
     <loc>https://suikaremilia.github.io/tags/podman/</loc>
@@ -74,10 +74,10 @@
     <loc>https://suikaremilia.github.io/tags/proxy/</loc>
     <lastmod>2020-07-20T14:15:12+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/set-up-proxy-for-podman/</loc>
+    <loc>https://suikaremilia.github.io/posts/set-up-proxy-for-podman/</loc>
     <lastmod>2020-07-20T14:15:12+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/rhel-mount-windows-share/</loc>
+    <loc>https://suikaremilia.github.io/posts/rhel-mount-windows-share/</loc>
     <lastmod>2020-07-13T13:50:07+00:00</lastmod>
   </url><url>
     <loc>https://suikaremilia.github.io/tags/smb/</loc>
@@ -86,34 +86,37 @@
     <loc>https://suikaremilia.github.io/tags/snap/</loc>
     <lastmod>2020-07-07T09:25:12+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/ubuntu-delete-snap/</loc>
+    <loc>https://suikaremilia.github.io/posts/ubuntu-delete-snap/</loc>
     <lastmod>2020-07-07T09:25:12+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/hongkong/</loc>
+    <loc>https://suikaremilia.github.io/murmur/</loc>
+    <lastmod>2022-05-25T11:19:52+00:00</lastmod>
+  </url><url>
+    <loc>https://suikaremilia.github.io/murmur/hongkong/</loc>
     <lastmod>2020-06-30T15:26:10+00:00</lastmod>
   </url><url>
     <loc>https://suikaremilia.github.io/tags/ceph/</loc>
     <lastmod>2020-05-20T15:16:05+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/ceph-architecture/</loc>
+    <loc>https://suikaremilia.github.io/posts/ceph-architecture/</loc>
     <lastmod>2020-05-20T15:16:05+00:00</lastmod>
   </url><url>
     <loc>https://suikaremilia.github.io/tags/virtualzation/</loc>
     <lastmod>2020-05-12T11:19:16+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/template/</loc>
+    <loc>https://suikaremilia.github.io/posts/template/</loc>
     <lastmod>2020-05-12T11:19:16+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/convert-image/</loc>
+    <loc>https://suikaremilia.github.io/posts/convert-image/</loc>
     <lastmod>2020-05-08T11:00:23+00:00</lastmod>
   </url><url>
     <loc>https://suikaremilia.github.io/tags/rhhi/</loc>
     <lastmod>2020-05-05T13:57:26+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/rhhi/</loc>
+    <loc>https://suikaremilia.github.io/posts/rhhi/</loc>
     <lastmod>2020-05-05T13:57:26+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/commvault/</loc>
+    <loc>https://suikaremilia.github.io/posts/commvault/</loc>
     <lastmod>2020-04-27T16:53:56+00:00</lastmod>
   </url><url>
     <loc>https://suikaremilia.github.io/tags/tape/</loc>
@@ -125,55 +128,55 @@
     <loc>https://suikaremilia.github.io/tags/pvmove/</loc>
     <lastmod>2020-04-12T15:29:48+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/pvmove/</loc>
+    <loc>https://suikaremilia.github.io/posts/pvmove/</loc>
     <lastmod>2020-04-12T15:29:48+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/caddy-fucke-gfw/</loc>
+    <loc>https://suikaremilia.github.io/posts/caddy-fucke-gfw/</loc>
     <lastmod>2020-04-06T10:09:28+00:00</lastmod>
   </url><url>
     <loc>https://suikaremilia.github.io/tags/pip/</loc>
     <lastmod>2020-03-25T10:08:05+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/pip/</loc>
+    <loc>https://suikaremilia.github.io/posts/pip/</loc>
     <lastmod>2020-03-25T10:08:05+00:00</lastmod>
   </url><url>
     <loc>https://suikaremilia.github.io/tags/vim/</loc>
     <lastmod>2020-03-20T10:05:31+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/vim-s/</loc>
+    <loc>https://suikaremilia.github.io/posts/vim-s/</loc>
     <lastmod>2020-03-20T10:05:31+00:00</lastmod>
   </url><url>
     <loc>https://suikaremilia.github.io/tags/tar/</loc>
     <lastmod>2020-03-16T11:08:56+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/tarxz/</loc>
+    <loc>https://suikaremilia.github.io/posts/tarxz/</loc>
     <lastmod>2020-03-16T11:08:56+00:00</lastmod>
   </url><url>
     <loc>https://suikaremilia.github.io/tags/uwp/</loc>
     <lastmod>2020-03-12T14:07:17+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/uwp-no-internet/</loc>
+    <loc>https://suikaremilia.github.io/posts/uwp-no-internet/</loc>
     <lastmod>2020-03-12T14:07:17+00:00</lastmod>
   </url><url>
     <loc>https://suikaremilia.github.io/tags/arch/</loc>
     <lastmod>2020-03-08T17:48:42+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/arch-linux-install/</loc>
+    <loc>https://suikaremilia.github.io/posts/arch-linux-install/</loc>
     <lastmod>2020-03-08T17:48:42+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/</loc>
+    <loc>https://suikaremilia.github.io/posts/ceph-nautilus-zabbix-module-setup/</loc>
     <lastmod>2020-03-02T15:13:58+00:00</lastmod>
   </url><url>
     <loc>https://suikaremilia.github.io/tags/monitor/</loc>
     <lastmod>2020-03-02T15:13:58+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/created-slice-andampamp-starting-session/</loc>
+    <loc>https://suikaremilia.github.io/posts/created-slice-andampamp-starting-session/</loc>
     <lastmod>2020-02-26T15:40:16+00:00</lastmod>
   </url><url>
     <loc>https://suikaremilia.github.io/tags/log/</loc>
     <lastmod>2020-02-26T15:40:16+00:00</lastmod>
   </url><url>
-    <loc>https://suikaremilia.github.io/post/mumbler/</loc>
+    <loc>https://suikaremilia.github.io/murmur/mumbler/</loc>
     <lastmod>2022-05-25T11:19:52+00:00</lastmod>
   </url>
 </urlset>

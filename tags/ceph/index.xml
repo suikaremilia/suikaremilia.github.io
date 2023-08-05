@@ -1,50 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>CEPH on 小熊猫快站起来</title>
+    <title>CEPH on Red Panda YOLO</title>
     <link>https://suikaremilia.github.io/tags/ceph/</link>
-    <description>Recent content in CEPH on 小熊猫快站起来</description>
+    <description>Recent content in CEPH on Red Panda YOLO</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en-us</language>
+    <copyright>{year}</copyright>
     <lastBuildDate>Wed, 20 May 2020 15:16:05 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/ceph/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CEPH规划</title>
-      <link>https://suikaremilia.github.io/post/ceph-architecture/</link>
+      <link>https://suikaremilia.github.io/posts/ceph-architecture/</link>
       <pubDate>Wed, 20 May 2020 15:16:05 +0000</pubDate>
       
-      <guid>https://suikaremilia.github.io/post/ceph-architecture/</guid>
-      <description>背景 终于准备用Nautilus做生产环境了！
-目前，Ceph 主要有三种企业级应用场景：
-IOPS 密集型：这种类型的场景通常是支撑在虚拟化/私有云上运行数据库。如在 OpenStack 上运行 Mysql、MariaDB 或 PostgreSQL 等。IOPS 密集型场景对磁盘的性能要求较高，最好使用全闪架构。如果使用混合架构，机械盘转速需要 1.2 万，并使用高速盘存储频繁写操作的日志或元数据。 高吞吐量型：这种类型的应用场景主要是大块数据传输，如图像、视频、音频文件等。高吞吐量型磁盘的要求没有 IOPS 密集型高，但需要配置较高的网络。同时也需要配置 SSD 来处理写日志。 高容量型：这种场景主要用于存储归档、离线数据。它对磁盘的容量要求高，对性能无过多要求。写日志也可以存储在 HDD 上。
-此次计划部署一套带宽型的用来提供S3服务，所以部署第二种就好。 硬件规划： nautilus采用blustore比filestore的性能大大提升，毕竟传输路径短了很多：
-随之而来的问题是BlueStore 存储引擎的实现，需要存储数据和元数据。目前 Ceph BuleStore 的元数据存储在 RocksDB（K-V 数据库）中。通过为 RocksEnv 提供操作接口，RocksDB 存放在 BlueFS 上。由于 BlueFS 最终通过 RocksDB，承载的是 BlueStore 存储引擎中的元数据，因此它的性能会很大程度上影响整个 Ceph 的性能。所以，要为它提供高速硬盘。
-Redhat建议，在新的bluestore架构下，如果用NVMe做metedata/jouranl，对应HDD的OSD是1：12；如果普通SSD做metedata/jouranl，则与HDD的比例为1：4 1 在此基础上，其他按照官方建议配置。
-Device Size Count Use CPU Inter Xeon 6252 2 Memor 32GB DISK 4TB 12 OSD SSD 480GB 2 Operation NVMe 4TB 2 blockk.</description>
+      <guid>https://suikaremilia.github.io/posts/ceph-architecture/</guid>
+      <description>背景 终于准备用Nautilus做生产环境了！</description>
     </item>
     
     <item>
       <title>CEPH Nautilus Zabbix module Setup</title>
-      <link>https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/</link>
+      <link>https://suikaremilia.github.io/posts/ceph-nautilus-zabbix-module-setup/</link>
       <pubDate>Mon, 02 Mar 2020 15:13:58 +0000</pubDate>
       
-      <guid>https://suikaremilia.github.io/post/ceph-nautilus-zabbix-module-setup/</guid>
-      <description>CEPH可以通过mgr节点的zabbix模块实现监控
-不同于普通的agent模式，CEPH自带的zabbix模块通过trapper模式工作，mgr节点收集集群信息并向Zabbix Server发送。
-1、环境说明： 3节点CEPH集群，每个node都是mgr节点;
-部署Nautilus 14.2.7；
-Zabbix Server版本：4.2.1
-2、安装部署： 在所有mgr节点上安装zabbix-sender
-配置yum：
-# rpm -Uvh https://repo.zabbix.com/zabbix/4.4/rhel/7/x86_64/zabbix-release-4.4-1.el7.noarch.rpm 安装sender：
-# yum install zabbix-sender -y 3、配置zabbix模块： 在任意一个mgr节点上执行如下配置：
-启用zabbix module：
-# ceph mgr module enable zabbix 指定zabbix server，如果有多个可以用&amp;quot;,&amp;ldquo;隔开，并且可以添加&amp;rdquo;:&amp;ldquo;来指定服务器端口，此处只有最简单的配置：
-# ceph zabbix config-set zabbix_host zabbix.test.com 指定zabbix_sender的位置：
-# which zabbix_sender /usr/bin/zabbix_sender # ceph zabbix config-set zabbix_sender /usr/bin/zabbix_sender Configuration option zabbix_sender updated 指定identifier，这里很奇怪，只能是某个mgr节点的主机名，其他的可以设置成功但是发送失败，不知道我哪里配的有问题：
-# ceph zabbix config-set identifier &amp;#34;ceph01.test.com&amp;#34; 后面如果有需要可以定义server的端口等，命令跟前面的相仿，这里就不配了。
-查看一下当前的配置：
-# ceph zabbix config-show 查看一下自带的监控模板，后面会用到：
-# find / -iname zabbix_template.</description>
+      <guid>https://suikaremilia.github.io/posts/ceph-nautilus-zabbix-module-setup/</guid>
+      <description>CEPH可以通过mgr节点的zabbix模块实现监控</description>
     </item>
     
   </channel>

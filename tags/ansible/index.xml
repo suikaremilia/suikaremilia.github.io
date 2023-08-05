@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ansible on 小熊猫快站起来</title>
+    <title>Ansible on Red Panda YOLO</title>
     <link>https://suikaremilia.github.io/tags/ansible/</link>
-    <description>Recent content in Ansible on 小熊猫快站起来</description>
+    <description>Recent content in Ansible on Red Panda YOLO</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en-us</language>
+    <copyright>{year}</copyright>
     <lastBuildDate>Mon, 27 Jul 2020 17:39:01 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/ansible/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ansible tower升级</title>
-      <link>https://suikaremilia.github.io/post/ansible-tower-upgrade/</link>
+      <link>https://suikaremilia.github.io/posts/ansible-tower-upgrade/</link>
       <pubDate>Mon, 27 Jul 2020 17:39:01 +0000</pubDate>
       
-      <guid>https://suikaremilia.github.io/post/ansible-tower-upgrade/</guid>
-      <description>Ansible Tower的版本更新的也是莫名的快，去年安装的3.5今年已经到3.7.1了，新的版本可以在线申请license，旧的license快过期了，所以就升个级吧。
-步骤： 升级的时候不能只看升级文档，还要看新版本的support，一开始只看了升级文档，做的时候报操作系统版本不被支持，所以第一步配个较新的rhel源，然后update系统。
-# yum update -y # systemctl reboot 下载要升级的版本，并解压：
-# wget https://releases.ansible.com/ansible-tower/setup/ansible-tower-setup-3.7.1-1.tar.gz # tar xvzf ansible-tower-setup-3.7.1-1.tar.gz 把曾经3.5时候安装的inventory拷贝一份到3.7,注意要把老版本的rabbitmq_host有关的变量更改为routable_hostname，因为新版本移除了rabbitmq：
-# cp ansible-tower-bundle-3.5.1-1.el7/inventory ansible-tower-setup-3.7.1-1/ # cat inventory [tower] ansible01-ap ansible02-ap [database] [all:vars] admin_password=&amp;#39;redhat&amp;#39; pg_host=&amp;#39;10.xx.xx.xx&amp;#39; pg_port=&amp;#39;5432&amp;#39; pg_database=&amp;#39;towerdata&amp;#39; pg_username=&amp;#39;postgres&amp;#39; pg_password=&amp;#39;redhat&amp;#39; routable_username=&amp;#39;tower&amp;#39; routable_password=&amp;#39;redhat&amp;#39; routable_cookie=cookiemonster 因为涉及到clust所以用到了rhscl里的两个包，可以单独下下来建一个源，也可以直接陪rhscl的源，我enable了base和rhcsl两个源。 然后，在各节点上关闭服务：
-ansible tower -m command -a &amp;#34;ansible-tower-service stop&amp;#34; -i inventory 拆除主备实例关系：
-# awx-manage list_instances [tower capacity=154] ansible01-ap capacity=72 version=3.5.1 ansible02-ap capacity=72 version=3.5.1 # awx-manage deprovision_instance --hostname=ansible02-ap # awx-manage list_instances [tower capacity=0] ansible01-ap capacity=0 version=3.</description>
+      <guid>https://suikaremilia.github.io/posts/ansible-tower-upgrade/</guid>
+      <description>Ansible Tower的版本更新的也是莫名的快，去年安装的3.</description>
     </item>
     
   </channel>

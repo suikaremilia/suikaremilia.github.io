@@ -1,66 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Virtualzation on 小熊猫快站起来</title>
+    <title>Virtualzation on Red Panda YOLO</title>
     <link>https://suikaremilia.github.io/tags/virtualzation/</link>
-    <description>Recent content in Virtualzation on 小熊猫快站起来</description>
+    <description>Recent content in Virtualzation on Red Panda YOLO</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en-us</language>
+    <copyright>{year}</copyright>
     <lastBuildDate>Tue, 12 May 2020 11:19:16 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/virtualzation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>封装虚拟机</title>
-      <link>https://suikaremilia.github.io/post/template/</link>
+      <link>https://suikaremilia.github.io/posts/template/</link>
       <pubDate>Tue, 12 May 2020 11:19:16 +0000</pubDate>
       
-      <guid>https://suikaremilia.github.io/post/template/</guid>
-      <description>很多时候我们需要重复创建虚机，模板就是方便此类重复操作的一个虚机副本。模板不能拥有任何特定的信息，否则依此建立的虚机将都带有特定信息。所以，在建立模板前需要对源虚机进行封装，所谓封装就是在保证其他功能正常的同时，去除掉特点的功能。
-以前linux通用的封装方式比较烦，需要手动删除如下：
-ssh主机密钥： rm -rf /etc/ssh/ssh_host_* 设置hostname为localhost cat /etc/sysconfig/network HOSTNAME=localhost.localdomain 从/var/log中删除所有日志： for i in `find .-name &amp;#34;*.log&amp;#34;`;do cat /dev/null&amp;gt;$i;done /root中删除build日志： 关闭虚机 现在rhel提供了更简便的封装方法：
-yum install -y libguestfs-tools virt-sysprep windows的封装一向很简单：
-运行sysprep.exe
-一般在C:\Windows\System32\sysprep\sysprep.exe
-此类是通用的封装方法，有虚拟化平台提供自己的封装工具，那么以平台为准。</description>
+      <guid>https://suikaremilia.github.io/posts/template/</guid>
+      <description>很多时候我们需要重复创建虚机，模板就是方便此类重复操作的一个虚机副本。模板不能拥有任何特定的信息，否则依此建立的虚机将都带有特定信息。所以，在建立模板前需要对源虚机进行封装，所谓封装就是在保证其他功能正常的同时，去除掉特点的功能。</description>
     </item>
     
     <item>
       <title>虚拟机镜像转换</title>
-      <link>https://suikaremilia.github.io/post/convert-image/</link>
+      <link>https://suikaremilia.github.io/posts/convert-image/</link>
       <pubDate>Fri, 08 May 2020 11:00:23 +0000</pubDate>
       
-      <guid>https://suikaremilia.github.io/post/convert-image/</guid>
-      <description>总会遇到诡异的问题，比如要部署厂家打包好的定制化的镜像，发现这镜像只提供一种平台的格式，这时候就需要将虚拟磁盘做转换了。
-各个厂家提供一些定制化的工具并不是太通用，比如VMWare的vmware-vdiskmanager，好在这个世界有开源的qemu-img工具，可以方便的转换各种格式的镜像。
-安装： qemu-img提供多平台支持，常见的windows可以从官网下载安装；linux就更简单了，配源然后install，比如：yum install qemu-img
-参数： 常用的转换参数如下：
-convert：转换操作；
--p：显示转换进度;
--f xxx：指明被转换镜像的格式，可以留空，但hyperV的vhd最好写明vpc否则可能不识别；
--O xxx：表明要转换成的格式；
-info：查询信息
-实例： vmdk转qcow2：
-qemu-img convert -p -f vmdk -O qcow2 RHEL.vmdk RHEL.qcow2 查询镜像详细信息：
-qemu-img info RHEL.qcow2 如果转vhd文件，注意-f后跟vpc而不是vhd
-以上没有了……</description>
+      <guid>https://suikaremilia.github.io/posts/convert-image/</guid>
+      <description>总会遇到诡异的问题，比如要部署厂家打包好的定制化的镜像，发现这镜像只提供一种平台的格式，这时候就需要将虚拟磁盘做转换了。</description>
     </item>
     
     <item>
       <title>部署RHHI环境</title>
-      <link>https://suikaremilia.github.io/post/rhhi/</link>
+      <link>https://suikaremilia.github.io/posts/rhhi/</link>
       <pubDate>Tue, 05 May 2020 13:57:26 +0000</pubDate>
       
-      <guid>https://suikaremilia.github.io/post/rhhi/</guid>
-      <description>一直不知道为啥红帽会把RHHI放进存储产品线，明明就是个虚拟化环境的超融合环境，甚至安装介质跟rhv都是一样的，两者只有部署方式上的差异。
-从最开始的RHV一直用到现在的RHHI，红帽的产品没有VMWare那么丰富的接口，却也别有特色，用习惯了感觉也不错。才不是用多了国产的烂玩意才有的这种感觉。
-这两天环境被弄乱了，就图省事不修了，重新部署了一套了事，记录一点过程：
-首先，要有RHVH的订阅，没有就去下ovirt，rhv对应的开源版本就是它；
-其次，红帽对此的文档已经很详细了，也不需要帐号就可以阅读，相关的两篇文档如下：
-https://access.redhat.com/documentation/en-us/red_hat_hyperconverged_infrastructure_for_virtualization/1.7/html/deploying_red_hat_hyperconverged_infrastructure_for_virtualization/deployment_workflow#enabling-software-repositories
-https://access.redhat.com/documentation/en-us/red_hat_virtualization/4.4-beta/html/administration_guide/sect-preparing_and_adding_nfs_storage
-注意，第一篇部署文档里没提到的是宿主机的主机名需要被DNS解析，否则部署host-engin的时候会过不去地址检测。
-第二篇文档要注意的是nfs的权限设置，不是随便哪个nfs都能在rhv环境中挂起来的。
-然后，按照文档部署完成之后要在compute-&amp;gt;cluster里把enable gluster service的勾勾上，不然在storage-&amp;gt;volumes里管理不到先前创建的gluster卷。
-最后，就可以慢慢用了，从rhv2到3再到如今的4.3，改变还是蛮大的，也明显越来越好用了。虽然不是主流产品，但是如果有超融合需求，不妨尝试一下，毕竟有免费的开源版本ovirt。
-但是4.3的RHV有个最坑的地方，由于宿主机是基于RHEL7的系统，因此无法将RHEL8的系统做成模板，因为rhel8中xfs有新特性，而这点居然写在了RHV4.4的文档里，而不是4.3的……</description>
+      <guid>https://suikaremilia.github.io/posts/rhhi/</guid>
+      <description>一直不知道为啥红帽会把RHHI放进存储产品线，明明就是个虚拟化环境的超融合环境，甚至安装介质跟rhv都是一样的，两者只有部署方式上的差异。</description>
     </item>
     
   </channel>

@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>log on 小熊猫快站起来</title>
+    <title>log on Red Panda YOLO</title>
     <link>https://suikaremilia.github.io/tags/log/</link>
-    <description>Recent content in log on 小熊猫快站起来</description>
+    <description>Recent content in log on Red Panda YOLO</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en-us</language>
+    <copyright>{year}</copyright>
     <lastBuildDate>Wed, 26 Feb 2020 15:40:16 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/log/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Created slice &amp;amp;amp; Starting Session</title>
-      <link>https://suikaremilia.github.io/post/created-slice-andampamp-starting-session/</link>
+      <link>https://suikaremilia.github.io/posts/created-slice-andampamp-starting-session/</link>
       <pubDate>Wed, 26 Feb 2020 15:40:16 +0000</pubDate>
       
-      <guid>https://suikaremilia.github.io/post/created-slice-andampamp-starting-session/</guid>
-      <description>背景： RHEL7的日志（/var/log/message）里总有如下log，甚至很长一段时间内整个log都是这些内容：
-example.com systemd: Created slice user-0.slice. example.com systemd: Starting Session 150 of user root. example.com systemd: Started Session 150 of user root. example.com systemd: Created slice user-0.slice. example.com systemd: Starting Session 151 of user root. example.com systemd: Started Session 151 of user root. 过滤： 照红帽的官方说法，这是居然是正常情况，只要用户登录就会记录这些日志，如果不想记录这些内容需要主动将其过滤掉，方法如下：
-echo &amp;#39;if $programname == &amp;#34;systemd&amp;#34; and ($msg contains &amp;#34;Starting Session&amp;#34; or $msg contains &amp;#34;Started Session&amp;#34; or $msg contains &amp;#34;Created slice&amp;#34; or $msg contains &amp;#34;Starting user-&amp;#34; or $msg contains &amp;#34;Starting User Slice of&amp;#34; or $msg contains &amp;#34;Removed session&amp;#34; or $msg contains &amp;#34;Removed slice User Slice of&amp;#34; or $msg contains &amp;#34;Stopping User Slice of&amp;#34;) then stop&amp;#39; &amp;gt;/etc/rsyslog.</description>
+      <guid>https://suikaremilia.github.io/posts/created-slice-andampamp-starting-session/</guid>
+      <description>背景： RHEL7的日志（/var/log/message）里总有如下log，甚至很长一段时间内整个log都是这些内容：</description>
     </item>
     
   </channel>

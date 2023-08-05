@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Snap on 小熊猫快站起来</title>
+    <title>Snap on Red Panda YOLO</title>
     <link>https://suikaremilia.github.io/tags/snap/</link>
-    <description>Recent content in Snap on 小熊猫快站起来</description>
+    <description>Recent content in Snap on Red Panda YOLO</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en-us</language>
+    <copyright>{year}</copyright>
     <lastBuildDate>Tue, 07 Jul 2020 09:25:12 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/snap/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ubuntu删除snap</title>
-      <link>https://suikaremilia.github.io/post/ubuntu-delete-snap/</link>
+      <link>https://suikaremilia.github.io/posts/ubuntu-delete-snap/</link>
       <pubDate>Tue, 07 Jul 2020 09:25:12 +0000</pubDate>
       
-      <guid>https://suikaremilia.github.io/post/ubuntu-delete-snap/</guid>
-      <description>Snap在ubuntu里简直是病毒一样的存在，一定要用purge才能删掉……
-顽固病毒也不过如此
-# apt autoremove --purge snapd 更彻底一点：
-# rm -rf /var/cache/snapd # rm -rf ~/snap </description>
+      <guid>https://suikaremilia.github.io/posts/ubuntu-delete-snap/</guid>
+      <description>Snap在ubuntu里简直是病毒一样的存在，一定要用purge才能删掉……</description>
     </item>
     
   </channel>

@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Podman on 小熊猫快站起来</title>
+    <title>Podman on Red Panda YOLO</title>
     <link>https://suikaremilia.github.io/tags/podman/</link>
-    <description>Recent content in Podman on 小熊猫快站起来</description>
+    <description>Recent content in Podman on Red Panda YOLO</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en-us</language>
+    <copyright>{year}</copyright>
     <lastBuildDate>Mon, 20 Jul 2020 14:15:12 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/podman/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Set up proxy for podman</title>
-      <link>https://suikaremilia.github.io/post/set-up-proxy-for-podman/</link>
+      <link>https://suikaremilia.github.io/posts/set-up-proxy-for-podman/</link>
       <pubDate>Mon, 20 Jul 2020 14:15:12 +0000</pubDate>
       
-      <guid>https://suikaremilia.github.io/post/set-up-proxy-for-podman/</guid>
-      <description>背景如题，方案在/etc/profile.d/下配置：
-# cat /etc/profile.d/http_proxy.sh export HTTP_PROXY=http://192.168.0.1:8080 export HTTPS_PROXY=http://192.168.0.1:8080 或直接export，但前者对ansible也生效，后者只能是该终端的用户
-貌似都是废话，其他程序配置Proxy，用常规的用export命令配置环境变量不生效的时候，也可以试试这样……</description>
+      <guid>https://suikaremilia.github.io/posts/set-up-proxy-for-podman/</guid>
+      <description>背景如题，方案在/etc/profile.d/下配置：</description>
     </item>
     
   </channel>

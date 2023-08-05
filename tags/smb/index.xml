@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SMB on 小熊猫快站起来</title>
+    <title>SMB on Red Panda YOLO</title>
     <link>https://suikaremilia.github.io/tags/smb/</link>
-    <description>Recent content in SMB on 小熊猫快站起来</description>
+    <description>Recent content in SMB on Red Panda YOLO</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
+    <language>en-us</language>
+    <copyright>{year}</copyright>
     <lastBuildDate>Mon, 13 Jul 2020 13:50:07 +0000</lastBuildDate><atom:link href="https://suikaremilia.github.io/tags/smb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>RHEL挂载windows共享</title>
-      <link>https://suikaremilia.github.io/post/rhel-mount-windows-share/</link>
+      <link>https://suikaremilia.github.io/posts/rhel-mount-windows-share/</link>
       <pubDate>Mon, 13 Jul 2020 13:50:07 +0000</pubDate>
       
-      <guid>https://suikaremilia.github.io/post/rhel-mount-windows-share/</guid>
-      <description>莫名其妙的曾经能用的mount cifs的方式开始报错
-mount error(112): Host is down Refer to the mount.cifs(8) manual page (e.g. man mount.cifs) 查了一下原因是smb协议版本问题，RHEL5和6最高支持SMB 1.0协议，RHEL7.2以后支持到SMB3。 所以，RHEL5和6就不要想挂载最新的windows共享了，windows目前关闭了smb1，RHEL7如果想访问windows共享的话，则需要指定一下版本。
-mount -t cifs -o vers=2.0,username=&amp;lt;win_share_user&amp;gt;,password=&amp;lt;win_share_password&amp;gt; //WIN_SHARE_IP/&amp;lt;share_name&amp;gt; /mnt/win_share 如果是域用户，则加domain信息：
-mount -t cifs -o vers=2.0,username=&amp;lt;win_share_user&amp;gt;,domain=&amp;lt;win_domain&amp;gt;，password=&amp;lt;win_share_password&amp;gt; //WIN_SHARE_IP/&amp;lt;share_name&amp;gt; /mnt/win_share 或者更安全一点的做法，建个文件储存用户名和密码：
-# cat /etc/win-credentials username = user password = password domain = domain 设置权限： chown root: /etc/win-credentials chmod 600 /etc/win-credentials 挂载： mount -t cifs -o credentials=/etc/win-credentials //WIN_SHARE_IP/&amp;lt;share_name&amp;gt; /mnt/win_share 也可以把信息写入/etc/fstab来实现自动挂载：
-# cat /etc/fstab # &amp;lt;file system&amp;gt; &amp;lt;dir&amp;gt; &amp;lt;type&amp;gt; &amp;lt;options&amp;gt; &amp;lt;dump&amp;gt; &amp;lt;pass&amp;gt; //WIN_SHARE_IP/share_name /mnt/win_share cifs credentials=/etc/win-credentials,file_mode=0755,dir_mode=0755 0 0 mount /mnt/win_share </description>
+      <guid>https://suikaremilia.github.io/posts/rhel-mount-windows-share/</guid>
+      <description>莫名其妙的曾经能用的mount cifs的方式开始报错</description>
     </item>
     
   </channel>
