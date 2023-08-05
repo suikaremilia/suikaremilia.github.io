@@ -1,0 +1,44 @@
+[[main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+[[main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts"
+    weight = 2
+
+[[main]]
+    identifier = "murmur"
+    name = "Ｍurmur"
+    url = "/murmur"
+    weight = 3
+
+[[main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags"
+    weight = 4
+
+
+# Social Media Configuration
+
+[[social]]
+    identifier = "telegram"
+    name = "Telegram"
+    url = "https://t.me/touhoumichong"
+    weight = 1
+
+[[social]]
+    identifier = "mail"
+    name = "Mail"
+    url = "mailto:suika@kadama.eu.org"
+    weight = 2
+
+[[social]]
+    identifier = "rss"
+    name = "RSS"
+    url = "/index.xml"
+    weight = 2

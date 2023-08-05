@@ -1,0 +1,27 @@
+# Homepage Config
+isSinglePage = false
+
+# Meta Config
+description = "About"
+
+googleAnalytics = "G-RNEHT80K8P"
+
+# Header Configuration
+avatar = "img/firefox.jpg"
+favicon = "/img/favicon.ico"
+
+[emoji]
+enableEmoji = true
+
+ # giscus is a comment system based on GitHub Discussions. see https://giscus.app
+[giscus]       
+enable = true
+repo = "suikaremilia/suikaremilia.github.io"
+repoId = "R_kgDOHZJINw"
+category = "Announcements"
+categoryId = "DIC_kwDOHZJIN84CYPk_"
+inputPosition = "top"
+theme = "light"
+lang = "zh-CN"
+lazyLoading = true
+crossorigin = "anonymous"
